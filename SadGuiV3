@@ -2,7 +2,7 @@
   feito por Darkzin
   
   roblox.com/games
---]====[
+--]====]
 
 local Key = Instance.new("ScreenGui")
 local keysystem = Instance.new("ImageLabel")
