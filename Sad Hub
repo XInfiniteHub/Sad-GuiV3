@@ -1,9 +1,8 @@
--- GUI to Lua
------
--- Version: 2.0.
--- Made by chrisopdemobiel.
-
--- Instances:
+--[====[
+	made by Darkzin
+	
+	Roblox profile "Darkzin"	
+--]====]
 
 local Key = Instance.new("ScreenGui")
 local keysystem = Instance.new("ImageLabel")
