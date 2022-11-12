@@ -1,7 +1,10 @@
---[====[ 
-	Made by darkzin
+--[====[
+	made by Darkzin
 	
 	roblox profile = "https://www.roblox.com/users/834538235/profile"
+	
+	
+	Update 2 Sad Hub V3
 --]====]
 
 local Key = Instance.new("ScreenGui")
@@ -79,7 +82,6 @@ keysystem.Parent = Key
 keysystem.BackgroundTransparency = 1.000
 keysystem.Position = UDim2.new(0.303856999, 0, 0.251953125, 0)
 keysystem.Size = UDim2.new(0, 417, 0, 253)
-keysystem.Visible = false
 keysystem.Image = "rbxassetid://2790382281"
 keysystem.ScaleType = Enum.ScaleType.Slice
 keysystem.SliceCenter = Rect.new(4, 4, 252, 252)
@@ -747,15 +749,15 @@ TextLabel_9.TextWrapped = true
 
 -- Scripts:
 
-local function ZLDT_fake_script() -- Credits.LocalScript 
+local function FSKUGT_fake_script() -- Credits.LocalScript 
 	local script = Instance.new('LocalScript', Credits)
 
 	script.Parent.Parent.Credits.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.creditsgui.Visible = true
 	end)
 end
-coroutine.wrap(ZLDT_fake_script)()
-local function LXQZAW_fake_script() -- Check.LocalScript 
+coroutine.wrap(FSKUGT_fake_script)()
+local function OEFE_fake_script() -- Check.LocalScript 
 	local script = Instance.new('LocalScript', Check)
 
 	script.Parent.Parent.Check.MouseButton1Click:Connect(function()
@@ -781,16 +783,16 @@ local function LXQZAW_fake_script() -- Check.LocalScript
 	
 	
 end
-coroutine.wrap(LXQZAW_fake_script)()
-local function JIJENEJ_fake_script() -- freekeyyy.LocalScript 
+coroutine.wrap(OEFE_fake_script)()
+local function OTHFGI_fake_script() -- freekeyyy.LocalScript 
 	local script = Instance.new('LocalScript', freekeyyy)
 
 	script.Parent.Parent.freekeyyy.MouseButton1Click:Connect(function()
 		setclipboard("CpESIRTGb&cNUaoa%pqhKP!PJMc06tOS7OM@jd05R0pd#3O")
 	end)
 end
-coroutine.wrap(JIJENEJ_fake_script)()
-local function YWTUKTW_fake_script() -- Key.LocalScript 
+coroutine.wrap(OTHFGI_fake_script)()
+local function LEZACR_fake_script() -- Key.LocalScript 
 	local script = Instance.new('LocalScript', Key)
 
 	local UIS = game:GetService('UserInputService')
@@ -862,8 +864,8 @@ local function YWTUKTW_fake_script() -- Key.LocalScript
 	
 	end)
 end
-coroutine.wrap(YWTUKTW_fake_script)()
-local function YNPVP_fake_script() -- Key.LocalScript 
+coroutine.wrap(LEZACR_fake_script)()
+local function LMEP_fake_script() -- Key.LocalScript 
 	local script = Instance.new('LocalScript', Key)
 
 	script.Parent["key system"].Discord.MouseButton1Click:Connect(function()
@@ -877,8 +879,8 @@ local function YNPVP_fake_script() -- Key.LocalScript
 		setclipboard("discord.gg/Sjk28Sjus7")
 	end)
 end
-coroutine.wrap(YNPVP_fake_script)()
-local function FOIW_fake_script() -- minimize.LocalScript 
+coroutine.wrap(LMEP_fake_script)()
+local function UWEABN_fake_script() -- minimize.LocalScript 
 	local script = Instance.new('LocalScript', minimize)
 
 	script.Parent.Parent.minimize.MouseButton1Click:Connect(function()
@@ -886,16 +888,16 @@ local function FOIW_fake_script() -- minimize.LocalScript
 		script.Parent.Parent.Parent["open menu"].Visible = true
 	end)
 end
-coroutine.wrap(FOIW_fake_script)()
-local function CAMLX_fake_script() -- close.LocalScript 
+coroutine.wrap(UWEABN_fake_script)()
+local function DVVXA_fake_script() -- close.LocalScript 
 	local script = Instance.new('LocalScript', close)
 
 	script.Parent.Parent.close.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.menu.Visible = false
 	end)
 end
-coroutine.wrap(CAMLX_fake_script)()
-local function HGNZ_fake_script() -- next.LocalScript 
+coroutine.wrap(DVVXA_fake_script)()
+local function VQVPOZ_fake_script() -- next.LocalScript 
 	local script = Instance.new('LocalScript', next)
 
 	script.Parent.Parent.next.MouseButton1Click:Connect(function()
@@ -903,8 +905,8 @@ local function HGNZ_fake_script() -- next.LocalScript
 		script.Parent.Parent.Parent.nextpage.Visible = true
 	end)
 end
-coroutine.wrap(HGNZ_fake_script)()
-local function RERE_fake_script() -- admingui.LocalScript 
+coroutine.wrap(VQVPOZ_fake_script)()
+local function CRCTS_fake_script() -- admingui.LocalScript 
 	local script = Instance.new('LocalScript', admingui)
 
 	script.Parent.Parent["admin gui"].MouseButton1Click:Connect(function()
@@ -913,8 +915,8 @@ local function RERE_fake_script() -- admingui.LocalScript
 		script.Parent.Parent.Parent.menu.Visible = false
 	end)
 end
-coroutine.wrap(RERE_fake_script)()
-local function YGVLLG_fake_script() -- menu.Script 
+coroutine.wrap(CRCTS_fake_script)()
+local function DMIMXC_fake_script() -- menu.Script 
 	local script = Instance.new('Script', menu)
 
 	h = script.Parent.Parent.Parent.Parent.Character.Humanoid
@@ -935,16 +937,16 @@ local function YGVLLG_fake_script() -- menu.Script
 	script.Parent.Faster.MouseButton1Click:connect(faster)
 	
 end
-coroutine.wrap(YGVLLG_fake_script)()
-local function CLFCIZ_fake_script() -- hehe.LocalScript 
+coroutine.wrap(DMIMXC_fake_script)()
+local function UPQZQWA_fake_script() -- hehe.LocalScript 
 	local script = Instance.new('LocalScript', hehe)
 
 	script.Parent.Parent.hehe.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.creditsgui.Visible = false
 	end)
 end
-coroutine.wrap(CLFCIZ_fake_script)()
-local function IEBQZ_fake_script() -- openmenu.LocalScript 
+coroutine.wrap(UPQZQWA_fake_script)()
+local function ICILX_fake_script() -- openmenu.LocalScript 
 	local script = Instance.new('LocalScript', openmenu)
 
 	script.Parent.Parent["open menu"].MouseButton1Click:Connect(function()
@@ -952,8 +954,8 @@ local function IEBQZ_fake_script() -- openmenu.LocalScript
 		script.Parent.Parent["open menu"].Visible = false
 	end)
 end
-coroutine.wrap(IEBQZ_fake_script)()
-local function NXEI_fake_script() -- openmenu.LocalScript 
+coroutine.wrap(ICILX_fake_script)()
+local function OCKN_fake_script() -- openmenu.LocalScript 
 	local script = Instance.new('LocalScript', openmenu)
 
 	local UIS = game:GetService('UserInputService')
@@ -1026,16 +1028,16 @@ local function NXEI_fake_script() -- openmenu.LocalScript
 	
 	end)
 end
-coroutine.wrap(NXEI_fake_script)()
-local function KZNXER_fake_script() -- Key.LocalScript 
+coroutine.wrap(OCKN_fake_script)()
+local function KQJZC_fake_script() -- Key.LocalScript 
 	local script = Instance.new('LocalScript', Key)
 
 	script.Parent.menu.kill.MouseButton1Click:Connect(function()
 		game.Players:FindFirstChild(script.Parent.menu.TextBox.Text).Character.Humanoid.Health = 0
 	end)
 end
-coroutine.wrap(KZNXER_fake_script)()
-local function WOOG_fake_script() -- back.LocalScript 
+coroutine.wrap(KQJZC_fake_script)()
+local function QIUOFGT_fake_script() -- back.LocalScript 
 	local script = Instance.new('LocalScript', back)
 
 	script.Parent.Parent.Parent.nextpage.back.MouseButton1Click:Connect(function()
@@ -1043,8 +1045,8 @@ local function WOOG_fake_script() -- back.LocalScript
 		script.Parent.Parent.Parent.menu.Visible = true
 	end)
 end
-coroutine.wrap(WOOG_fake_script)()
-local function IKADJBI_fake_script() -- btools.LocalScript 
+coroutine.wrap(QIUOFGT_fake_script)()
+local function SXSECL_fake_script() -- btools.LocalScript 
 	local script = Instance.new('LocalScript', btools)
 
 	script.Parent.Parent.btools.MouseButton1Click:Connect(function()
@@ -1102,32 +1104,32 @@ local function IKADJBI_fake_script() -- btools.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(IKADJBI_fake_script)()
-local function RFFEN_fake_script() -- infyield.LocalScript 
+coroutine.wrap(SXSECL_fake_script)()
+local function FGKVMMR_fake_script() -- infyield.LocalScript 
 	local script = Instance.new('LocalScript', infyield)
 
 	script.Parent.Parent.infyield.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Yield.txt"))()
 	end)
 end
-coroutine.wrap(RFFEN_fake_script)()
-local function UZBT_fake_script() -- Damain.LocalScript 
+coroutine.wrap(FGKVMMR_fake_script)()
+local function CATPPOP_fake_script() -- Damain.LocalScript 
 	local script = Instance.new('LocalScript', Damain)
 
 	script.Parent.Parent.Damain.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
 	end)
 end
-coroutine.wrap(UZBT_fake_script)()
-local function XINXBG_fake_script() -- dex.LocalScript 
+coroutine.wrap(CATPPOP_fake_script)()
+local function CXCKPH_fake_script() -- dex.LocalScript 
 	local script = Instance.new('LocalScript', dex)
 
 	script.Parent.Parent.dex.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
 	end)
 end
-coroutine.wrap(XINXBG_fake_script)()
-local function JPXKBDU_fake_script() -- orca.LocalScript 
+coroutine.wrap(CXCKPH_fake_script)()
+local function EZBV_fake_script() -- orca.LocalScript 
 	local script = Instance.new('LocalScript', orca)
 
 	script.Parent.Parent.orca.MouseButton1Click:Connect(function()
@@ -1136,8 +1138,8 @@ local function JPXKBDU_fake_script() -- orca.LocalScript
 		)()
 	end)
 end
-coroutine.wrap(JPXKBDU_fake_script)()
-local function IONCB_fake_script() -- hydroxide.LocalScript 
+coroutine.wrap(EZBV_fake_script)()
+local function GBHUUS_fake_script() -- hydroxide.LocalScript 
 	local script = Instance.new('LocalScript', hydroxide)
 
 	script.Parent.Parent.hydroxide.MouseButton1Click:Connect(function()
@@ -1152,32 +1154,32 @@ local function IONCB_fake_script() -- hydroxide.LocalScript
 		webImport("ui/main")
 	end)
 end
-coroutine.wrap(IONCB_fake_script)()
-local function TCFTV_fake_script() -- nolag.LocalScript 
+coroutine.wrap(GBHUUS_fake_script)()
+local function DODSHW_fake_script() -- nolag.LocalScript 
 	local script = Instance.new('LocalScript', nolag)
 
 	script.Parent.Parent.nolag.MouseButton1Click:Connect(function()
 		setfpscap(99)
 	end)
 end
-coroutine.wrap(TCFTV_fake_script)()
-local function WNUM_fake_script() -- makuro.LocalScript 
+coroutine.wrap(DODSHW_fake_script)()
+local function EJRLQ_fake_script() -- makuro.LocalScript 
 	local script = Instance.new('LocalScript', makuro)
 
 	script.Parent.Parent.makuro.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
 	end)
 end
-coroutine.wrap(WNUM_fake_script)()
-local function SYIVZ_fake_script() -- copymaps.LocalScript 
+coroutine.wrap(EJRLQ_fake_script)()
+local function YCDZWR_fake_script() -- copymaps.LocalScript 
 	local script = Instance.new('LocalScript', copymaps)
 
 	script.Parent.Parent["copy maps"].MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Copy%20maps'))()
 	end)
 end
-coroutine.wrap(SYIVZ_fake_script)()
-local function PSLWXGI_fake_script() -- gamehub.LocalScript 
+coroutine.wrap(YCDZWR_fake_script)()
+local function KNEGO_fake_script() -- gamehub.LocalScript 
 	local script = Instance.new('LocalScript', gamehub)
 
 	script.Parent.Parent.gamehub.MouseButton1Click:Connect(function()
@@ -1197,16 +1199,16 @@ local function PSLWXGI_fake_script() -- gamehub.LocalScript
 	
 	end)
 end
-coroutine.wrap(PSLWXGI_fake_script)()
-local function XHCROD_fake_script() -- DontPressBro.LocalScript 
+coroutine.wrap(KNEGO_fake_script)()
+local function BYCGPG_fake_script() -- DontPressBro.LocalScript 
 	local script = Instance.new('LocalScript', DontPressBro)
 
 	script.Parent.Parent.DontPressBro.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer:Kick("LOL XD")
 	end)
 end
-coroutine.wrap(XHCROD_fake_script)()
-local function LSBAV_fake_script() -- closeadmingui.LocalScript 
+coroutine.wrap(BYCGPG_fake_script)()
+local function QIOFJ_fake_script() -- closeadmingui.LocalScript 
 	local script = Instance.new('LocalScript', closeadmingui)
 
 	script.Parent.Parent.closeadmingui.MouseButton1Click:Connect(function()
@@ -1215,14 +1217,14 @@ local function LSBAV_fake_script() -- closeadmingui.LocalScript
 		script.Parent.Parent.Parent.menu.Visible = true
 	end)
 end
-coroutine.wrap(LSBAV_fake_script)()
-local function IOZTKZ_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(QIOFJ_fake_script)()
+local function BCNGLDI_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	
 end
-coroutine.wrap(IOZTKZ_fake_script)()
-local function DMSUSI_fake_script() -- closegamehubguiv22.LocalScript 
+coroutine.wrap(BCNGLDI_fake_script)()
+local function EAVAXQ_fake_script() -- closegamehubguiv22.LocalScript 
 	local script = Instance.new('LocalScript', closegamehubguiv22)
 
 	script.Parent.Parent.closegamehubguiv22.MouseButton1Click:Connect(function()
@@ -1231,16 +1233,16 @@ local function DMSUSI_fake_script() -- closegamehubguiv22.LocalScript
 		script.Parent.Parent.Parent.nextpage.Visible = true
 	end)
 end
-coroutine.wrap(DMSUSI_fake_script)()
-local function ZPHI_fake_script() -- radio_button_checked.LocalScript 
+coroutine.wrap(EAVAXQ_fake_script)()
+local function OCLYO_fake_script() -- radio_button_checked.LocalScript 
 	local script = Instance.new('LocalScript', radio_button_checked)
 
 	script.Parent.Parent.radio_button_checked.MouseButton1Click:Connect(function()
 		script.Parent.Parent.radio_button_checked.Visible = false
 	end)
 end
-coroutine.wrap(ZPHI_fake_script)()
-local function JBYGBBR_fake_script() -- radio_button_unchecked.LocalScript 
+coroutine.wrap(OCLYO_fake_script)()
+local function EXWR_fake_script() -- radio_button_unchecked.LocalScript 
 	local script = Instance.new('LocalScript', radio_button_unchecked)
 
 	script.Parent.Parent.radio_button_unchecked.MouseButton1Click:Connect(function()
@@ -1252,8 +1254,8 @@ local function JBYGBBR_fake_script() -- radio_button_unchecked.LocalScript
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-532.74, 58.99, -464.29))
 	end)
 end
-coroutine.wrap(JBYGBBR_fake_script)()
-local function JIANUPJ_fake_script() -- Key.LocalScript 
+coroutine.wrap(EXWR_fake_script)()
+local function EURQU_fake_script() -- Key.LocalScript 
 	local script = Instance.new('LocalScript', Key)
 
 	local UIS = game:GetService('UserInputService')
@@ -1326,4 +1328,4 @@ local function JIANUPJ_fake_script() -- Key.LocalScript
 	
 	end)
 end
-coroutine.wrap(JIANUPJ_fake_script)()
+coroutine.wrap(EURQU_fake_script)()
