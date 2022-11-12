@@ -1,7 +1,7 @@
---[====[
-	made by Darkzin
+--[====[ 
+	Made by darkzin
 	
-	Roblox profile "Darkzin"
+	roblox profile = "https://www.roblox.com/users/834538235/profile"
 --]====]
 
 local Key = Instance.new("ScreenGui")
@@ -49,11 +49,29 @@ local hydroxide = Instance.new("TextButton")
 local nolag = Instance.new("TextButton")
 local makuro = Instance.new("TextButton")
 local copymaps = Instance.new("TextButton")
+local gamehub = Instance.new("TextButton")
+local AdminGui = Instance.new("ImageLabel")
+local Frame_6 = Instance.new("Frame")
+local TextLabel_7 = Instance.new("TextLabel")
+local DontPressBro = Instance.new("TextButton")
+local closeadmingui = Instance.new("TextButton")
+local opengamehubv2 = Instance.new("ImageLabel")
+local Frame_7 = Instance.new("Frame")
+local TextLabel_8 = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local TextButton = Instance.new("TextButton")
+local closegamehubguiv22 = Instance.new("TextButton")
+local menuallstartowerdefense = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local radio_button_unchecked = Instance.new("ImageButton")
+local radio_button_checked = Instance.new("ImageButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextLabel_9 = Instance.new("TextLabel")
 
 --Properties:
 
 Key.Name = "Key"
-Key.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Key.Parent = (game:GetService("CoreGui") or gethui())
 Key.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 keysystem.Name = "key system"
@@ -61,6 +79,7 @@ keysystem.Parent = Key
 keysystem.BackgroundTransparency = 1.000
 keysystem.Position = UDim2.new(0.303856999, 0, 0.251953125, 0)
 keysystem.Size = UDim2.new(0, 417, 0, 253)
+keysystem.Visible = false
 keysystem.Image = "rbxassetid://2790382281"
 keysystem.ScaleType = Enum.ScaleType.Slice
 keysystem.SliceCenter = Rect.new(4, 4, 252, 252)
@@ -248,15 +267,15 @@ wadsdad.TextWrapped = true
 
 Frame_3.Parent = menu
 Frame_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame_3.Position = UDim2.new(0.299760193, 0, 0.292490065, 0)
+Frame_3.Position = UDim2.new(0.316546768, 0, 0.292490065, 0)
 Frame_3.Size = UDim2.new(0, 0, 0, 130)
 
 asdwasdgsdfg.Name = "asdwasdgsdfg"
 asdwasdgsdfg.Parent = menu
 asdwasdgsdfg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 asdwasdgsdfg.BorderSizePixel = 0
-asdwasdgsdfg.Position = UDim2.new(0.316546768, 0, 0.296442688, 0)
-asdwasdgsdfg.Size = UDim2.new(0, 127, 0, 23)
+asdwasdgsdfg.Position = UDim2.new(0.345323741, 0, 0.296442688, 0)
+asdwasdgsdfg.Size = UDim2.new(0, 115, 0, 23)
 asdwasdgsdfg.Font = Enum.Font.SourceSans
 asdwasdgsdfg.Text = "Kill Players"
 asdwasdgsdfg.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -268,7 +287,7 @@ kill.Name = "kill"
 kill.Parent = menu
 kill.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 kill.BorderColor3 = Color3.fromRGB(73, 114, 143)
-kill.Position = UDim2.new(0.371702641, 0, 0.561264813, 0)
+kill.Position = UDim2.new(0.393285364, 0, 0.561264813, 0)
 kill.Size = UDim2.new(0, 74, 0, 20)
 kill.Font = Enum.Font.Bangers
 kill.Text = "kill"
@@ -277,7 +296,7 @@ kill.TextSize = 14.000
 
 TextBox_2.Parent = menu
 TextBox_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextBox_2.Position = UDim2.new(0.345323741, 0, 0.44268775, 0)
+TextBox_2.Position = UDim2.new(0.366906464, 0, 0.446640313, 0)
 TextBox_2.Size = UDim2.new(0, 96, 0, 23)
 TextBox_2.Font = Enum.Font.SourceSans
 TextBox_2.PlaceholderText = "Player name"
@@ -287,7 +306,7 @@ TextBox_2.TextSize = 14.000
 
 Frame_4.Parent = menu
 Frame_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame_4.Position = UDim2.new(0.64268589, 0, 0.292490065, 0)
+Frame_4.Position = UDim2.new(0.649880171, 0, 0.292490065, 0)
 Frame_4.Size = UDim2.new(0, 0, 0, 130)
 
 asdawdasdgfghjk.Name = "asdawdasdgfghjk"
@@ -546,17 +565,197 @@ copymaps.TextScaled = true
 copymaps.TextSize = 14.000
 copymaps.TextWrapped = true
 
+gamehub.Name = "gamehub"
+gamehub.Parent = nextpage
+gamehub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+gamehub.BorderSizePixel = 2
+gamehub.Position = UDim2.new(0.501199067, 0, 0.426877469, 0)
+gamehub.Size = UDim2.new(0, 81, 0, 26)
+gamehub.Font = Enum.Font.Kalam
+gamehub.Text = "Game Hub"
+gamehub.TextColor3 = Color3.fromRGB(0, 0, 0)
+gamehub.TextScaled = true
+gamehub.TextSize = 14.000
+gamehub.TextWrapped = true
+
+AdminGui.Name = "AdminGui"
+AdminGui.Parent = Key
+AdminGui.BackgroundTransparency = 1.000
+AdminGui.Position = UDim2.new(0.303856999, 0, 0.251953125, 0)
+AdminGui.Size = UDim2.new(0, 417, 0, 253)
+AdminGui.Visible = false
+AdminGui.Image = "rbxassetid://2790382281"
+AdminGui.ScaleType = Enum.ScaleType.Slice
+AdminGui.SliceCenter = Rect.new(4, 4, 252, 252)
+
+Frame_6.Parent = AdminGui
+Frame_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_6.Position = UDim2.new(0.0143884895, 0, 0.110671937, 0)
+Frame_6.Size = UDim2.new(0, 405, 0, 0)
+
+TextLabel_7.Parent = AdminGui
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0.366906464, 0, 0, 0)
+TextLabel_7.Size = UDim2.new(0, 110, 0, 20)
+TextLabel_7.Font = Enum.Font.Kalam
+TextLabel_7.Text = "Admin Gui"
+TextLabel_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 14.000
+TextLabel_7.TextWrapped = true
+
+DontPressBro.Name = "DontPressBro"
+DontPressBro.Parent = AdminGui
+DontPressBro.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DontPressBro.BorderSizePixel = 0
+DontPressBro.Position = UDim2.new(0.0143884895, 0, 0.936758876, 0)
+DontPressBro.Size = UDim2.new(0, 52, 0, 16)
+DontPressBro.Font = Enum.Font.JosefinSans
+DontPressBro.Text = "DANGER DONT PRESS"
+DontPressBro.TextColor3 = Color3.fromRGB(0, 0, 0)
+DontPressBro.TextScaled = true
+DontPressBro.TextSize = 14.000
+DontPressBro.TextWrapped = true
+
+closeadmingui.Name = "closeadmingui"
+closeadmingui.Parent = AdminGui
+closeadmingui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+closeadmingui.BorderSizePixel = 0
+closeadmingui.Position = UDim2.new(0.92086333, 0, 0, 0)
+closeadmingui.Size = UDim2.new(0, 27, 0, 21)
+closeadmingui.Font = Enum.Font.Kalam
+closeadmingui.Text = "X"
+closeadmingui.TextColor3 = Color3.fromRGB(255, 6, 10)
+closeadmingui.TextScaled = true
+closeadmingui.TextSize = 14.000
+closeadmingui.TextWrapped = true
+
+opengamehubv2.Name = "opengamehubv2"
+opengamehubv2.Parent = Key
+opengamehubv2.BackgroundTransparency = 1.000
+opengamehubv2.Position = UDim2.new(0.30399999, 0, 0.252000004, 0)
+opengamehubv2.Size = UDim2.new(0, 417, 0, 253)
+opengamehubv2.Visible = false
+opengamehubv2.Image = "rbxassetid://2790382281"
+opengamehubv2.ScaleType = Enum.ScaleType.Slice
+opengamehubv2.SliceCenter = Rect.new(4, 4, 252, 252)
+
+Frame_7.Parent = opengamehubv2
+Frame_7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_7.Position = UDim2.new(0.0143884895, 0, 0.110671937, 0)
+Frame_7.Size = UDim2.new(0, 405, 0, 0)
+
+TextLabel_8.Parent = opengamehubv2
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BorderSizePixel = 0
+TextLabel_8.Position = UDim2.new(0.366906464, 0, 0, 0)
+TextLabel_8.Size = UDim2.new(0, 110, 0, 21)
+TextLabel_8.Font = Enum.Font.Kalam
+TextLabel_8.Text = "Game Hub"
+TextLabel_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 14.000
+TextLabel_8.TextWrapped = true
+
+ImageLabel.Parent = opengamehubv2
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Position = UDim2.new(0.0479616337, 0, 0.169960484, 0)
+ImageLabel.Size = UDim2.new(0, 122, 0, 118)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=11541963801"
+
+TextButton.Parent = opengamehubv2
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.0479616299, 0, 0.636363626, 0)
+TextButton.Size = UDim2.new(0, 122, 0, 23)
+TextButton.Font = Enum.Font.Kalam
+TextButton.Text = "Run"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+closegamehubguiv22.Name = "closegamehubguiv22"
+closegamehubguiv22.Parent = opengamehubv2
+closegamehubguiv22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+closegamehubguiv22.BorderSizePixel = 0
+closegamehubguiv22.Position = UDim2.new(0.906474829, 0, 0, 0)
+closegamehubguiv22.Size = UDim2.new(0, 33, 0, 23)
+closegamehubguiv22.Font = Enum.Font.Kalam
+closegamehubguiv22.Text = "X"
+closegamehubguiv22.TextColor3 = Color3.fromRGB(255, 0, 4)
+closegamehubguiv22.TextScaled = true
+closegamehubguiv22.TextSize = 14.000
+closegamehubguiv22.TextWrapped = true
+
+menuallstartowerdefense.Name = "menuallstartowerdefense"
+menuallstartowerdefense.Parent = Key
+menuallstartowerdefense.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+menuallstartowerdefense.BorderColor3 = Color3.fromRGB(27, 42, 53)
+menuallstartowerdefense.BorderSizePixel = 0
+menuallstartowerdefense.Position = UDim2.new(0.300934464, 0, 0.263940513, 0)
+menuallstartowerdefense.Size = UDim2.new(0, 417, 0, 253)
+menuallstartowerdefense.Visible = false
+
+UICorner.CornerRadius = UDim.new(0, 4)
+UICorner.Parent = menuallstartowerdefense
+
+radio_button_unchecked.Name = "radio_button_unchecked"
+radio_button_unchecked.Parent = menuallstartowerdefense
+radio_button_unchecked.BackgroundTransparency = 1.000
+radio_button_unchecked.Position = UDim2.new(0.32416302, 0, 0.327813804, 0)
+radio_button_unchecked.Size = UDim2.new(0, 25, 0, 25)
+radio_button_unchecked.ZIndex = 2
+radio_button_unchecked.Image = "rbxassetid://3926309567"
+radio_button_unchecked.ImageRectOffset = Vector2.new(628, 420)
+radio_button_unchecked.ImageRectSize = Vector2.new(48, 48)
+
+radio_button_checked.Name = "radio_button_checked"
+radio_button_checked.Parent = radio_button_unchecked
+radio_button_checked.BackgroundTransparency = 1.000
+radio_button_checked.Position = UDim2.new(-0.0199999809, 0, -0.0199999809, 0)
+radio_button_checked.Size = UDim2.new(0, 25, 0, 25)
+radio_button_checked.Visible = false
+radio_button_checked.ZIndex = 2
+radio_button_checked.Image = "rbxassetid://3926309567"
+radio_button_checked.ImageRectOffset = Vector2.new(784, 420)
+radio_button_checked.ImageRectSize = Vector2.new(48, 48)
+
+TextButton_2.Parent = menuallstartowerdefense
+TextButton_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.Position = UDim2.new(0.258992791, 0, 0.0276679844, 0)
+TextButton_2.Size = UDim2.new(0, 200, 0, 24)
+TextButton_2.Font = Enum.Font.Kalam
+TextButton_2.Text = "Word 1"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+TextLabel_9.Parent = menuallstartowerdefense
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_9.BorderSizePixel = 0
+TextLabel_9.Position = UDim2.new(0.0383693054, 0, 0.335968405, 0)
+TextLabel_9.Size = UDim2.new(0, 104, 0, 20)
+TextLabel_9.Font = Enum.Font.SourceSans
+TextLabel_9.Text = "Auto Farm "
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextScaled = true
+TextLabel_9.TextSize = 14.000
+TextLabel_9.TextWrapped = true
+
 -- Scripts:
 
-local function ANWWAF_fake_script() -- Credits.LocalScript 
+local function ZLDT_fake_script() -- Credits.LocalScript 
 	local script = Instance.new('LocalScript', Credits)
 
 	script.Parent.Parent.Credits.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.creditsgui.Visible = true
 	end)
 end
-coroutine.wrap(ANWWAF_fake_script)()
-local function LHWKKGB_fake_script() -- Check.LocalScript 
+coroutine.wrap(ZLDT_fake_script)()
+local function LXQZAW_fake_script() -- Check.LocalScript 
 	local script = Instance.new('LocalScript', Check)
 
 	script.Parent.Parent.Check.MouseButton1Click:Connect(function()
@@ -582,16 +781,16 @@ local function LHWKKGB_fake_script() -- Check.LocalScript
 	
 	
 end
-coroutine.wrap(LHWKKGB_fake_script)()
-local function OQLXSJG_fake_script() -- freekeyyy.LocalScript 
+coroutine.wrap(LXQZAW_fake_script)()
+local function JIJENEJ_fake_script() -- freekeyyy.LocalScript 
 	local script = Instance.new('LocalScript', freekeyyy)
 
 	script.Parent.Parent.freekeyyy.MouseButton1Click:Connect(function()
 		setclipboard("CpESIRTGb&cNUaoa%pqhKP!PJMc06tOS7OM@jd05R0pd#3O")
 	end)
 end
-coroutine.wrap(OQLXSJG_fake_script)()
-local function NMRA_fake_script() -- Key.LocalScript 
+coroutine.wrap(JIJENEJ_fake_script)()
+local function YWTUKTW_fake_script() -- Key.LocalScript 
 	local script = Instance.new('LocalScript', Key)
 
 	local UIS = game:GetService('UserInputService')
@@ -663,8 +862,8 @@ local function NMRA_fake_script() -- Key.LocalScript
 	
 	end)
 end
-coroutine.wrap(NMRA_fake_script)()
-local function PWPGVBR_fake_script() -- Key.LocalScript 
+coroutine.wrap(YWTUKTW_fake_script)()
+local function YNPVP_fake_script() -- Key.LocalScript 
 	local script = Instance.new('LocalScript', Key)
 
 	script.Parent["key system"].Discord.MouseButton1Click:Connect(function()
@@ -678,8 +877,8 @@ local function PWPGVBR_fake_script() -- Key.LocalScript
 		setclipboard("discord.gg/Sjk28Sjus7")
 	end)
 end
-coroutine.wrap(PWPGVBR_fake_script)()
-local function DRIS_fake_script() -- minimize.LocalScript 
+coroutine.wrap(YNPVP_fake_script)()
+local function FOIW_fake_script() -- minimize.LocalScript 
 	local script = Instance.new('LocalScript', minimize)
 
 	script.Parent.Parent.minimize.MouseButton1Click:Connect(function()
@@ -687,16 +886,16 @@ local function DRIS_fake_script() -- minimize.LocalScript
 		script.Parent.Parent.Parent["open menu"].Visible = true
 	end)
 end
-coroutine.wrap(DRIS_fake_script)()
-local function JFIBOAD_fake_script() -- close.LocalScript 
+coroutine.wrap(FOIW_fake_script)()
+local function CAMLX_fake_script() -- close.LocalScript 
 	local script = Instance.new('LocalScript', close)
 
 	script.Parent.Parent.close.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.menu.Visible = false
 	end)
 end
-coroutine.wrap(JFIBOAD_fake_script)()
-local function FHGPDG_fake_script() -- next.LocalScript 
+coroutine.wrap(CAMLX_fake_script)()
+local function HGNZ_fake_script() -- next.LocalScript 
 	local script = Instance.new('LocalScript', next)
 
 	script.Parent.Parent.next.MouseButton1Click:Connect(function()
@@ -704,21 +903,18 @@ local function FHGPDG_fake_script() -- next.LocalScript
 		script.Parent.Parent.Parent.nextpage.Visible = true
 	end)
 end
-coroutine.wrap(FHGPDG_fake_script)()
-local function NEZHQ_fake_script() -- admingui.LocalScript 
+coroutine.wrap(HGNZ_fake_script)()
+local function RERE_fake_script() -- admingui.LocalScript 
 	local script = Instance.new('LocalScript', admingui)
 
 	script.Parent.Parent["admin gui"].MouseButton1Click:Connect(function()
-		if game:GetService("Workspace").FilteringEnabled == true then
-			game:GetService("StarterGui"):SetCore("SendNotification", {
-				Title = " Coming Soon ";
-				Text = " i sorry bro :( ";
-			})
-		end
+		script.Parent.Parent.Parent.AdminGui.Visible = true
+		wait(0.1)
+		script.Parent.Parent.Parent.menu.Visible = false
 	end)
 end
-coroutine.wrap(NEZHQ_fake_script)()
-local function GCZJYC_fake_script() -- menu.Script 
+coroutine.wrap(RERE_fake_script)()
+local function YGVLLG_fake_script() -- menu.Script 
 	local script = Instance.new('Script', menu)
 
 	h = script.Parent.Parent.Parent.Parent.Character.Humanoid
@@ -739,16 +935,16 @@ local function GCZJYC_fake_script() -- menu.Script
 	script.Parent.Faster.MouseButton1Click:connect(faster)
 	
 end
-coroutine.wrap(GCZJYC_fake_script)()
-local function IRNTG_fake_script() -- hehe.LocalScript 
+coroutine.wrap(YGVLLG_fake_script)()
+local function CLFCIZ_fake_script() -- hehe.LocalScript 
 	local script = Instance.new('LocalScript', hehe)
 
 	script.Parent.Parent.hehe.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.creditsgui.Visible = false
 	end)
 end
-coroutine.wrap(IRNTG_fake_script)()
-local function HKUQKYG_fake_script() -- openmenu.LocalScript 
+coroutine.wrap(CLFCIZ_fake_script)()
+local function IEBQZ_fake_script() -- openmenu.LocalScript 
 	local script = Instance.new('LocalScript', openmenu)
 
 	script.Parent.Parent["open menu"].MouseButton1Click:Connect(function()
@@ -756,8 +952,8 @@ local function HKUQKYG_fake_script() -- openmenu.LocalScript
 		script.Parent.Parent["open menu"].Visible = false
 	end)
 end
-coroutine.wrap(HKUQKYG_fake_script)()
-local function VGWN_fake_script() -- openmenu.LocalScript 
+coroutine.wrap(IEBQZ_fake_script)()
+local function NXEI_fake_script() -- openmenu.LocalScript 
 	local script = Instance.new('LocalScript', openmenu)
 
 	local UIS = game:GetService('UserInputService')
@@ -830,16 +1026,16 @@ local function VGWN_fake_script() -- openmenu.LocalScript
 	
 	end)
 end
-coroutine.wrap(VGWN_fake_script)()
-local function GRLH_fake_script() -- Key.LocalScript 
+coroutine.wrap(NXEI_fake_script)()
+local function KZNXER_fake_script() -- Key.LocalScript 
 	local script = Instance.new('LocalScript', Key)
 
 	script.Parent.menu.kill.MouseButton1Click:Connect(function()
 		game.Players:FindFirstChild(script.Parent.menu.TextBox.Text).Character.Humanoid.Health = 0
 	end)
 end
-coroutine.wrap(GRLH_fake_script)()
-local function BKABSVI_fake_script() -- back.LocalScript 
+coroutine.wrap(KZNXER_fake_script)()
+local function WOOG_fake_script() -- back.LocalScript 
 	local script = Instance.new('LocalScript', back)
 
 	script.Parent.Parent.Parent.nextpage.back.MouseButton1Click:Connect(function()
@@ -847,8 +1043,8 @@ local function BKABSVI_fake_script() -- back.LocalScript
 		script.Parent.Parent.Parent.menu.Visible = true
 	end)
 end
-coroutine.wrap(BKABSVI_fake_script)()
-local function REOVTS_fake_script() -- btools.LocalScript 
+coroutine.wrap(WOOG_fake_script)()
+local function IKADJBI_fake_script() -- btools.LocalScript 
 	local script = Instance.new('LocalScript', btools)
 
 	script.Parent.Parent.btools.MouseButton1Click:Connect(function()
@@ -906,32 +1102,32 @@ local function REOVTS_fake_script() -- btools.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(REOVTS_fake_script)()
-local function ZLILS_fake_script() -- infyield.LocalScript 
+coroutine.wrap(IKADJBI_fake_script)()
+local function RFFEN_fake_script() -- infyield.LocalScript 
 	local script = Instance.new('LocalScript', infyield)
 
 	script.Parent.Parent.infyield.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Yield.txt"))()
 	end)
 end
-coroutine.wrap(ZLILS_fake_script)()
-local function SUPOTQ_fake_script() -- Damain.LocalScript 
+coroutine.wrap(RFFEN_fake_script)()
+local function UZBT_fake_script() -- Damain.LocalScript 
 	local script = Instance.new('LocalScript', Damain)
 
 	script.Parent.Parent.Damain.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
 	end)
 end
-coroutine.wrap(SUPOTQ_fake_script)()
-local function ZRMOH_fake_script() -- dex.LocalScript 
+coroutine.wrap(UZBT_fake_script)()
+local function XINXBG_fake_script() -- dex.LocalScript 
 	local script = Instance.new('LocalScript', dex)
 
 	script.Parent.Parent.dex.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
 	end)
 end
-coroutine.wrap(ZRMOH_fake_script)()
-local function UFQMZB_fake_script() -- orca.LocalScript 
+coroutine.wrap(XINXBG_fake_script)()
+local function JPXKBDU_fake_script() -- orca.LocalScript 
 	local script = Instance.new('LocalScript', orca)
 
 	script.Parent.Parent.orca.MouseButton1Click:Connect(function()
@@ -940,8 +1136,8 @@ local function UFQMZB_fake_script() -- orca.LocalScript
 		)()
 	end)
 end
-coroutine.wrap(UFQMZB_fake_script)()
-local function GNJB_fake_script() -- hydroxide.LocalScript 
+coroutine.wrap(JPXKBDU_fake_script)()
+local function IONCB_fake_script() -- hydroxide.LocalScript 
 	local script = Instance.new('LocalScript', hydroxide)
 
 	script.Parent.Parent.hydroxide.MouseButton1Click:Connect(function()
@@ -956,28 +1152,178 @@ local function GNJB_fake_script() -- hydroxide.LocalScript
 		webImport("ui/main")
 	end)
 end
-coroutine.wrap(GNJB_fake_script)()
-local function FQYT_fake_script() -- nolag.LocalScript 
+coroutine.wrap(IONCB_fake_script)()
+local function TCFTV_fake_script() -- nolag.LocalScript 
 	local script = Instance.new('LocalScript', nolag)
 
 	script.Parent.Parent.nolag.MouseButton1Click:Connect(function()
 		setfpscap(99)
 	end)
 end
-coroutine.wrap(FQYT_fake_script)()
-local function PAFJPX_fake_script() -- makuro.LocalScript 
+coroutine.wrap(TCFTV_fake_script)()
+local function WNUM_fake_script() -- makuro.LocalScript 
 	local script = Instance.new('LocalScript', makuro)
 
 	script.Parent.Parent.makuro.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
 	end)
 end
-coroutine.wrap(PAFJPX_fake_script)()
-local function OHWF_fake_script() -- copymaps.LocalScript 
+coroutine.wrap(WNUM_fake_script)()
+local function SYIVZ_fake_script() -- copymaps.LocalScript 
 	local script = Instance.new('LocalScript', copymaps)
 
 	script.Parent.Parent["copy maps"].MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Copy%20maps'))()
 	end)
 end
-coroutine.wrap(OHWF_fake_script)()
+coroutine.wrap(SYIVZ_fake_script)()
+local function PSLWXGI_fake_script() -- gamehub.LocalScript 
+	local script = Instance.new('LocalScript', gamehub)
+
+	script.Parent.Parent.gamehub.MouseButton1Click:Connect(function()
+		
+		if game:GetService("Workspace").FilteringEnabled == true then
+			game:GetService("StarterGui"):SetCore("SendNotification", {
+				Title = " Game hub Loaded Have Fun :) ";
+				Text = " ... ";
+			})
+		end
+		
+		wait(2)
+		
+		script.Parent.Parent.Parent.nextpage.Visible = false
+		wait(0.1)
+		script.Parent.Parent.Parent.opengamehubv2.Visible = true
+	
+	end)
+end
+coroutine.wrap(PSLWXGI_fake_script)()
+local function XHCROD_fake_script() -- DontPressBro.LocalScript 
+	local script = Instance.new('LocalScript', DontPressBro)
+
+	script.Parent.Parent.DontPressBro.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer:Kick("LOL XD")
+	end)
+end
+coroutine.wrap(XHCROD_fake_script)()
+local function LSBAV_fake_script() -- closeadmingui.LocalScript 
+	local script = Instance.new('LocalScript', closeadmingui)
+
+	script.Parent.Parent.closeadmingui.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.AdminGui.Visible = false
+		wait(0.1)
+		script.Parent.Parent.Parent.menu.Visible = true
+	end)
+end
+coroutine.wrap(LSBAV_fake_script)()
+local function IOZTKZ_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	
+end
+coroutine.wrap(IOZTKZ_fake_script)()
+local function DMSUSI_fake_script() -- closegamehubguiv22.LocalScript 
+	local script = Instance.new('LocalScript', closegamehubguiv22)
+
+	script.Parent.Parent.closegamehubguiv22.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.opengamehubv2.Visible = false
+		wait(0.1)
+		script.Parent.Parent.Parent.nextpage.Visible = true
+	end)
+end
+coroutine.wrap(DMSUSI_fake_script)()
+local function ZPHI_fake_script() -- radio_button_checked.LocalScript 
+	local script = Instance.new('LocalScript', radio_button_checked)
+
+	script.Parent.Parent.radio_button_checked.MouseButton1Click:Connect(function()
+		script.Parent.Parent.radio_button_checked.Visible = false
+	end)
+end
+coroutine.wrap(ZPHI_fake_script)()
+local function JBYGBBR_fake_script() -- radio_button_unchecked.LocalScript 
+	local script = Instance.new('LocalScript', radio_button_unchecked)
+
+	script.Parent.Parent.radio_button_unchecked.MouseButton1Click:Connect(function()
+		
+		script.Parent.radio_button_checked.Visible = true
+		
+		wait(0.1)
+		
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-532.74, 58.99, -464.29))
+	end)
+end
+coroutine.wrap(JBYGBBR_fake_script)()
+local function JIANUPJ_fake_script() -- Key.LocalScript 
+	local script = Instance.new('LocalScript', Key)
+
+	local UIS = game:GetService('UserInputService')
+	
+	local frame = script.Parent.menuallstartowerdefense
+	
+	
+	
+	local dragToggle = nil
+	
+	local dragSpeed = 0.25
+	
+	local dragStart = nil
+	
+	local startPos = nil
+	
+	
+	
+	local function updateInput(input)
+	
+		local delta = input.Position - dragStart
+	
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+	
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+	end
+	
+	
+	
+	frame.InputBegan:Connect(function(input)
+	
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+	
+			dragToggle = true
+	
+			dragStart = input.Position
+	
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+	
+				if input.UserInputState == Enum.UserInputState.End then
+	
+					dragToggle = false
+	
+				end
+	
+			end)
+	
+		end
+	
+	end)
+	
+	
+	
+	UIS.InputChanged:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	
+			if dragToggle then
+	
+				updateInput(input)
+	
+			end
+	
+		end
+	
+	end)
+end
+coroutine.wrap(JIANUPJ_fake_script)()
