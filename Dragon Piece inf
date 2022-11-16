@@ -1,0 +1,69 @@
+--Intro
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " Made by darkzin ";
+		Text = " have fun :) ";
+	})
+end
+
+wait(2)
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " wait 2 seconds pls ";
+		Text = " ... ";
+	})
+end
+
+wait(2)
+
+
+
+--Propri
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " inf money script loaded... ";
+		Text = " ... ";
+	})
+end
+game.Players.LocalPlayer.Data.Beli.Value = "9e9"
+
+wait(2)
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " inf level script loaded... ";
+		Text = " ... ";
+	})
+end
+game.Players.LocalPlayer.Data.Levels.Value = '9e9'
+
+wait(2)
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " inf PointsS script loaded... ";
+		Text = " ... ";
+	})
+end
+game.Players.LocalPlayer.Data.PointsS.Value = "9e9"
+
+wait(2)
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " inf points stats script loaded... ";
+		Text = " ... ";
+	})
+end
+game.Players.LocalPlayer.Data.Points.Value = "9e9"
+
+wait(5)
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " thanks for use my script :) ";
+		Text = " ... ";
+	})
+end
