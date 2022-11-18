@@ -1,0 +1,49 @@
+-- Made by dakrzin (Roblox)
+-- AloneBr (GitHub)
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " Made by darkzin ";
+		Text = " Flee the Facility Op Script, have fun :) ";
+	})
+end
+
+wait(2)
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " Inf money loaded ";
+		Text = " ... ";
+	})
+end
+game.Players.LocalPlayer.SavedPlayerStatsModule.Credits.Value = "9e9"
+
+wait(2)
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " inf stats donation loaded ";
+		Text = " ... ";
+	})
+end
+game.Players.LocalPlayer.SavedPlayerStatsModule.DonationTotal.Value = "9e9"
+
+wait(2)
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " inf level laoded ";
+		Text = " ... ";
+	})
+end
+game.Players.LocalPlayer.SavedPlayerStatsModule.Level.Value = "9e9"
+
+wait(2)
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " inf XP laoded ";
+		Text = " ... ";
+	})
+end
+game.Players.LocalPlayer.SavedPlayerStatsModule.Xp.Value = "9e9"
