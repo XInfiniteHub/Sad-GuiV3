@@ -1,0 +1,104 @@
+-- GUI to Lua
+-----
+-- Version: 2.0.
+-- Made by chrisopdemobiel.
+
+-- Instances:
+
+local TrollGuiFleeTheFacility = Instance.new("ScreenGui")
+local Menu = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local close = Instance.new("ImageButton")
+local adjust = Instance.new("ImageButton")
+local radio_button_unchecked = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+
+--Properties:
+
+TrollGuiFleeTheFacility.Name = "TrollGuiFleeTheFacility"
+TrollGuiFleeTheFacility.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Menu.Name = "Menu"
+Menu.Parent = TrollGuiFleeTheFacility
+Menu.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Menu.Position = UDim2.new(0.25224635, 0, 0.229637742, 0)
+Menu.Size = UDim2.new(0, 520, 0, 289)
+UICorner.Parent = Menu
+
+TextLabel.Parent = Menu
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(0, 236, 0, 20)
+TextLabel.Font = Enum.Font.Gotham
+TextLabel.Text = "Troll Gui Flee The Facility / Made by Darkzin"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = Menu
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.0461538471, 0, 0.26333335, 0)
+TextLabel_2.Size = UDim2.new(0, 112, 0, 21)
+TextLabel_2.Font = Enum.Font.Gotham
+TextLabel_2.Text = "1 Hp (Visual)"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+close.Name = "close"
+close.Parent = Menu
+close.BackgroundTransparency = 1.000
+close.Position = UDim2.new(0.951923072, 0, -0.00173008442, 0)
+close.Size = UDim2.new(0, 25, 0, 25)
+close.ZIndex = 2
+close.Image = "rbxassetid://3926305904"
+close.ImageRectOffset = Vector2.new(284, 4)
+close.ImageRectSize = Vector2.new(24, 24)
+
+adjust.Name = "adjust"
+adjust.Parent = Menu
+adjust.BackgroundTransparency = 1.000
+adjust.LayoutOrder = 5
+adjust.Position = UDim2.new(0.282692313, 0, 0.261245668, 0)
+adjust.Size = UDim2.new(0, 25, 0, 25)
+adjust.Visible = false
+adjust.ZIndex = 2
+adjust.Image = "rbxassetid://3926307971"
+adjust.ImageRectOffset = Vector2.new(444, 324)
+adjust.ImageRectSize = Vector2.new(36, 36)
+
+radio_button_unchecked.Name = "radio_button_unchecked"
+radio_button_unchecked.Parent = Menu
+radio_button_unchecked.BackgroundTransparency = 1.000
+radio_button_unchecked.LayoutOrder = 17
+radio_button_unchecked.Position = UDim2.new(0.282692313, 0, 0.261245668, 0)
+radio_button_unchecked.Size = UDim2.new(0, 25, 0, 25)
+radio_button_unchecked.ZIndex = 2
+radio_button_unchecked.Image = "rbxassetid://3926309567"
+radio_button_unchecked.ImageRectOffset = Vector2.new(628, 420)
+radio_button_unchecked.ImageRectSize = Vector2.new(48, 48)
+
+-- Scripts:
+
+local function EIJI_fake_script() -- Menu.LocalScript 
+	local script = Instance.new('LocalScript', Menu)
+
+	script.Parent.close.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Menu.Visible = false
+	end)
+end
+coroutine.wrap(EIJI_fake_script)()
+local function KLRN_fake_script() -- radio_button_unchecked.LocalScript 
+	local script = Instance.new('LocalScript', radio_button_unchecked)
+
+	script.Parent.Parent.radio_button_unchecked.MouseButton1Click:Connect(function()
+		script.Parent.Parent.adjust.Visible = true
+		wait(0.1)
+		game.Players.LocalPlayer.TempPlayerStatsModule.Health.Value = "1"
+	end)
+end
+coroutine.wrap(KLRN_fake_script)()
