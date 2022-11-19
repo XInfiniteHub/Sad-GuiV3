@@ -10,8 +10,11 @@ local Menu = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
 local close = Instance.new("ImageButton")
-local adjust = Instance.new("ImageButton")
 local radio_button_unchecked = Instance.new("ImageButton")
+local radio_button_checked = Instance.new("ImageButton")
+local TextLabel_3 = Instance.new("TextLabel")
+local radio_button_uncheckedtwo = Instance.new("ImageButton")
+local radio_button_checkedtwo = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
 
 --Properties:
@@ -59,18 +62,6 @@ close.Image = "rbxassetid://3926305904"
 close.ImageRectOffset = Vector2.new(284, 4)
 close.ImageRectSize = Vector2.new(24, 24)
 
-adjust.Name = "adjust"
-adjust.Parent = Menu
-adjust.BackgroundTransparency = 1.000
-adjust.LayoutOrder = 5
-adjust.Position = UDim2.new(0.282692313, 0, 0.261245668, 0)
-adjust.Size = UDim2.new(0, 25, 0, 25)
-adjust.Visible = false
-adjust.ZIndex = 2
-adjust.Image = "rbxassetid://3926307971"
-adjust.ImageRectOffset = Vector2.new(444, 324)
-adjust.ImageRectSize = Vector2.new(36, 36)
-
 radio_button_unchecked.Name = "radio_button_unchecked"
 radio_button_unchecked.Parent = Menu
 radio_button_unchecked.BackgroundTransparency = 1.000
@@ -82,23 +73,184 @@ radio_button_unchecked.Image = "rbxassetid://3926309567"
 radio_button_unchecked.ImageRectOffset = Vector2.new(628, 420)
 radio_button_unchecked.ImageRectSize = Vector2.new(48, 48)
 
+radio_button_checked.Name = "radio_button_checked"
+radio_button_checked.Parent = Menu
+radio_button_checked.BackgroundTransparency = 1.000
+radio_button_checked.LayoutOrder = 6
+radio_button_checked.Position = UDim2.new(0.282692313, 0, 0.261245668, 0)
+radio_button_checked.Size = UDim2.new(0, 25, 0, 25)
+radio_button_checked.Visible = false
+radio_button_checked.ZIndex = 2
+radio_button_checked.Image = "rbxassetid://3926309567"
+radio_button_checked.ImageRectOffset = Vector2.new(784, 420)
+radio_button_checked.ImageRectSize = Vector2.new(48, 48)
+
+TextLabel_3.Parent = Menu
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.0461538471, 0, 0.46056518, 0)
+TextLabel_3.Size = UDim2.new(0, 112, 0, 21)
+TextLabel_3.Font = Enum.Font.Gotham
+TextLabel_3.Text = "100 Hp (Visual)"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+radio_button_uncheckedtwo.Name = "radio_button_uncheckedtwo"
+radio_button_uncheckedtwo.Parent = Menu
+radio_button_uncheckedtwo.BackgroundTransparency = 1.000
+radio_button_uncheckedtwo.LayoutOrder = 17
+radio_button_uncheckedtwo.Position = UDim2.new(0.282692313, 0, 0.458477527, 0)
+radio_button_uncheckedtwo.Size = UDim2.new(0, 25, 0, 25)
+radio_button_uncheckedtwo.ZIndex = 2
+radio_button_uncheckedtwo.Image = "rbxassetid://3926309567"
+radio_button_uncheckedtwo.ImageRectOffset = Vector2.new(628, 420)
+radio_button_uncheckedtwo.ImageRectSize = Vector2.new(48, 48)
+
+radio_button_checkedtwo.Name = "radio_button_checkedtwo"
+radio_button_checkedtwo.Parent = Menu
+radio_button_checkedtwo.BackgroundTransparency = 1.000
+radio_button_checkedtwo.LayoutOrder = 6
+radio_button_checkedtwo.Position = UDim2.new(0.282692313, 0, 0.458477497, 0)
+radio_button_checkedtwo.Size = UDim2.new(0, 25, 0, 25)
+radio_button_checkedtwo.Visible = false
+radio_button_checkedtwo.ZIndex = 2
+radio_button_checkedtwo.Image = "rbxassetid://3926309567"
+radio_button_checkedtwo.ImageRectOffset = Vector2.new(784, 420)
+radio_button_checkedtwo.ImageRectSize = Vector2.new(48, 48)
+
 -- Scripts:
 
-local function EIJI_fake_script() -- Menu.LocalScript 
+local function UTYPK_fake_script() -- Menu.LocalScript 
 	local script = Instance.new('LocalScript', Menu)
 
 	script.Parent.close.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Menu.Visible = false
 	end)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	local UIS = game:GetService('UserInputService')
+	
+	local frame = script.Parent.Parent.Menu
+	
+	
+	
+	local dragToggle = nil
+	
+	local dragSpeed = 0.25
+	
+	local dragStart = nil
+	
+	local startPos = nil
+	
+	
+	
+	local function updateInput(input)
+	
+		local delta = input.Position - dragStart
+	
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+	
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+	end
+	
+	
+	
+	frame.InputBegan:Connect(function(input)
+	
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+	
+			dragToggle = true
+	
+			dragStart = input.Position
+	
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+	
+				if input.UserInputState == Enum.UserInputState.End then
+	
+					dragToggle = false
+	
+				end
+	
+			end)
+	
+		end
+	
+	end)
+	
+	
+	
+	UIS.InputChanged:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	
+			if dragToggle then
+	
+				updateInput(input)
+	
+			end
+	
+		end
+	
+	end)
 end
-coroutine.wrap(EIJI_fake_script)()
-local function KLRN_fake_script() -- radio_button_unchecked.LocalScript 
+coroutine.wrap(UTYPK_fake_script)()
+local function CJANDSC_fake_script() -- radio_button_unchecked.LocalScript 
 	local script = Instance.new('LocalScript', radio_button_unchecked)
 
 	script.Parent.Parent.radio_button_unchecked.MouseButton1Click:Connect(function()
-		script.Parent.Parent.adjust.Visible = true
+		script.Parent.Parent.radio_button_checked.Visible = true
 		wait(0.1)
 		game.Players.LocalPlayer.TempPlayerStatsModule.Health.Value = "1"
 	end)
 end
-coroutine.wrap(KLRN_fake_script)()
+coroutine.wrap(CJANDSC_fake_script)()
+local function JXIJDD_fake_script() -- radio_button_checked.LocalScript 
+	local script = Instance.new('LocalScript', radio_button_checked)
+
+	script.Parent.Parent.radio_button_checked.MouseButton1Click:Connect(function()
+		script.Parent.Parent.radio_button_checked.Visible = false
+	end)
+end
+coroutine.wrap(JXIJDD_fake_script)()
+local function KLWHNNT_fake_script() -- radio_button_uncheckedtwo.LocalScript 
+	local script = Instance.new('LocalScript', radio_button_uncheckedtwo)
+
+	script.Parent.Parent.radio_button_uncheckedtwo.MouseButton1Click:Connect(function()
+		script.Parent.Parent.radio_button_checkedtwo.Visible = true
+		wait(0.1)
+		game.Players.LocalPlayer.TempPlayerStatsModule.Health.Value = "100"
+	end)
+end
+coroutine.wrap(KLWHNNT_fake_script)()
+local function YILSJA_fake_script() -- radio_button_checkedtwo.LocalScript 
+	local script = Instance.new('LocalScript', radio_button_checkedtwo)
+
+	script.Parent.Parent.radio_button_checkedtwo.MouseButton1Click:Connect(function()
+		script.Parent.Parent.radio_button_checkedtwo.Visible = false
+	end)
+end
+coroutine.wrap(YILSJA_fake_script)()
