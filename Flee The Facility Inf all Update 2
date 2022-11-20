@@ -1,256 +1,141 @@
--- GUI to Lua
------
--- Version: 2.0.
--- Made by chrisopdemobiel.
+--made by darkzin (Roblox)
+--AloneBr (GitHub)
 
--- Instances:
+print("Welcome tho Op Script Flee The Facility")
+wait(0.1)
+print("Sorry, give items vip and free VIP as Patched :<")
+wait(0.1)
+print("Made By Darkzin, RBX")
+wait(0.1)
+print("AloneBr, GitHub")
+wait(0.1)
+print("Have Fun")
 
-local TrollGuiFleeTheFacility = Instance.new("ScreenGui")
-local Menu = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
-local close = Instance.new("ImageButton")
-local radio_button_unchecked = Instance.new("ImageButton")
-local radio_button_checked = Instance.new("ImageButton")
-local TextLabel_3 = Instance.new("TextLabel")
-local radio_button_uncheckedtwo = Instance.new("ImageButton")
-local radio_button_checkedtwo = Instance.new("ImageButton")
-local UICorner = Instance.new("UICorner")
 
---Properties:
+-- functions
 
-TrollGuiFleeTheFacility.Name = "TrollGuiFleeTheFacility"
-TrollGuiFleeTheFacility.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
-Menu.Name = "Menu"
-Menu.Parent = TrollGuiFleeTheFacility
-Menu.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Menu.Position = UDim2.new(0.25224635, 0, 0.229637742, 0)
-Menu.Size = UDim2.new(0, 520, 0, 289)
-UICorner.Parent = Menu
-
-TextLabel.Parent = Menu
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.Size = UDim2.new(0, 236, 0, 20)
-TextLabel.Font = Enum.Font.Gotham
-TextLabel.Text = "Troll Gui Flee The Facility / Made by Darkzin"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
-
-TextLabel_2.Parent = Menu
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.Position = UDim2.new(0.0461538471, 0, 0.26333335, 0)
-TextLabel_2.Size = UDim2.new(0, 112, 0, 21)
-TextLabel_2.Font = Enum.Font.Gotham
-TextLabel_2.Text = "1 Hp (Visual)"
-TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 14.000
-TextLabel_2.TextWrapped = true
-
-close.Name = "close"
-close.Parent = Menu
-close.BackgroundTransparency = 1.000
-close.Position = UDim2.new(0.951923072, 0, -0.00173008442, 0)
-close.Size = UDim2.new(0, 25, 0, 25)
-close.ZIndex = 2
-close.Image = "rbxassetid://3926305904"
-close.ImageRectOffset = Vector2.new(284, 4)
-close.ImageRectSize = Vector2.new(24, 24)
-
-radio_button_unchecked.Name = "radio_button_unchecked"
-radio_button_unchecked.Parent = Menu
-radio_button_unchecked.BackgroundTransparency = 1.000
-radio_button_unchecked.LayoutOrder = 17
-radio_button_unchecked.Position = UDim2.new(0.282692313, 0, 0.261245668, 0)
-radio_button_unchecked.Size = UDim2.new(0, 25, 0, 25)
-radio_button_unchecked.ZIndex = 2
-radio_button_unchecked.Image = "rbxassetid://3926309567"
-radio_button_unchecked.ImageRectOffset = Vector2.new(628, 420)
-radio_button_unchecked.ImageRectSize = Vector2.new(48, 48)
-
-radio_button_checked.Name = "radio_button_checked"
-radio_button_checked.Parent = Menu
-radio_button_checked.BackgroundTransparency = 1.000
-radio_button_checked.LayoutOrder = 6
-radio_button_checked.Position = UDim2.new(0.282692313, 0, 0.261245668, 0)
-radio_button_checked.Size = UDim2.new(0, 25, 0, 25)
-radio_button_checked.Visible = false
-radio_button_checked.ZIndex = 2
-radio_button_checked.Image = "rbxassetid://3926309567"
-radio_button_checked.ImageRectOffset = Vector2.new(784, 420)
-radio_button_checked.ImageRectSize = Vector2.new(48, 48)
-
-TextLabel_3.Parent = Menu
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.Position = UDim2.new(0.0461538471, 0, 0.46056518, 0)
-TextLabel_3.Size = UDim2.new(0, 112, 0, 21)
-TextLabel_3.Font = Enum.Font.Gotham
-TextLabel_3.Text = "100 Hp (Visual)"
-TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.TextScaled = true
-TextLabel_3.TextSize = 14.000
-TextLabel_3.TextWrapped = true
-
-radio_button_uncheckedtwo.Name = "radio_button_uncheckedtwo"
-radio_button_uncheckedtwo.Parent = Menu
-radio_button_uncheckedtwo.BackgroundTransparency = 1.000
-radio_button_uncheckedtwo.LayoutOrder = 17
-radio_button_uncheckedtwo.Position = UDim2.new(0.282692313, 0, 0.458477527, 0)
-radio_button_uncheckedtwo.Size = UDim2.new(0, 25, 0, 25)
-radio_button_uncheckedtwo.ZIndex = 2
-radio_button_uncheckedtwo.Image = "rbxassetid://3926309567"
-radio_button_uncheckedtwo.ImageRectOffset = Vector2.new(628, 420)
-radio_button_uncheckedtwo.ImageRectSize = Vector2.new(48, 48)
-
-radio_button_checkedtwo.Name = "radio_button_checkedtwo"
-radio_button_checkedtwo.Parent = Menu
-radio_button_checkedtwo.BackgroundTransparency = 1.000
-radio_button_checkedtwo.LayoutOrder = 6
-radio_button_checkedtwo.Position = UDim2.new(0.282692313, 0, 0.458477497, 0)
-radio_button_checkedtwo.Size = UDim2.new(0, 25, 0, 25)
-radio_button_checkedtwo.Visible = false
-radio_button_checkedtwo.ZIndex = 2
-radio_button_checkedtwo.Image = "rbxassetid://3926309567"
-radio_button_checkedtwo.ImageRectOffset = Vector2.new(784, 420)
-radio_button_checkedtwo.ImageRectSize = Vector2.new(48, 48)
-
--- Scripts:
-
-local function UTYPK_fake_script() -- Menu.LocalScript 
-	local script = Instance.new('LocalScript', Menu)
-
-	script.Parent.close.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Menu.Visible = false
-	end)
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	local UIS = game:GetService('UserInputService')
-	
-	local frame = script.Parent.Parent.Menu
-	
-	
-	
-	local dragToggle = nil
-	
-	local dragSpeed = 0.25
-	
-	local dragStart = nil
-	
-	local startPos = nil
-	
-	
-	
-	local function updateInput(input)
-	
-		local delta = input.Position - dragStart
-	
-		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-	
-			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-	
-		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
-	
-	end
-	
-	
-	
-	frame.InputBegan:Connect(function(input)
-	
-		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-	
-			dragToggle = true
-	
-			dragStart = input.Position
-	
-			startPos = frame.Position
-	
-			input.Changed:Connect(function()
-	
-				if input.UserInputState == Enum.UserInputState.End then
-	
-					dragToggle = false
-	
-				end
-	
-			end)
-	
-		end
-	
-	end)
-	
-	
-	
-	UIS.InputChanged:Connect(function(input)
-	
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-	
-			if dragToggle then
-	
-				updateInput(input)
-	
-			end
-	
-		end
-	
-	end)
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " made by darkzin ";
+		Text = " thanks for use my script  ";
+	})
 end
-coroutine.wrap(UTYPK_fake_script)()
-local function CJANDSC_fake_script() -- radio_button_unchecked.LocalScript 
-	local script = Instance.new('LocalScript', radio_button_unchecked)
 
-	script.Parent.Parent.radio_button_unchecked.MouseButton1Click:Connect(function()
-		script.Parent.Parent.radio_button_checked.Visible = true
-		wait(0.1)
-		game.Players.LocalPlayer.TempPlayerStatsModule.Health.Value = "1"
-	end)
-end
-coroutine.wrap(CJANDSC_fake_script)()
-local function JXIJDD_fake_script() -- radio_button_checked.LocalScript 
-	local script = Instance.new('LocalScript', radio_button_checked)
+wait(2)
 
-	script.Parent.Parent.radio_button_checked.MouseButton1Click:Connect(function()
-		script.Parent.Parent.radio_button_checked.Visible = false
-	end)
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " infinite money loaded ";
+		Text = " ... ";
+	})
 end
-coroutine.wrap(JXIJDD_fake_script)()
-local function KLWHNNT_fake_script() -- radio_button_uncheckedtwo.LocalScript 
-	local script = Instance.new('LocalScript', radio_button_uncheckedtwo)
+game.Players.LocalPlayer.SavedPlayerStatsModule.Credits.Value = "9e9"
 
-	script.Parent.Parent.radio_button_uncheckedtwo.MouseButton1Click:Connect(function()
-		script.Parent.Parent.radio_button_checkedtwo.Visible = true
-		wait(0.1)
-		game.Players.LocalPlayer.TempPlayerStatsModule.Health.Value = "100"
-	end)
-end
-coroutine.wrap(KLWHNNT_fake_script)()
-local function YILSJA_fake_script() -- radio_button_checkedtwo.LocalScript 
-	local script = Instance.new('LocalScript', radio_button_checkedtwo)
+wait(2)
 
-	script.Parent.Parent.radio_button_checkedtwo.MouseButton1Click:Connect(function()
-		script.Parent.Parent.radio_button_checkedtwo.Visible = false
-	end)
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " infinite xp loaded ";
+		Text = " ... ";
+	})
 end
-coroutine.wrap(YILSJA_fake_script)()
+game.Players.LocalPlayer.SavedPlayerStatsModule.Xp.Value = "9e9"
+
+wait(2)
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " infinite Donation loaded ";
+		Text = " ... ";
+	})
+end
+game.Players.LocalPlayer.SavedPlayerStatsModule.DonationTotal.Value = "9e9"
+
+wait(2)
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " infinite level loaded ";
+		Text = " ... ";
+	})
+end
+game.Players.LocalPlayer.SavedPlayerStatsModule.Level.Value = "9e9"
+
+wait(2)
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " Give Items Vip (Patched :<) ";
+		Text = " ... ";
+	})
+end
+game.Players.LocalPlayer.SavedPlayerStatsModule.ReceivedVipItems.Value = true
+
+wait(2)
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " Free Vip (Patched :<) ";
+		Text = " ... ";
+	})
+end
+game.Players.LocalPlayer.SavedPlayerStatsModule.VIP.Value = true
+
+wait(2)
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " loading troll gui ";
+		Text = " ... ";
+	})
+end
+
+wait(5)
+
+print("Troll Gui Loaded, heve fun")
+print(":>")
+
+-- Made by Darkzin (Gui Working...)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/a8b209ed24ab81814a3ddb0f572cf03c0a1cbcc3/Flee%20The%20Facility%20Inf%20all%20Update%202'))()
+
+wait(2)
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " loading Sad Hub V3 :> ";
+		Text = " ... ";
+	})
+end
+
+wait(2)
+
+print("loaded Sad Hub V3 Update")
+
+--loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Sad%20Hub%20Update'))()
+
+wait(3)
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " Sad Hub V3 Working... ";
+		Text = " ... ";
+	})
+end
+
+wait(1)
+
+print("Sad Hub Working...")
+wait(2)
+print("loading Op HUB script")
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " Loading Op HUB script ";
+		Text = " ... ";
+	})
+end
+
+wait(2)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/khoaScript/scripts/master/flee-the-facility.lua"))()
+
+--end :>
