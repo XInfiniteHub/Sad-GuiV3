@@ -1,9 +1,7 @@
 -- GUI to Lua
 -----
 -- Version: 2.0.
--- Made by chrisopdemobiel.
-
--- Instances:
+-- Made by Darkzin e Cool
 
 if game:GetService("Workspace").FilteringEnabled == true then
 	game:GetService("StarterGui"):SetCore("SendNotification", {
@@ -12,6 +10,9 @@ if game:GetService("Workspace").FilteringEnabled == true then
 	})
 end
 
+-- Instances:
+
+local StandAwe = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local Stands = Instance.new("ScrollingFrame")
@@ -27,14 +28,20 @@ local TextLabel_2 = Instance.new("TextLabel")
 local AutoBlock = Instance.new("TextButton")
 local Insdamagereflection = Instance.new("TextButton")
 local close = Instance.new("ImageButton")
+local Open = Instance.new("TextButton")
+local Shadow_3 = Instance.new("Frame")
 
 --Properties:
 
+StandAwe.Name = "StandAwe"
+StandAwe.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
 MainFrame.Name = "MainFrame"
-MainFrame.Parent = game.StarterGui.StandAwe
+MainFrame.Parent = StandAwe
 MainFrame.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
 MainFrame.Position = UDim2.new(0.676700115, 0, 0, 0)
 MainFrame.Size = UDim2.new(0, 278, 0, 142)
+MainFrame.Visible = false
 
 TextLabel.Parent = MainFrame
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -191,9 +198,29 @@ close.Image = "rbxassetid://3926305904"
 close.ImageRectOffset = Vector2.new(284, 4)
 close.ImageRectSize = Vector2.new(24, 24)
 
+Open.Name = "Open"
+Open.Parent = StandAwe
+Open.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Open.BorderSizePixel = 0
+Open.Position = UDim2.new(0.0158286933, 0, 0.0520445704, 0)
+Open.Size = UDim2.new(0, 74, 0, 29)
+Open.ZIndex = 2
+Open.Font = Enum.Font.GothamMedium
+Open.Text = "Open Gui"
+Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Open.TextScaled = true
+Open.TextSize = 14.000
+Open.TextWrapped = true
+
+Shadow_3.Name = "Shadow"
+Shadow_3.Parent = Open
+Shadow_3.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_3.BorderSizePixel = 0
+Shadow_3.Size = UDim2.new(1, 0, 1, 4)
+
 -- Scripts:
 
-local function AMBLO_fake_script() -- MainFrame.Main 
+local function CBLZL_fake_script() -- MainFrame.Main 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	--[[
@@ -286,8 +313,8 @@ local function AMBLO_fake_script() -- MainFrame.Main
 	
 	
 end
-coroutine.wrap(AMBLO_fake_script)()
-local function ZHKY_fake_script() -- ShadowDioSelected.LocalScript 
+coroutine.wrap(CBLZL_fake_script)()
+local function OBCHBNJ_fake_script() -- ShadowDioSelected.LocalScript 
 	local script = Instance.new('LocalScript', ShadowDioSelected)
 
 	script.Parent.Parent.ShadowDioSelected.MouseButton1Click:Connect(function()
@@ -295,8 +322,8 @@ local function ZHKY_fake_script() -- ShadowDioSelected.LocalScript
 		script.Parent.Parent.Parent.JSPTimeStop.Visible = false
 	end)
 end
-coroutine.wrap(ZHKY_fake_script)()
-local function XPRNU_fake_script() -- JSPSelected.LocalScript 
+coroutine.wrap(OBCHBNJ_fake_script)()
+local function WNCQJ_fake_script() -- JSPSelected.LocalScript 
 	local script = Instance.new('LocalScript', JSPSelected)
 
 	script.Parent.Parent.JSPSelected.MouseButton1Click:Connect(function()
@@ -304,8 +331,8 @@ local function XPRNU_fake_script() -- JSPSelected.LocalScript
 		script.Parent.Parent.Parent.ShadowDioTimeStop.Visible = false
 	end)
 end
-coroutine.wrap(XPRNU_fake_script)()
-local function AWVFS_fake_script() -- ShadowDioTimeStop.LocalScript 
+coroutine.wrap(WNCQJ_fake_script)()
+local function RJCUIKX_fake_script() -- ShadowDioTimeStop.LocalScript 
 	local script = Instance.new('LocalScript', ShadowDioTimeStop)
 
 	script.Parent.Parent.ShadowDioTimeStop.MouseButton1Click:Connect(function()
@@ -319,8 +346,8 @@ local function AWVFS_fake_script() -- ShadowDioTimeStop.LocalScript
 		
 	end)
 end
-coroutine.wrap(AWVFS_fake_script)()
-local function HMDNP_fake_script() -- JSPTimeStop.LocalScript 
+coroutine.wrap(RJCUIKX_fake_script)()
+local function HBYYTZ_fake_script() -- JSPTimeStop.LocalScript 
 	local script = Instance.new('LocalScript', JSPTimeStop)
 
 	script.Parent.Parent.JSPTimeStop.MouseButton1Click:Connect(function()
@@ -337,16 +364,16 @@ local function HMDNP_fake_script() -- JSPTimeStop.LocalScript
 	
 	end)
 end
-coroutine.wrap(HMDNP_fake_script)()
-local function KXKT_fake_script() -- MainScriptsHub.LocalScript 
+coroutine.wrap(HBYYTZ_fake_script)()
+local function XJZPLV_fake_script() -- MainScriptsHub.LocalScript 
 	local script = Instance.new('LocalScript', MainScriptsHub)
 
 	script.Parent.Parent.MainScriptsHub.MouseButton1Click:Connect(function()
 		script.Parent.Parent.MainScripts.Visible = true
 	end)
 end
-coroutine.wrap(KXKT_fake_script)()
-local function UMCN_fake_script() -- AutoBlock.LocalScript 
+coroutine.wrap(XJZPLV_fake_script)()
+local function WWFEG_fake_script() -- AutoBlock.LocalScript 
 	local script = Instance.new('LocalScript', AutoBlock)
 
 	script.Parent.Parent.AutoBlock.MouseButton1Click:Connect(function()
@@ -358,8 +385,8 @@ local function UMCN_fake_script() -- AutoBlock.LocalScript
 		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
 	end)
 end
-coroutine.wrap(UMCN_fake_script)()
-local function DIMEJDF_fake_script() -- Insdamagereflection.LocalScript 
+coroutine.wrap(WWFEG_fake_script)()
+local function HGMT_fake_script() -- Insdamagereflection.LocalScript 
 	local script = Instance.new('LocalScript', Insdamagereflection)
 
 	script.Parent.Parent.Insdamagereflection.MouseButton1Click:Connect(function()
@@ -382,12 +409,20 @@ local function DIMEJDF_fake_script() -- Insdamagereflection.LocalScript
 	
 	end)
 end
-coroutine.wrap(DIMEJDF_fake_script)()
-local function ZFPCU_fake_script() -- close.LocalScript 
+coroutine.wrap(HGMT_fake_script)()
+local function QNOH_fake_script() -- close.LocalScript 
 	local script = Instance.new('LocalScript', close)
 
 	script.Parent.Parent.close.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.MainScripts.Visible = false
 	end)
 end
-coroutine.wrap(ZFPCU_fake_script)()
+coroutine.wrap(QNOH_fake_script)()
+local function ZYZY_fake_script() -- Open.LocalScript 
+	local script = Instance.new('LocalScript', Open)
+
+	script.Parent.Parent.Open.MouseButton1Click:Connect(function()
+		script.Parent.Parent.MainFrame.Visible = true
+	end)
+end
+coroutine.wrap(ZYZY_fake_script)()
