@@ -1,0 +1,393 @@
+-- GUI to Lua
+-----
+-- Version: 2.0.
+-- Made by chrisopdemobiel.
+
+-- Instances:
+
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " script rodado ";
+		Text = " Feito por Darkzin e Cool ";
+	})
+end
+
+local MainFrame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Stands = Instance.new("ScrollingFrame")
+local ShadowDioSelected = Instance.new("TextButton")
+local JSPSelected = Instance.new("TextButton")
+local ShadowDioTimeStop = Instance.new("TextButton")
+local Shadow = Instance.new("Frame")
+local JSPTimeStop = Instance.new("TextButton")
+local Shadow_2 = Instance.new("Frame")
+local MainScriptsHub = Instance.new("TextButton")
+local MainScripts = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local AutoBlock = Instance.new("TextButton")
+local Insdamagereflection = Instance.new("TextButton")
+local close = Instance.new("ImageButton")
+
+--Properties:
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = game.StarterGui.StandAwe
+MainFrame.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+MainFrame.Position = UDim2.new(0.676700115, 0, 0, 0)
+MainFrame.Size = UDim2.new(0, 278, 0, 142)
+
+TextLabel.Parent = MainFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.139092058, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 28)
+TextLabel.Font = Enum.Font.Gotham
+TextLabel.Text = "Select  You Stand"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+Stands.Name = "Stands"
+Stands.Parent = MainFrame
+Stands.Active = true
+Stands.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Stands.Position = UDim2.new(0.139092103, 0, 0.311342061, 0)
+Stands.Size = UDim2.new(0, 200, 0, 65)
+
+ShadowDioSelected.Name = "ShadowDioSelected"
+ShadowDioSelected.Parent = Stands
+ShadowDioSelected.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ShadowDioSelected.Size = UDim2.new(0, 186, 0, 30)
+ShadowDioSelected.Font = Enum.Font.SourceSans
+ShadowDioSelected.Text = "Shadow Dio"
+ShadowDioSelected.TextColor3 = Color3.fromRGB(0, 0, 0)
+ShadowDioSelected.TextScaled = true
+ShadowDioSelected.TextSize = 14.000
+ShadowDioSelected.TextWrapped = true
+
+JSPSelected.Name = "JSPSelected"
+JSPSelected.Parent = Stands
+JSPSelected.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+JSPSelected.Position = UDim2.new(0, 0, 0.105633803, 0)
+JSPSelected.Size = UDim2.new(0, 186, 0, 30)
+JSPSelected.Font = Enum.Font.SourceSans
+JSPSelected.Text = "JSP"
+JSPSelected.TextColor3 = Color3.fromRGB(0, 0, 0)
+JSPSelected.TextScaled = true
+JSPSelected.TextSize = 14.000
+JSPSelected.TextWrapped = true
+
+ShadowDioTimeStop.Name = "ShadowDioTimeStop"
+ShadowDioTimeStop.Parent = MainFrame
+ShadowDioTimeStop.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+ShadowDioTimeStop.BorderSizePixel = 0
+ShadowDioTimeStop.Position = UDim2.new(0.33453238, 0, 0.769088507, 0)
+ShadowDioTimeStop.Size = UDim2.new(0, 76, 0, 20)
+ShadowDioTimeStop.Visible = false
+ShadowDioTimeStop.ZIndex = 2
+ShadowDioTimeStop.Font = Enum.Font.GothamMedium
+ShadowDioTimeStop.Text = "Shadow Dio Time Stop"
+ShadowDioTimeStop.TextColor3 = Color3.fromRGB(255, 255, 255)
+ShadowDioTimeStop.TextScaled = true
+ShadowDioTimeStop.TextSize = 14.000
+ShadowDioTimeStop.TextWrapped = true
+
+Shadow.Name = "Shadow"
+Shadow.Parent = ShadowDioTimeStop
+Shadow.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow.BorderSizePixel = 0
+Shadow.Size = UDim2.new(1, 0, 1, 4)
+
+JSPTimeStop.Name = "JSPTimeStop"
+JSPTimeStop.Parent = MainFrame
+JSPTimeStop.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+JSPTimeStop.BorderSizePixel = 0
+JSPTimeStop.Position = UDim2.new(0.33453238, 0, 0.769088507, 0)
+JSPTimeStop.Size = UDim2.new(0, 76, 0, 20)
+JSPTimeStop.Visible = false
+JSPTimeStop.ZIndex = 2
+JSPTimeStop.Font = Enum.Font.GothamMedium
+JSPTimeStop.Text = "JSP Time Stop"
+JSPTimeStop.TextColor3 = Color3.fromRGB(255, 255, 255)
+JSPTimeStop.TextScaled = true
+JSPTimeStop.TextSize = 14.000
+JSPTimeStop.TextWrapped = true
+
+Shadow_2.Name = "Shadow"
+Shadow_2.Parent = JSPTimeStop
+Shadow_2.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Shadow_2.BorderSizePixel = 0
+Shadow_2.Size = UDim2.new(1, 0, 1, 4)
+
+MainScriptsHub.Name = "MainScriptsHub"
+MainScriptsHub.Parent = MainFrame
+MainScriptsHub.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+MainScriptsHub.BorderSizePixel = 0
+MainScriptsHub.Position = UDim2.new(0, 0, 0.853595555, 0)
+MainScriptsHub.Size = UDim2.new(0, 76, 0, 20)
+MainScriptsHub.ZIndex = 2
+MainScriptsHub.Font = Enum.Font.GothamMedium
+MainScriptsHub.Text = "Main"
+MainScriptsHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainScriptsHub.TextScaled = true
+MainScriptsHub.TextSize = 14.000
+MainScriptsHub.TextWrapped = true
+
+MainScripts.Name = "MainScripts"
+MainScripts.Parent = MainFrame
+MainScripts.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+MainScripts.Position = UDim2.new(0, 0, 1, 0)
+MainScripts.Size = UDim2.new(0, 278, 0, 63)
+MainScripts.Visible = false
+
+TextLabel_2.Parent = MainScripts
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.278653383, 0, 0.113835655, 0)
+TextLabel_2.Size = UDim2.new(0, 107, 0, 22)
+TextLabel_2.Font = Enum.Font.Gotham
+TextLabel_2.Text = "Main Scripts"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+AutoBlock.Name = "AutoBlock"
+AutoBlock.Parent = MainScripts
+AutoBlock.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+AutoBlock.BorderSizePixel = 0
+AutoBlock.Position = UDim2.new(0.00359712355, 0, 0.678992391, 0)
+AutoBlock.Size = UDim2.new(0, 76, 0, 20)
+AutoBlock.ZIndex = 2
+AutoBlock.Font = Enum.Font.GothamMedium
+AutoBlock.Text = "Auto Block"
+AutoBlock.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoBlock.TextScaled = true
+AutoBlock.TextSize = 14.000
+AutoBlock.TextWrapped = true
+
+Insdamagereflection.Name = "Insdamagereflection"
+Insdamagereflection.Parent = MainScripts
+Insdamagereflection.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Insdamagereflection.BorderSizePixel = 0
+Insdamagereflection.Position = UDim2.new(0.726618767, 0, 0.678992391, 0)
+Insdamagereflection.Size = UDim2.new(0, 76, 0, 20)
+Insdamagereflection.ZIndex = 2
+Insdamagereflection.Font = Enum.Font.GothamMedium
+Insdamagereflection.Text = "Infinite damage reflection"
+Insdamagereflection.TextColor3 = Color3.fromRGB(255, 255, 255)
+Insdamagereflection.TextScaled = true
+Insdamagereflection.TextSize = 14.000
+Insdamagereflection.TextWrapped = true
+
+close.Name = "close"
+close.Parent = MainScripts
+close.BackgroundTransparency = 1.000
+close.Position = UDim2.new(0.910071969, 0, 0.0555555522, 0)
+close.Size = UDim2.new(0, 25, 0, 25)
+close.ZIndex = 2
+close.Image = "rbxassetid://3926305904"
+close.ImageRectOffset = Vector2.new(284, 4)
+close.ImageRectSize = Vector2.new(24, 24)
+
+-- Scripts:
+
+local function AMBLO_fake_script() -- MainFrame.Main 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	--[[
+			Stand Awekining Op script
+			made By Darkzin
+	--]]
+	
+	
+	
+	
+	
+	-- Funções
+	
+	local UIS = game:GetService('UserInputService')
+	
+	local frame = script.Parent.Parent.MainFrame
+	
+	
+	
+	local dragToggle = nil
+	
+	local dragSpeed = 0.25
+	
+	local dragStart = nil
+	
+	local startPos = nil
+	
+	
+	
+	local function updateInput(input)
+	
+		local delta = input.Position - dragStart
+	
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+	
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+	end
+	
+	
+	
+	frame.InputBegan:Connect(function(input)
+	
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+	
+			dragToggle = true
+	
+			dragStart = input.Position
+	
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+	
+				if input.UserInputState == Enum.UserInputState.End then
+	
+					dragToggle = false
+	
+				end
+	
+			end)
+	
+		end
+	
+	end)
+	
+	
+	
+	UIS.InputChanged:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	
+			if dragToggle then
+	
+				updateInput(input)
+	
+			end
+	
+		end
+	
+	end)
+	
+	
+	
+	
+	
+	
+	-- Porpriedades
+	
+	
+end
+coroutine.wrap(AMBLO_fake_script)()
+local function ZHKY_fake_script() -- ShadowDioSelected.LocalScript 
+	local script = Instance.new('LocalScript', ShadowDioSelected)
+
+	script.Parent.Parent.ShadowDioSelected.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.ShadowDioTimeStop.Visible = true
+		script.Parent.Parent.Parent.JSPTimeStop.Visible = false
+	end)
+end
+coroutine.wrap(ZHKY_fake_script)()
+local function XPRNU_fake_script() -- JSPSelected.LocalScript 
+	local script = Instance.new('LocalScript', JSPSelected)
+
+	script.Parent.Parent.JSPSelected.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.JSPTimeStop.Visible = true
+		script.Parent.Parent.Parent.ShadowDioTimeStop.Visible = false
+	end)
+end
+coroutine.wrap(XPRNU_fake_script)()
+local function AWVFS_fake_script() -- ShadowDioTimeStop.LocalScript 
+	local script = Instance.new('LocalScript', ShadowDioTimeStop)
+
+	script.Parent.Parent.ShadowDioTimeStop.MouseButton1Click:Connect(function()
+		
+		local args = {
+			[1] = 20000000,           -- 20000000 = 20 or 15
+			[2] = "shadowdio"			-- Shadow dio / Stw
+		}
+	
+		game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+		
+	end)
+end
+coroutine.wrap(AWVFS_fake_script)()
+local function HMDNP_fake_script() -- JSPTimeStop.LocalScript 
+	local script = Instance.new('LocalScript', JSPTimeStop)
+
+	script.Parent.Parent.JSPTimeStop.MouseButton1Click:Connect(function()
+		script.Parent.Parent.ShadowDioTimeStop.Visible = false
+		
+		-- Script generated by SimpleSpy - credits to exx#9394
+	
+		local args = {
+			[1] = 200000000000,
+			[2] = "jotaro"
+		}
+	
+		game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+	
+	end)
+end
+coroutine.wrap(HMDNP_fake_script)()
+local function KXKT_fake_script() -- MainScriptsHub.LocalScript 
+	local script = Instance.new('LocalScript', MainScriptsHub)
+
+	script.Parent.Parent.MainScriptsHub.MouseButton1Click:Connect(function()
+		script.Parent.Parent.MainScripts.Visible = true
+	end)
+end
+coroutine.wrap(KXKT_fake_script)()
+local function UMCN_fake_script() -- AutoBlock.LocalScript 
+	local script = Instance.new('LocalScript', AutoBlock)
+
+	script.Parent.Parent.AutoBlock.MouseButton1Click:Connect(function()
+		local args = {
+			[1] = "Alternate",
+			[2] = "Block"
+		}
+	
+		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+	end)
+end
+coroutine.wrap(UMCN_fake_script)()
+local function DIMEJDF_fake_script() -- Insdamagereflection.LocalScript 
+	local script = Instance.new('LocalScript', Insdamagereflection)
+
+	script.Parent.Parent.Insdamagereflection.MouseButton1Click:Connect(function()
+		if game:GetService("Workspace").FilteringEnabled == true then
+			game:GetService("StarterGui"):SetCore("SendNotification", {
+				Title = " cuidado ";
+				Text = " Requer Gold Expirience Requiem ";
+			})
+		end
+		
+		wait(2)
+	
+		local args = {
+			[1] = "Alternate",
+			[2] = "RTZ",
+			[3] = true
+		}
+	
+		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+	
+	end)
+end
+coroutine.wrap(DIMEJDF_fake_script)()
+local function ZFPCU_fake_script() -- close.LocalScript 
+	local script = Instance.new('LocalScript', close)
+
+	script.Parent.Parent.close.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.MainScripts.Visible = false
+	end)
+end
+coroutine.wrap(ZFPCU_fake_script)()
