@@ -321,6 +321,11 @@ Tab:AddButton({
 	Callback = function()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/itsyouranya/free/main/Anya%20Stands%20Awakening%20Helper.lua'),true))()
 	end    
+})Tab:AddButton({
+	Name = "Complete Parkour",
+	Callback = function()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(20.4561386, 113.245972, 196.61351, 0.0634383112, 5.81675401e-08, -0.99798578, 8.29346689e-08, 1, 6.35567972e-08, 0.99798578, -8.67995524e-08, 0.0634383112))
+	end    
 })
 
 -- END --
