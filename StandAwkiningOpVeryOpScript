@@ -1,13 +1,19 @@
--- GUI to Lua
------
--- Made by Darkzin and Cool
+-- (VOID) : Gui to Lua
+-- Version: 1.4
 
-local message = Instance.new("Message", workspace)
-message.Text = " Executado! GUI feita por Darkzin e Cool, para Abri/Fecha a GUI aperte  (J) "
-wait(4.5)
-message:Destroy()
+if game:GetService("Workspace").FilteringEnabled == true then
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = " Script Rodado ";
+		Text = " Obrigado por Usar Project Awekining ";
+	})
+end
 
--- Instances:
+wait(3)
+
+ local message = Instance.new("Message", workspace)
+        message.Text = " Executado! GUI feita por darkzin e cool | para abrir e fechar a GUI aperte (J) "
+        wait(4.5)
+        message:Destroy()
 
 local StandAwe = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
@@ -20,6 +26,17 @@ local EVAONESelected = Instance.new("TextButton")
 local Shadow_3 = Instance.new("Frame")
 local DFOURCSelect = Instance.new("TextButton")
 local Shadow_4 = Instance.new("Frame")
+local UIStroke = Instance.new("UIStroke")
+local TextLabel = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local Frame_3 = Instance.new("Frame")
+local Frame_4 = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local Frame_5 = Instance.new("Frame")
+local Frame_6 = Instance.new("Frame")
+local Frame_7 = Instance.new("Frame")
+local Frame_8 = Instance.new("Frame")
 local ShadowDioTimeStop = Instance.new("TextButton")
 local Shadow_5 = Instance.new("Frame")
 local JSPTimeStop = Instance.new("TextButton")
@@ -28,25 +45,31 @@ local MainScriptsHub = Instance.new("TextButton")
 local MainScripts = Instance.new("Frame")
 local AutoBlock = Instance.new("TextButton")
 local Insdamagereflection = Instance.new("TextButton")
+local UIStroke_2 = Instance.new("UIStroke")
+local TextLabel_3 = Instance.new("TextLabel")
+local InfinitePose = Instance.new("TextButton")
 local StandSelectOpen = Instance.new("TextButton")
 local EVAONETimseStop = Instance.new("TextButton")
 local Shadow_7 = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
 local DFOURCClones = Instance.new("TextButton")
 local Shadow_8 = Instance.new("Frame")
-local Frame = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
+local Frame_9 = Instance.new("Frame")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
 local TopBarTwo = Instance.new("Frame")
 local TopBarOne = Instance.new("Frame")
 local StandFarmOp = Instance.new("TextButton")
 local StandFarmMainFrame = Instance.new("Frame")
-local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_6 = Instance.new("TextLabel")
 local TheWorldOVAStandFarm = Instance.new("TextButton")
 local Shadow_9 = Instance.new("Frame")
 local StarPlatinumStandFarm = Instance.new("TextButton")
 local Shadow_10 = Instance.new("Frame")
 local thewordstandfarm = Instance.new("TextButton")
 local Shadow_11 = Instance.new("Frame")
+local UIStroke_3 = Instance.new("UIStroke")
 local info = Instance.new("ImageButton")
 local ItemFarmSlect = Instance.new("TextButton")
 local ItemFarmMainFrame = Instance.new("Frame")
@@ -54,7 +77,9 @@ local StarItemFarm = Instance.new("TextButton")
 local Shadow_12 = Instance.new("Frame")
 local StopItemFarm = Instance.new("TextButton")
 local Shadow_13 = Instance.new("Frame")
+local UIStroke_4 = Instance.new("UIStroke")
 local TpAreaSelectLock = Instance.new("Frame")
+local UIStroke_5 = Instance.new("UIStroke")
 local Timmy = Instance.new("TextButton")
 local Shadow_14 = Instance.new("Frame")
 local FarmZone = Instance.new("TextButton")
@@ -65,22 +90,30 @@ local BanckTeleportScript = Instance.new("TextButton")
 local Shadow_17 = Instance.new("Frame")
 local TeleportAreasButton = Instance.new("TextButton")
 local ImageLabel = Instance.new("ImageLabel")
-local UIGradient = Instance.new("UIGradient")
+local UIStroke_6 = Instance.new("UIStroke")
+local next = Instance.new("TextButton")
+local PageTwoMainFrame = Instance.new("Frame")
+local back = Instance.new("TextButton")
+local AutoFarmBossOpen = Instance.new("TextButton")
+local LocalPlayerOpenSelect = Instance.new("TextButton")
+local AutoFarmBossMainFrame = Instance.new("Frame")
+local UIStroke_7 = Instance.new("UIStroke")
+local TextLabel_7 = Instance.new("TextLabel")
+local StartAUtoFarmBoss = Instance.new("TextButton")
+local Pattern = Instance.new("ImageLabel")
+local Pattern_2 = Instance.new("ImageLabel")
+local LocalPlayerMainFrame = Instance.new("Frame")
+local UIStroke_8 = Instance.new("UIStroke")
+local TextLabel_8 = Instance.new("TextLabel")
+local HitBoxViwer = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
 local Open = Instance.new("TextButton")
 local Shadow_18 = Instance.new("Frame")
-local UIStroke = Instance.new("UIStroke")
-local UIStroke_2 = Instance.new("UIStroke")
-local UICorner = Instance.new("UICorner")
-local UIStroke_3 = Instance.new("UIStroke")
-local UIStroke_4 = Instance.new("UIStroke")
-local UIStroke_5 = Instance.new("UIStroke")
-local UIStroke_6 = Instance.new("UIStroke")
-local UIGradient = Instance.new("UIGradient")
 
 --Properties:
 
 StandAwe.Name = "StandAwe"
-StandAwe.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+StandAwe.Parent = (game:GetService("CoreGui") or gethui())
 StandAwe.ResetOnSpawn = false
 
 MainFrame.Name = "MainFrame"
@@ -103,7 +136,7 @@ ShadowDioSelected.Name = "ShadowDioSelected"
 ShadowDioSelected.Parent = Stands
 ShadowDioSelected.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
 ShadowDioSelected.BorderSizePixel = 0
-ShadowDioSelected.Position = UDim2.new(0.0634512678, 0, 0.0202805772, 0)
+ShadowDioSelected.Position = UDim2.new(0.0920971036, 0, 0.219933331, 0)
 ShadowDioSelected.Size = UDim2.new(0, 111, 0, 22)
 ShadowDioSelected.ZIndex = 2
 ShadowDioSelected.Font = Enum.Font.GothamMedium
@@ -123,7 +156,7 @@ JSPSelected.Name = "JSPSelected"
 JSPSelected.Parent = Stands
 JSPSelected.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
 JSPSelected.BorderSizePixel = 0
-JSPSelected.Position = UDim2.new(0.618212223, 0, 0.0205224995, 0)
+JSPSelected.Position = UDim2.new(0.0921705365, 0, 0.0951752737, 0)
 JSPSelected.Size = UDim2.new(0, 111, 0, 21)
 JSPSelected.ZIndex = 2
 JSPSelected.Font = Enum.Font.GothamMedium
@@ -143,7 +176,7 @@ EVAONESelected.Name = "EVAONESelected"
 EVAONESelected.Parent = Stands
 EVAONESelected.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
 EVAONESelected.BorderSizePixel = 0
-EVAONESelected.Position = UDim2.new(0.0633096993, 0, 0.0868055373, 0)
+EVAONESelected.Position = UDim2.new(0.091955483, 0, 0.154513866, 0)
 EVAONESelected.Size = UDim2.new(0, 111, 0, 22)
 EVAONESelected.ZIndex = 2
 EVAONESelected.Font = Enum.Font.GothamMedium
@@ -163,7 +196,7 @@ DFOURCSelect.Name = "DFOURCSelect"
 DFOURCSelect.Parent = Stands
 DFOURCSelect.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
 DFOURCSelect.BorderSizePixel = 0
-DFOURCSelect.Position = UDim2.new(0.620692551, 0, 0.0868055373, 0)
+DFOURCSelect.Position = UDim2.new(0.571213365, 0, 0.0972222015, 0)
 DFOURCSelect.Size = UDim2.new(0, 111, 0, 22)
 DFOURCSelect.ZIndex = 2
 DFOURCSelect.Font = Enum.Font.GothamMedium
@@ -179,12 +212,79 @@ Shadow_4.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
 Shadow_4.BorderSizePixel = 0
 Shadow_4.Size = UDim2.new(1, 0, 1, 4)
 
+UIStroke.Thickness = 3.300
+UIStroke.Parent = Stands
+
+TextLabel.Parent = Stands
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.028645834, 0, 0.0201004371, 0)
+TextLabel.Size = UDim2.new(0, 160, 0, 30)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "Time Stop para 20 segundos"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+Frame.Parent = Stands
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Position = UDim2.new(0.401041657, 0, 0.0203817524, 0)
+Frame.Size = UDim2.new(0, 0, 0, 178)
+
+Frame_2.Parent = Stands
+Frame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.Position = UDim2.new(0.0598958135, 0, 0.0203817524, 0)
+Frame_2.Size = UDim2.new(0, 0, 0, 178)
+
+Frame_3.Parent = Stands
+Frame_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.Position = UDim2.new(0.0598958321, 0, 0.0194382966, 0)
+Frame_3.Size = UDim2.new(0, 131, 0, 1)
+
+Frame_4.Parent = Stands
+Frame_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_4.Position = UDim2.new(0.0598958321, 0, 0.326729953, 0)
+Frame_4.Size = UDim2.new(0, 131, 0, 1)
+
+TextLabel_2.Parent = Stands
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.559895813, 0, 0.0351746231, 0)
+TextLabel_2.Size = UDim2.new(0, 118, 0, 28)
+TextLabel_2.Font = Enum.Font.FredokaOne
+TextLabel_2.Text = "D4C clones"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+Frame_5.Parent = Stands
+Frame_5.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_5.Position = UDim2.new(0.541666687, 0, 0.0211744085, 0)
+Frame_5.Size = UDim2.new(0, 131, 0, 1)
+
+Frame_6.Parent = Stands
+Frame_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_6.Position = UDim2.new(0.541666687, 0, 0.0217027869, 0)
+Frame_6.Size = UDim2.new(0, 0, 0, 127)
+
+Frame_7.Parent = Stands
+Frame_7.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_7.Position = UDim2.new(0.8828125, 0, 0.0217027869, 0)
+Frame_7.Size = UDim2.new(0, 0, 0, 127)
+
+Frame_8.Parent = Stands
+Frame_8.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_8.Position = UDim2.new(0.541666687, 0, 0.241660506, 0)
+Frame_8.Size = UDim2.new(0, 131, 0, 1)
+
 ShadowDioTimeStop.Name = "ShadowDioTimeStop"
 ShadowDioTimeStop.Parent = MainFrame
 ShadowDioTimeStop.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
 ShadowDioTimeStop.BorderSizePixel = 0
-ShadowDioTimeStop.Position = UDim2.new(0.479999989, 0, 0.79400003, 0)
-ShadowDioTimeStop.Size = UDim2.new(0, 104, 0, 18)
+ShadowDioTimeStop.Position = UDim2.new(0.284000009, 0, 0.750999987, 0)
+ShadowDioTimeStop.Size = UDim2.new(0, 75, 0, 17)
 ShadowDioTimeStop.Visible = false
 ShadowDioTimeStop.ZIndex = 2
 ShadowDioTimeStop.Font = Enum.Font.GothamMedium
@@ -204,8 +304,8 @@ JSPTimeStop.Name = "JSPTimeStop"
 JSPTimeStop.Parent = MainFrame
 JSPTimeStop.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
 JSPTimeStop.BorderSizePixel = 0
-JSPTimeStop.Position = UDim2.new(0.479999989, 0, 0.79400003, 0)
-JSPTimeStop.Size = UDim2.new(0, 104, 0, 18)
+JSPTimeStop.Position = UDim2.new(0.284166664, 0, 0.750574291, 0)
+JSPTimeStop.Size = UDim2.new(0, 75, 0, 17)
 JSPTimeStop.Visible = false
 JSPTimeStop.ZIndex = 2
 JSPTimeStop.Font = Enum.Font.GothamMedium
@@ -224,7 +324,7 @@ Shadow_6.Size = UDim2.new(1, 0, 1, 4)
 MainScriptsHub.Name = "MainScriptsHub"
 MainScriptsHub.Parent = MainFrame
 MainScriptsHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MainScriptsHub.BackgroundTransparency = 0.950
+MainScriptsHub.BackgroundTransparency = 0.980
 MainScriptsHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
 MainScriptsHub.BorderSizePixel = 0
 MainScriptsHub.Position = UDim2.new(0.00833333284, 0, 0.292927772, 0)
@@ -250,8 +350,8 @@ AutoBlock.Name = "AutoBlock"
 AutoBlock.Parent = MainScripts
 AutoBlock.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
 AutoBlock.BorderSizePixel = 0
-AutoBlock.Position = UDim2.new(0.0541102514, 0, 0.0428648517, 0)
-AutoBlock.Size = UDim2.new(0, 88, 0, 22)
+AutoBlock.Position = UDim2.new(0.0619227104, 0, 0.332080543, 0)
+AutoBlock.Size = UDim2.new(0, 117, 0, 29)
 AutoBlock.ZIndex = 2
 AutoBlock.Font = Enum.Font.GothamMedium
 AutoBlock.Text = "Auto Block"
@@ -264,8 +364,8 @@ Insdamagereflection.Name = "Insdamagereflection"
 Insdamagereflection.Parent = MainScripts
 Insdamagereflection.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
 Insdamagereflection.BorderSizePixel = 0
-Insdamagereflection.Position = UDim2.new(0.0530882329, 0, 0.191075772, 0)
-Insdamagereflection.Size = UDim2.new(0, 88, 0, 22)
+Insdamagereflection.Position = UDim2.new(0.623400748, 0, 0.333232611, 0)
+Insdamagereflection.Size = UDim2.new(0, 117, 0, 29)
 Insdamagereflection.ZIndex = 2
 Insdamagereflection.Font = Enum.Font.GothamMedium
 Insdamagereflection.Text = "Infinite Damage Reflect "
@@ -274,10 +374,39 @@ Insdamagereflection.TextScaled = true
 Insdamagereflection.TextSize = 14.000
 Insdamagereflection.TextWrapped = true
 
+UIStroke_2.Thickness = 3.300
+UIStroke_2.Parent = MainScripts
+
+TextLabel_3.Parent = MainScripts
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.236979157, 0, 0.0196078457, 0)
+TextLabel_3.Size = UDim2.new(0, 200, 0, 30)
+TextLabel_3.Font = Enum.Font.FredokaOne
+TextLabel_3.Text = "Outros Scripts"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+InfinitePose.Name = "InfinitePose"
+InfinitePose.Parent = MainScripts
+InfinitePose.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+InfinitePose.BorderSizePixel = 0
+InfinitePose.Position = UDim2.new(0.0619227104, 0, 0.577178597, 0)
+InfinitePose.Size = UDim2.new(0, 117, 0, 29)
+InfinitePose.ZIndex = 2
+InfinitePose.Font = Enum.Font.GothamMedium
+InfinitePose.Text = "Infinite Pose"
+InfinitePose.TextColor3 = Color3.fromRGB(255, 255, 255)
+InfinitePose.TextScaled = true
+InfinitePose.TextSize = 14.000
+InfinitePose.TextWrapped = true
+
 StandSelectOpen.Name = "StandSelectOpen"
 StandSelectOpen.Parent = MainFrame
 StandSelectOpen.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-StandSelectOpen.BackgroundTransparency = 0.950
+StandSelectOpen.BackgroundTransparency = 0.980
 StandSelectOpen.BorderColor3 = Color3.fromRGB(0, 0, 0)
 StandSelectOpen.BorderSizePixel = 0
 StandSelectOpen.Position = UDim2.new(0.00833333377, 0, 0.142935425, 0)
@@ -294,8 +423,8 @@ EVAONETimseStop.Name = "EVAONETimseStop"
 EVAONETimseStop.Parent = MainFrame
 EVAONETimseStop.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
 EVAONETimseStop.BorderSizePixel = 0
-EVAONETimseStop.Position = UDim2.new(0.479999989, 0, 0.79400003, 0)
-EVAONETimseStop.Size = UDim2.new(0, 104, 0, 18)
+EVAONETimseStop.Position = UDim2.new(0.284000009, 0, 0.750999987, 0)
+EVAONETimseStop.Size = UDim2.new(0, 75, 0, 17)
 EVAONETimseStop.Visible = false
 EVAONETimseStop.ZIndex = 2
 EVAONETimseStop.Font = Enum.Font.GothamMedium
@@ -311,12 +440,17 @@ Shadow_7.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
 Shadow_7.BorderSizePixel = 0
 Shadow_7.Size = UDim2.new(1, 0, 1, 4)
 
+UICorner.Parent = MainFrame
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(224, 43, 39)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(168, 3, 3))}
+UIGradient.Parent = MainFrame
+
 DFOURCClones.Name = "DFOURCClones"
 DFOURCClones.Parent = MainFrame
 DFOURCClones.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
 DFOURCClones.BorderSizePixel = 0
-DFOURCClones.Position = UDim2.new(0.480083317, 0, 0.793888867, 0)
-DFOURCClones.Size = UDim2.new(0, 104, 0, 18)
+DFOURCClones.Position = UDim2.new(0.669666648, 0, 0.53182435, 0)
+DFOURCClones.Size = UDim2.new(0, 78, 0, 15)
 DFOURCClones.Visible = false
 DFOURCClones.ZIndex = 2
 DFOURCClones.Font = Enum.Font.GothamMedium
@@ -332,34 +466,34 @@ Shadow_8.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
 Shadow_8.BorderSizePixel = 0
 Shadow_8.Size = UDim2.new(1, 0, 1, 4)
 
-Frame.Parent = MainFrame
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.BackgroundTransparency = 1.000
-Frame.Size = UDim2.new(0, 389, 0, 27)
+Frame_9.Parent = MainFrame
+Frame_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_9.BackgroundTransparency = 1.000
+Frame_9.Size = UDim2.new(0, 389, 0, 27)
 
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(-0.00114911608, 0, -0.264471918, 0)
-TextLabel.Size = UDim2.new(0, 200, 0, 28)
-TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "Op Stand Awekinig GUI"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
+TextLabel_4.Parent = Frame_9
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(-0.00114911608, 0, -0.264471918, 0)
+TextLabel_4.Size = UDim2.new(0, 200, 0, 28)
+TextLabel_4.Font = Enum.Font.FredokaOne
+TextLabel_4.Text = "Project Awekining Beta"
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
 
-TextLabel_2.Parent = Frame
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.Position = UDim2.new(0.994459331, 0, 10.058444, 0)
-TextLabel_2.Size = UDim2.new(0, 93, 0, 16)
-TextLabel_2.Font = Enum.Font.FredokaOne
-TextLabel_2.Text = "Beta Version 1.8"
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 14.000
-TextLabel_2.TextWrapped = true
+TextLabel_5.Parent = Frame_9
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Position = UDim2.new(0.994459331, 0, 10.058444, 0)
+TextLabel_5.Size = UDim2.new(0, 93, 0, 16)
+TextLabel_5.Font = Enum.Font.FredokaOne
+TextLabel_5.Text = "Beta Version 2.0 "
+TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
 
 TopBarTwo.Name = "TopBarTwo"
 TopBarTwo.Parent = MainFrame
@@ -376,7 +510,7 @@ TopBarOne.Size = UDim2.new(0, 79, 0, 0)
 StandFarmOp.Name = "StandFarmOp"
 StandFarmOp.Parent = MainFrame
 StandFarmOp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-StandFarmOp.BackgroundTransparency = 0.950
+StandFarmOp.BackgroundTransparency = 0.980
 StandFarmOp.BorderColor3 = Color3.fromRGB(0, 0, 0)
 StandFarmOp.BorderSizePixel = 0
 StandFarmOp.Position = UDim2.new(0.00833333284, 0, 0.442233324, 0)
@@ -398,17 +532,17 @@ StandFarmMainFrame.Position = UDim2.new(0.179000095, 0, 0.150000036, 0)
 StandFarmMainFrame.Size = UDim2.new(0, 384, 0, 204)
 StandFarmMainFrame.Visible = false
 
-TextLabel_3.Parent = StandFarmMainFrame
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.Position = UDim2.new(-0.0130804703, 0, 0, 0)
-TextLabel_3.Size = UDim2.new(0, 393, 0, 29)
-TextLabel_3.Font = Enum.Font.FredokaOne
-TextLabel_3.Text = "CUIDADO!! ao aperta o botão ele vai iniciar o stand Farm do qual voce selecionou"
-TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.TextScaled = true
-TextLabel_3.TextSize = 14.000
-TextLabel_3.TextWrapped = true
+TextLabel_6.Parent = StandFarmMainFrame
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.Position = UDim2.new(-0.0130804703, 0, 0, 0)
+TextLabel_6.Size = UDim2.new(0, 393, 0, 29)
+TextLabel_6.Font = Enum.Font.FredokaOne
+TextLabel_6.Text = "CUIDADO!! ao aperta o botão ele vai iniciar o stand Farm do qual voce selecionou"
+TextLabel_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 14.000
+TextLabel_6.TextWrapped = true
 
 TheWorldOVAStandFarm.Name = "TheWorldOVAStandFarm"
 TheWorldOVAStandFarm.Parent = StandFarmMainFrame
@@ -470,6 +604,9 @@ Shadow_11.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
 Shadow_11.BorderSizePixel = 0
 Shadow_11.Size = UDim2.new(1, 0, 1, 4)
 
+UIStroke_3.Thickness = 3.300
+UIStroke_3.Parent = StandFarmMainFrame
+
 info.Name = "info"
 info.Parent = MainFrame
 info.BackgroundTransparency = 1.000
@@ -483,7 +620,7 @@ info.ImageRectSize = Vector2.new(36, 36)
 ItemFarmSlect.Name = "ItemFarmSlect"
 ItemFarmSlect.Parent = MainFrame
 ItemFarmSlect.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ItemFarmSlect.BackgroundTransparency = 0.950
+ItemFarmSlect.BackgroundTransparency = 0.980
 ItemFarmSlect.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ItemFarmSlect.BorderSizePixel = 0
 ItemFarmSlect.Position = UDim2.new(0.00833333284, 0, 0.591538906, 0)
@@ -545,6 +682,9 @@ Shadow_13.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
 Shadow_13.BorderSizePixel = 0
 Shadow_13.Size = UDim2.new(1, 0, 1, 4)
 
+UIStroke_4.Thickness = 3.300
+UIStroke_4.Parent = ItemFarmMainFrame
+
 TpAreaSelectLock.Name = "TpAreaSelectLock"
 TpAreaSelectLock.Parent = MainFrame
 TpAreaSelectLock.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -552,6 +692,9 @@ TpAreaSelectLock.BackgroundTransparency = 1.000
 TpAreaSelectLock.Position = UDim2.new(0.179000005, 0, 0.150000006, 0)
 TpAreaSelectLock.Size = UDim2.new(0, 384, 0, 204)
 TpAreaSelectLock.Visible = false
+
+UIStroke_5.Thickness = 3.300
+UIStroke_5.Parent = TpAreaSelectLock
 
 Timmy.Name = "Timmy"
 Timmy.Parent = TpAreaSelectLock
@@ -636,7 +779,7 @@ Shadow_17.Size = UDim2.new(1, 0, 1, 4)
 TeleportAreasButton.Name = "TeleportAreasButton"
 TeleportAreasButton.Parent = MainFrame
 TeleportAreasButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TeleportAreasButton.BackgroundTransparency = 0.950
+TeleportAreasButton.BackgroundTransparency = 0.980
 TeleportAreasButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TeleportAreasButton.BorderSizePixel = 0
 TeleportAreasButton.Position = UDim2.new(0.00833333377, 0, 0.7227965, 0)
@@ -656,8 +799,177 @@ ImageLabel.Position = UDim2.new(0.920833349, 0, -0.020833334, 0)
 ImageLabel.Size = UDim2.new(0, 45, 0, 37)
 ImageLabel.Image = "http://www.roblox.com/asset/?id=11113255726"
 
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(203, 215, 253)), ColorSequenceKeypoint.new(1, Color3.fromRGB(225, 226, 227))}
-UIGradient.Parent = MainFrame
+UIStroke_6.Thickness = 6.300
+UIStroke_6.Parent = MainFrame
+
+next.Name = "next"
+next.Parent = MainFrame
+next.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+next.BackgroundTransparency = 1.000
+next.Position = UDim2.new(0.1166666, 0, 0.909722209, 0)
+next.Size = UDim2.new(0, 23, 0, 24)
+next.Font = Enum.Font.FredokaOne
+next.Text = ">"
+next.TextColor3 = Color3.fromRGB(0, 0, 0)
+next.TextScaled = true
+next.TextSize = 14.000
+next.TextWrapped = true
+
+PageTwoMainFrame.Name = "PageTwoMainFrame"
+PageTwoMainFrame.Parent = MainFrame
+PageTwoMainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PageTwoMainFrame.BackgroundTransparency = 1.000
+PageTwoMainFrame.Position = UDim2.new(0, 0, 0.128472224, 0)
+PageTwoMainFrame.Size = UDim2.new(0, 79, 0, 225)
+PageTwoMainFrame.Visible = false
+
+back.Name = "back"
+back.Parent = PageTwoMainFrame
+back.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+back.BackgroundTransparency = 1.000
+back.Position = UDim2.new(0.0379746817, 0, 1, 0)
+back.Size = UDim2.new(0, 23, 0, 24)
+back.Visible = false
+back.Font = Enum.Font.FredokaOne
+back.Text = "<"
+back.TextColor3 = Color3.fromRGB(0, 0, 0)
+back.TextScaled = true
+back.TextSize = 14.000
+back.TextWrapped = true
+
+AutoFarmBossOpen.Name = "AutoFarmBossOpen"
+AutoFarmBossOpen.Parent = PageTwoMainFrame
+AutoFarmBossOpen.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AutoFarmBossOpen.BackgroundTransparency = 0.950
+AutoFarmBossOpen.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoFarmBossOpen.BorderSizePixel = 0
+AutoFarmBossOpen.Position = UDim2.new(0.0463080183, 0, 0.0407132059, 0)
+AutoFarmBossOpen.Size = UDim2.new(0, 71, 0, 33)
+AutoFarmBossOpen.ZIndex = 2
+AutoFarmBossOpen.Font = Enum.Font.GothamMedium
+AutoFarmBossOpen.Text = "AUTO BOSS !!!"
+AutoFarmBossOpen.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoFarmBossOpen.TextScaled = true
+AutoFarmBossOpen.TextSize = 14.000
+AutoFarmBossOpen.TextWrapped = true
+
+LocalPlayerOpenSelect.Name = "LocalPlayerOpenSelect"
+LocalPlayerOpenSelect.Parent = PageTwoMainFrame
+LocalPlayerOpenSelect.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LocalPlayerOpenSelect.BackgroundTransparency = 0.950
+LocalPlayerOpenSelect.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LocalPlayerOpenSelect.BorderSizePixel = 0
+LocalPlayerOpenSelect.Position = UDim2.new(0.0463080145, 0, 0.240713209, 0)
+LocalPlayerOpenSelect.Size = UDim2.new(0, 71, 0, 33)
+LocalPlayerOpenSelect.ZIndex = 2
+LocalPlayerOpenSelect.Font = Enum.Font.GothamMedium
+LocalPlayerOpenSelect.Text = "Local Player"
+LocalPlayerOpenSelect.TextColor3 = Color3.fromRGB(0, 0, 0)
+LocalPlayerOpenSelect.TextScaled = true
+LocalPlayerOpenSelect.TextSize = 14.000
+LocalPlayerOpenSelect.TextWrapped = true
+
+AutoFarmBossMainFrame.Name = "AutoFarmBossMainFrame"
+AutoFarmBossMainFrame.Parent = MainFrame
+AutoFarmBossMainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AutoFarmBossMainFrame.BackgroundTransparency = 1.000
+AutoFarmBossMainFrame.Position = UDim2.new(0.179000005, 0, 0.150000006, 0)
+AutoFarmBossMainFrame.Size = UDim2.new(0, 384, 0, 204)
+AutoFarmBossMainFrame.Visible = false
+
+UIStroke_7.Thickness = 3.300
+UIStroke_7.Parent = AutoFarmBossMainFrame
+
+TextLabel_7.Parent = AutoFarmBossMainFrame
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.Position = UDim2.new(0.0416666716, 0, 0.0147058824, 0)
+TextLabel_7.Size = UDim2.new(0, 355, 0, 50)
+TextLabel_7.Font = Enum.Font.FredokaOne
+TextLabel_7.Text = "Cuidado, e para ser executa so quando voce entrar dentro da batalha"
+TextLabel_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 14.000
+TextLabel_7.TextWrapped = true
+
+StartAUtoFarmBoss.Name = "StartAUtoFarmBoss"
+StartAUtoFarmBoss.Parent = AutoFarmBossMainFrame
+StartAUtoFarmBoss.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+StartAUtoFarmBoss.BorderSizePixel = 0
+StartAUtoFarmBoss.Position = UDim2.new(0.268229187, 0, 0.465686262, 0)
+StartAUtoFarmBoss.Size = UDim2.new(0, 180, 0, 45)
+StartAUtoFarmBoss.ZIndex = 2
+StartAUtoFarmBoss.Font = Enum.Font.GothamMedium
+StartAUtoFarmBoss.Text = "Iniciar Auto Farm Boss"
+StartAUtoFarmBoss.TextColor3 = Color3.fromRGB(255, 255, 255)
+StartAUtoFarmBoss.TextScaled = true
+StartAUtoFarmBoss.TextSize = 14.000
+StartAUtoFarmBoss.TextWrapped = true
+
+Pattern.Name = "Pattern"
+Pattern.Parent = MainFrame
+Pattern.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pattern.BackgroundTransparency = 1.000
+Pattern.Position = UDim2.new(0.164583325, 0, -0.00694444031, 0)
+Pattern.Size = UDim2.new(0, 401, 0, 288)
+Pattern.ZIndex = 9
+Pattern.Image = "rbxassetid://2151741365"
+Pattern.ImageTransparency = 0.600
+Pattern.ScaleType = Enum.ScaleType.Tile
+Pattern.SliceCenter = Rect.new(0, 256, 0, 256)
+Pattern.TileSize = UDim2.new(0, 250, 0, 250)
+
+Pattern_2.Name = "Pattern"
+Pattern_2.Parent = MainFrame
+Pattern_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pattern_2.BackgroundTransparency = 1.000
+Pattern_2.Position = UDim2.new(-0.000931294751, 0, 0, 0)
+Pattern_2.Size = UDim2.new(0, 79, 0, 37)
+Pattern_2.ZIndex = 9
+Pattern_2.Image = "rbxassetid://2151741365"
+Pattern_2.ImageTransparency = 0.600
+Pattern_2.ScaleType = Enum.ScaleType.Tile
+Pattern_2.SliceCenter = Rect.new(0, 256, 0, 256)
+Pattern_2.TileSize = UDim2.new(0, 250, 0, 250)
+
+LocalPlayerMainFrame.Name = "LocalPlayerMainFrame"
+LocalPlayerMainFrame.Parent = MainFrame
+LocalPlayerMainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LocalPlayerMainFrame.BackgroundTransparency = 1.000
+LocalPlayerMainFrame.Position = UDim2.new(0.179000005, 0, 0.150000006, 0)
+LocalPlayerMainFrame.Size = UDim2.new(0, 384, 0, 204)
+LocalPlayerMainFrame.Visible = false
+
+UIStroke_8.Thickness = 3.300
+UIStroke_8.Parent = LocalPlayerMainFrame
+
+TextLabel_8.Parent = LocalPlayerMainFrame
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.Position = UDim2.new(0.203124985, 0, 0.00980392285, 0)
+TextLabel_8.Size = UDim2.new(0, 215, 0, 28)
+TextLabel_8.Font = Enum.Font.FredokaOne
+TextLabel_8.Text = "Local Player"
+TextLabel_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 14.000
+TextLabel_8.TextWrapped = true
+
+HitBoxViwer.Name = "HitBoxViwer"
+HitBoxViwer.Parent = LocalPlayerMainFrame
+HitBoxViwer.BackgroundColor3 = Color3.fromRGB(77, 100, 150)
+HitBoxViwer.BorderSizePixel = 0
+HitBoxViwer.Position = UDim2.new(0.0390624888, 0, 0.284313738, 0)
+HitBoxViwer.Size = UDim2.new(0, 132, 0, 33)
+HitBoxViwer.ZIndex = 2
+HitBoxViwer.Font = Enum.Font.GothamMedium
+HitBoxViwer.Text = "Hit Box Viwer"
+HitBoxViwer.TextColor3 = Color3.fromRGB(255, 255, 255)
+HitBoxViwer.TextScaled = true
+HitBoxViwer.TextSize = 14.000
+HitBoxViwer.TextWrapped = true
+
+UICorner_2.Parent = HitBoxViwer
 
 Open.Name = "Open"
 Open.Parent = StandAwe
@@ -680,25 +992,9 @@ Shadow_18.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
 Shadow_18.BorderSizePixel = 0
 Shadow_18.Size = UDim2.new(1, 0, 1, 4)
 
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(203, 215, 253)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(225, 226, 227))}
-UIGradient.Parent = MainFrame
-UIStroke_6.Thickness = 3.300
-UIStroke_6.Parent = TpAreaSelectLock
-UIStroke_5.Thickness = 3.300
-UIStroke_5.Parent = ItemFarmMainFrame
-UIStroke_4.Thickness = 3.300
-UIStroke_4.Parent = StandFarmMainFrame
-UICorner.Parent = MainFrame
-UIStroke_3.Thickness = 6.300
-UIStroke_3.Parent = MainFrame
-UIStroke_2.Thickness = 3.300
-UIStroke_2.Parent = MainScripts
-UIStroke.Thickness = 3.300
-UIStroke.Parent = Stands
-
 -- Scripts:
 
-local function XQIXMQE_fake_script() -- MainFrame.Main 
+local function ITNF_fake_script() -- MainFrame.Main 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	--[[
@@ -804,8 +1100,8 @@ local function XQIXMQE_fake_script() -- MainFrame.Main
 		end
 	end)
 end
-coroutine.wrap(XQIXMQE_fake_script)()
-local function NGWFM_fake_script() -- ShadowDioSelected.LocalScript 
+coroutine.wrap(ITNF_fake_script)()
+local function RLRO_fake_script() -- ShadowDioSelected.LocalScript 
 	local script = Instance.new('LocalScript', ShadowDioSelected)
 
 	script.Parent.Parent.ShadowDioSelected.MouseButton1Click:Connect(function()
@@ -815,8 +1111,8 @@ local function NGWFM_fake_script() -- ShadowDioSelected.LocalScript
 		script.Parent.Parent.Parent.DFOURCClones.Visible = false
 	end)
 end
-coroutine.wrap(NGWFM_fake_script)()
-local function XRCWHU_fake_script() -- JSPSelected.LocalScript 
+coroutine.wrap(RLRO_fake_script)()
+local function IEJPEI_fake_script() -- JSPSelected.LocalScript 
 	local script = Instance.new('LocalScript', JSPSelected)
 
 	script.Parent.Parent.JSPSelected.MouseButton1Click:Connect(function()
@@ -826,8 +1122,8 @@ local function XRCWHU_fake_script() -- JSPSelected.LocalScript
 		script.Parent.Parent.Parent.DFOURCClones.Visible = false
 	end)
 end
-coroutine.wrap(XRCWHU_fake_script)()
-local function PMTI_fake_script() -- EVAONESelected.LocalScript 
+coroutine.wrap(IEJPEI_fake_script)()
+local function MLXUL_fake_script() -- EVAONESelected.LocalScript 
 	local script = Instance.new('LocalScript', EVAONESelected)
 
 	script.Parent.Parent.EVAONESelected.MouseButton1Click:Connect(function()
@@ -837,8 +1133,8 @@ local function PMTI_fake_script() -- EVAONESelected.LocalScript
 		script.Parent.Parent.Parent.DFOURCClones.Visible = false
 	end)
 end
-coroutine.wrap(PMTI_fake_script)()
-local function GOUEA_fake_script() -- DFOURCSelect.LocalScript 
+coroutine.wrap(MLXUL_fake_script)()
+local function JDHGA_fake_script() -- DFOURCSelect.LocalScript 
 	local script = Instance.new('LocalScript', DFOURCSelect)
 
 	script.Parent.Parent.DFOURCSelect.MouseButton1Click:Connect(function()
@@ -848,8 +1144,8 @@ local function GOUEA_fake_script() -- DFOURCSelect.LocalScript
 		script.Parent.Parent.Parent.DFOURCClones.Visible = true
 	end)
 end
-coroutine.wrap(GOUEA_fake_script)()
-local function UWZROE_fake_script() -- ShadowDioTimeStop.LocalScript 
+coroutine.wrap(JDHGA_fake_script)()
+local function AFTGI_fake_script() -- ShadowDioTimeStop.LocalScript 
 	local script = Instance.new('LocalScript', ShadowDioTimeStop)
 
 	script.Parent.Parent.ShadowDioTimeStop.MouseButton1Click:Connect(function()
@@ -863,8 +1159,8 @@ local function UWZROE_fake_script() -- ShadowDioTimeStop.LocalScript
 		
 	end)
 end
-coroutine.wrap(UWZROE_fake_script)()
-local function FJVWNUS_fake_script() -- JSPTimeStop.LocalScript 
+coroutine.wrap(AFTGI_fake_script)()
+local function VASN_fake_script() -- JSPTimeStop.LocalScript 
 	local script = Instance.new('LocalScript', JSPTimeStop)
 
 	script.Parent.Parent.JSPTimeStop.MouseButton1Click:Connect(function()
@@ -878,8 +1174,8 @@ local function FJVWNUS_fake_script() -- JSPTimeStop.LocalScript
 	
 	end)
 end
-coroutine.wrap(FJVWNUS_fake_script)()
-local function NLSXB_fake_script() -- MainScriptsHub.LocalScript 
+coroutine.wrap(VASN_fake_script)()
+local function AVBQAH_fake_script() -- MainScriptsHub.LocalScript 
 	local script = Instance.new('LocalScript', MainScriptsHub)
 
 	script.Parent.Parent.MainScriptsHub.MouseButton1Click:Connect(function()
@@ -894,8 +1190,8 @@ local function NLSXB_fake_script() -- MainScriptsHub.LocalScript
 		script.Parent.Parent.TpAreaSelectLock.Visible = false
 	end)
 end
-coroutine.wrap(NLSXB_fake_script)()
-local function EURWR_fake_script() -- AutoBlock.LocalScript 
+coroutine.wrap(AVBQAH_fake_script)()
+local function ZNGLJ_fake_script() -- AutoBlock.LocalScript 
 	local script = Instance.new('LocalScript', AutoBlock)
 
 	script.Parent.Parent.AutoBlock.MouseButton1Click:Connect(function()
@@ -907,8 +1203,8 @@ local function EURWR_fake_script() -- AutoBlock.LocalScript
 		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
 	end)
 end
-coroutine.wrap(EURWR_fake_script)()
-local function BUBM_fake_script() -- Insdamagereflection.LocalScript 
+coroutine.wrap(ZNGLJ_fake_script)()
+local function EYMEZIO_fake_script() -- Insdamagereflection.LocalScript 
 	local script = Instance.new('LocalScript', Insdamagereflection)
 
 	script.Parent.Parent.Insdamagereflection.MouseButton1Click:Connect(function()
@@ -931,8 +1227,20 @@ local function BUBM_fake_script() -- Insdamagereflection.LocalScript
 	
 	end)
 end
-coroutine.wrap(BUBM_fake_script)()
-local function LCKY_fake_script() -- StandSelectOpen.LocalScript 
+coroutine.wrap(EYMEZIO_fake_script)()
+local function JHMAC_fake_script() -- InfinitePose.LocalScript 
+	local script = Instance.new('LocalScript', InfinitePose)
+
+	script.Parent.Parent.InfinitePose.MouseButton1Click:Connect(function()
+		local args = {
+			[1] = true
+		}
+	
+		game:GetService("ReplicatedStorage").Main.Menacing:FireServer(unpack(args))
+	end)
+end
+coroutine.wrap(JHMAC_fake_script)()
+local function GVYSMUK_fake_script() -- StandSelectOpen.LocalScript 
 	local script = Instance.new('LocalScript', StandSelectOpen)
 
 	script.Parent.Parent.StandSelectOpen.MouseButton1Click:Connect(function()
@@ -948,8 +1256,8 @@ local function LCKY_fake_script() -- StandSelectOpen.LocalScript
 		script.Parent.Parent.TpAreaSelectLock.Visible = false
 	end)
 end
-coroutine.wrap(LCKY_fake_script)()
-local function AKIQFYQ_fake_script() -- EVAONETimseStop.LocalScript 
+coroutine.wrap(GVYSMUK_fake_script)()
+local function VJGQ_fake_script() -- EVAONETimseStop.LocalScript 
 	local script = Instance.new('LocalScript', EVAONETimseStop)
 
 	script.Parent.Parent.EVAONETimseStop.MouseButton1Click:Connect(function()
@@ -963,8 +1271,8 @@ local function AKIQFYQ_fake_script() -- EVAONETimseStop.LocalScript
 		
 	end)
 end
-coroutine.wrap(AKIQFYQ_fake_script)()
-local function ERICFZA_fake_script() -- DFOURCClones.LocalScript 
+coroutine.wrap(VJGQ_fake_script)()
+local function UGBDXDE_fake_script() -- DFOURCClones.LocalScript 
 	local script = Instance.new('LocalScript', DFOURCClones)
 
 	script.Parent.Parent.DFOURCClones.MouseButton1Click:Connect(function()
@@ -978,8 +1286,8 @@ local function ERICFZA_fake_script() -- DFOURCClones.LocalScript
 	
 	end)
 end
-coroutine.wrap(ERICFZA_fake_script)()
-local function UATRP_fake_script() -- StandFarmOp.LocalScript 
+coroutine.wrap(UGBDXDE_fake_script)()
+local function IEXDVXH_fake_script() -- StandFarmOp.LocalScript 
 	local script = Instance.new('LocalScript', StandFarmOp)
 
 	script.Parent.Parent.StandFarmOp.MouseButton1Click:Connect(function()
@@ -994,8 +1302,8 @@ local function UATRP_fake_script() -- StandFarmOp.LocalScript
 		script.Parent.Parent.TpAreaSelectLock.Visible = false
 	end)
 end
-coroutine.wrap(UATRP_fake_script)()
-local function YINXTAE_fake_script() -- TheWorldOVAStandFarm.LocalScript 
+coroutine.wrap(IEXDVXH_fake_script)()
+local function TOIACH_fake_script() -- TheWorldOVAStandFarm.LocalScript 
 	local script = Instance.new('LocalScript', TheWorldOVAStandFarm)
 
 	script.Parent.Parent.TheWorldOVAStandFarm.MouseButton1Click:Connect(function()
@@ -1155,8 +1463,8 @@ local function YINXTAE_fake_script() -- TheWorldOVAStandFarm.LocalScript
 		game:GetService("ReplicatedStorage").Main.Input:FireServer("Alternate", "Appear", true)
 	end)
 end
-coroutine.wrap(YINXTAE_fake_script)()
-local function YKTWCB_fake_script() -- StarPlatinumStandFarm.LocalScript 
+coroutine.wrap(TOIACH_fake_script)()
+local function ANBWM_fake_script() -- StarPlatinumStandFarm.LocalScript 
 	local script = Instance.new('LocalScript', StarPlatinumStandFarm)
 
 	script.Parent.Parent.StarPlatinumStandFarm.MouseButton1Click:Connect(function()
@@ -1316,8 +1624,8 @@ local function YKTWCB_fake_script() -- StarPlatinumStandFarm.LocalScript
 		game:GetService("ReplicatedStorage").Main.Input:FireServer("Alternate", "Appear", true)
 	end)
 end
-coroutine.wrap(YKTWCB_fake_script)()
-local function DPKMQL_fake_script() -- thewordstandfarm.LocalScript 
+coroutine.wrap(ANBWM_fake_script)()
+local function NGQCJP_fake_script() -- thewordstandfarm.LocalScript 
 	local script = Instance.new('LocalScript', thewordstandfarm)
 
 	script.Parent.Parent.thewordstandfarm.MouseButton1Click:Connect(function()
@@ -1477,14 +1785,14 @@ local function DPKMQL_fake_script() -- thewordstandfarm.LocalScript
 		game:GetService("ReplicatedStorage").Main.Input:FireServer("Alternate", "Appear", true)
 	end)
 end
-coroutine.wrap(DPKMQL_fake_script)()
-local function ITZCYS_fake_script() -- info.LocalScript 
+coroutine.wrap(NGQCJP_fake_script)()
+local function YEACIM_fake_script() -- info.LocalScript 
 	local script = Instance.new('LocalScript', info)
 
 	script.Parent.Parent.info.MouseButton1Click:Connect(function()
 		if game:GetService("Workspace").FilteringEnabled == true then
 			game:GetService("StarterGui"):SetCore("SendNotification", {
-				Title = " Nova Update 1.8 ";
+				Title = " Nova Update 2.0 ";
 				Text = " ... ";
 			})
 		end
@@ -1494,13 +1802,13 @@ local function ITZCYS_fake_script() -- info.LocalScript
 		if game:GetService("Workspace").FilteringEnabled == true then
 			game:GetService("StarterGui"):SetCore("SendNotification", {
 				Title = " Adicionais ";
-				Text = " Foi adicionado Teleport | foi corrigido alguns erros de texto | a GUI foi alterada ";
+				Text = " Bugs corrigidos | Erro de textos corrigidos | visual da GUI | Local Player Scripts | E AUTO FARM BOSS FOI ADICIONADO APROVEITE!! ";
 			})
 		end
 	end)
 end
-coroutine.wrap(ITZCYS_fake_script)()
-local function XCTDV_fake_script() -- ItemFarmSlect.LocalScript 
+coroutine.wrap(YEACIM_fake_script)()
+local function OGPCXA_fake_script() -- ItemFarmSlect.LocalScript 
 	local script = Instance.new('LocalScript', ItemFarmSlect)
 
 	script.Parent.Parent.ItemFarmSlect.MouseButton1Click:Connect(function()
@@ -1515,8 +1823,8 @@ local function XCTDV_fake_script() -- ItemFarmSlect.LocalScript
 		script.Parent.Parent.TpAreaSelectLock.Visible = false
 	end)
 end
-coroutine.wrap(XCTDV_fake_script)()
-local function GMVD_fake_script() -- StarItemFarm.LocalScript 
+coroutine.wrap(OGPCXA_fake_script)()
+local function UBOQRE_fake_script() -- StarItemFarm.LocalScript 
 	local script = Instance.new('LocalScript', StarItemFarm)
 
 	script.Parent.Parent.StarItemFarm.MouseButton1Click:Connect(function()
@@ -1534,8 +1842,8 @@ local function GMVD_fake_script() -- StarItemFarm.LocalScript
 		end -- End lol
 	end)
 end
-coroutine.wrap(GMVD_fake_script)()
-local function RQECCV_fake_script() -- StopItemFarm.LocalScript 
+coroutine.wrap(UBOQRE_fake_script)()
+local function LJEOCXY_fake_script() -- StopItemFarm.LocalScript 
 	local script = Instance.new('LocalScript', StopItemFarm)
 
 	script.Parent.Parent.StopItemFarm.MouseButton1Click:Connect(function()
@@ -1553,40 +1861,40 @@ local function RQECCV_fake_script() -- StopItemFarm.LocalScript
 		end -- End lol
 	end)
 end
-coroutine.wrap(RQECCV_fake_script)()
-local function PDYQ_fake_script() -- Timmy.LocalScript 
+coroutine.wrap(LJEOCXY_fake_script)()
+local function IUNH_fake_script() -- Timmy.LocalScript 
 	local script = Instance.new('LocalScript', Timmy)
 
 	script.Parent.Parent.Timmy.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1395.74, 581.69, -218.97))
 	end)
 end
-coroutine.wrap(PDYQ_fake_script)()
-local function CIRCOB_fake_script() -- FarmZone.LocalScript 
+coroutine.wrap(IUNH_fake_script)()
+local function XBJOLB_fake_script() -- FarmZone.LocalScript 
 	local script = Instance.new('LocalScript', FarmZone)
 
 	script.Parent.Parent.FarmZone.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-316.59, 466.42, -1502.53))
 	end)
 end
-coroutine.wrap(CIRCOB_fake_script)()
-local function NKGO_fake_script() -- BossArea.LocalScript 
+coroutine.wrap(XBJOLB_fake_script)()
+local function HFJID_fake_script() -- BossArea.LocalScript 
 	local script = Instance.new('LocalScript', BossArea)
 
 	script.Parent.Parent.BossArea.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1101.2, 585.91, -736.67))
 	end)
 end
-coroutine.wrap(NKGO_fake_script)()
-local function GBQY_fake_script() -- BanckTeleportScript.LocalScript 
+coroutine.wrap(HFJID_fake_script)()
+local function SHLU_fake_script() -- BanckTeleportScript.LocalScript 
 	local script = Instance.new('LocalScript', BanckTeleportScript)
 
 	script.Parent.Parent.BanckTeleportScript.MouseButton1Click:Connect(function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1342.28, 584.95, -546.44))
 	end)
 end
-coroutine.wrap(GBQY_fake_script)()
-local function LPTS_fake_script() -- TeleportAreasButton.LocalScript 
+coroutine.wrap(SHLU_fake_script)()
+local function YYADAY_fake_script() -- TeleportAreasButton.LocalScript 
 	local script = Instance.new('LocalScript', TeleportAreasButton)
 
 	script.Parent.Parent.TeleportAreasButton.MouseButton1Click:Connect(function()
@@ -1602,20 +1910,146 @@ local function LPTS_fake_script() -- TeleportAreasButton.LocalScript
 		script.Parent.Parent.TpAreaSelectLock.Visible = true
 	end)
 end
-coroutine.wrap(LPTS_fake_script)()
-local function CVGTCHB_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(YYADAY_fake_script)()
+local function ZZWIOFM_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	while wait () do
 		script.Parent.Rotation = script.Parent.Rotation + 0.8
 	end
 end
-coroutine.wrap(CVGTCHB_fake_script)()
-local function XQBDH_fake_script() -- Open.LocalScript 
+coroutine.wrap(ZZWIOFM_fake_script)()
+local function ERGR_fake_script() -- next.LocalScript 
+	local script = Instance.new('LocalScript', next)
+
+	-- INFO --
+	
+	script.Parent.Parent.next.MouseButton1Click:Connect(function()
+		
+		script.Parent.Parent.Stands.Visible = false
+		script.Parent.Parent.MainScripts.Visible = false
+		script.Parent.Parent.JSPTimeStop.Visible = false
+		script.Parent.Parent.ShadowDioTimeStop.Visible = false
+		script.Parent.Parent.EVAONETimseStop.Visible = false
+		script.Parent.Parent.DFOURCClones.Visible = false
+		script.Parent.Parent.StandFarmMainFrame.Visible = false
+		script.Parent.Parent.ItemFarmMainFrame.Visible = false
+		script.Parent.Parent.TpAreaSelectLock.Visible = false
+		script.Parent.Parent.MainScriptsHub.Visible = false
+		script.Parent.Parent.StandSelectOpen.Visible = false
+		script.Parent.Parent.TeleportAreasButton.Visible = false
+		script.Parent.Parent.StandFarmOp.Visible = false
+		script.Parent.Parent.ItemFarmSlect.Visible = false
+		script.Parent.Parent.next.Visible = false
+		script.Parent.Parent.PageTwoMainFrame.Visible = true
+		script.Parent.Parent.PageTwoMainFrame.back.Visible = true
+		
+	end)
+	
+	-- END -- 
+end
+coroutine.wrap(ERGR_fake_script)()
+local function CNSN_fake_script() -- back.LocalScript 
+	local script = Instance.new('LocalScript', back)
+
+	script.Parent.Parent.back.MouseButton1Click:Connect(function()
+		
+		script.Parent.Parent.Parent.Stands.Visible = false
+		script.Parent.Parent.Parent.MainScripts.Visible = false
+		script.Parent.Parent.Parent.JSPTimeStop.Visible = false
+		script.Parent.Parent.Parent.ShadowDioTimeStop.Visible = false
+		script.Parent.Parent.Parent.EVAONETimseStop.Visible = false
+		script.Parent.Parent.Parent.DFOURCClones.Visible = false
+		script.Parent.Parent.Parent.StandFarmMainFrame.Visible = false
+		script.Parent.Parent.Parent.ItemFarmMainFrame.Visible = false
+		script.Parent.Parent.Parent.TpAreaSelectLock.Visible = true
+		script.Parent.Parent.Parent.MainScriptsHub.Visible = true
+		script.Parent.Parent.Parent.StandSelectOpen.Visible = true
+		script.Parent.Parent.Parent.TeleportAreasButton.Visible = true
+		script.Parent.Parent.Parent.StandFarmOp.Visible = true
+		script.Parent.Parent.Parent.ItemFarmSlect.Visible = true
+		script.Parent.Parent.Parent.next.Visible = true
+		script.Parent.Parent.Parent.PageTwoMainFrame.Visible = false
+		script.Parent.Parent.Parent.PageTwoMainFrame.back.Visible = false
+		script.Parent.Parent.Parent.AutoFarmBossMainFrame.Visible = false
+		script.Parent.Parent.Parent.AutoFarmBossMainFrame.StartAUtoFarmBoss.Visible = false
+		script.Parent.Parent.Parent.LocalPlayerMainFrame.Visible = false
+		
+	end)
+end
+coroutine.wrap(CNSN_fake_script)()
+local function NVLYKE_fake_script() -- AutoFarmBossOpen.LocalScript 
+	local script = Instance.new('LocalScript', AutoFarmBossOpen)
+
+	script.Parent.Parent.AutoFarmBossOpen.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.AutoFarmBossMainFrame.Visible = true
+		script.Parent.Parent.Parent.AutoFarmBossMainFrame.StartAUtoFarmBoss.Visible = true
+		script.Parent.Parent.Parent.LocalPlayerMainFrame.Visible = false
+	end)
+end
+coroutine.wrap(NVLYKE_fake_script)()
+local function FPFMMTD_fake_script() -- LocalPlayerOpenSelect.LocalScript 
+	local script = Instance.new('LocalScript', LocalPlayerOpenSelect)
+
+	script.Parent.Parent.LocalPlayerOpenSelect.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.AutoFarmBossMainFrame.Visible = false
+		script.Parent.Parent.Parent.AutoFarmBossMainFrame.StartAUtoFarmBoss.Visible = true
+		
+		
+		script.Parent.Parent.Parent.LocalPlayerMainFrame.Visible = true
+	end)
+end
+coroutine.wrap(FPFMMTD_fake_script)()
+local function WSVRGA_fake_script() -- StartAUtoFarmBoss.LocalScript 
+	local script = Instance.new('LocalScript', StartAUtoFarmBoss)
+
+	script.Parent.Parent.StartAUtoFarmBoss.MouseButton1Click:Connect(function()
+		getgenv().WaitTime = 240 -- amount time you want added to your run in seconds
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/sunexn/standsawakening/main/uncanny.lua",true))() -- open source
+	end)
+end
+coroutine.wrap(WSVRGA_fake_script)()
+local function UOXNDX_fake_script() -- HitBoxViwer.LocalScript 
+	local script = Instance.new('LocalScript', HitBoxViwer)
+
+	script.Parent.Parent.HitBoxViwer.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.AutoFarmBossMainFrame.Visible = false
+		script.Parent.Parent.Parent.AutoFarmBossMainFrame.StartAUtoFarmBoss.Visible = false
+		script.Parent.Parent.Parent.LocalPlayerMainFrame.Visible = true
+		
+		wait(0.1)
+		
+		-- SCRIPT --
+		
+		_G.HeadSize = 20 -- Se quiser almentar o tamanho do bloco é so almentar :>
+		_G.Disabled = true
+	
+		game:GetService('RunService').RenderStepped:connect(function()
+			if _G.Disabled then
+				for i,v in next, game:GetService('Players'):GetPlayers() do
+					if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+						pcall(function()
+							v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+							v.Character.HumanoidRootPart.Transparency = 0.7
+							v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+							v.Character.HumanoidRootPart.Material = "Neon"
+							v.Character.HumanoidRootPart.CanCollide = false
+						end)
+					end
+				end
+			end
+		end)
+		
+		-- END --
+		
+	end)
+end
+coroutine.wrap(UOXNDX_fake_script)()
+local function CBIIY_fake_script() -- Open.LocalScript 
 	local script = Instance.new('LocalScript', Open)
 
 	script.Parent.Parent.Open.MouseButton1Click:Connect(function()
 		script.Parent.Parent.MainFrame.Visible = true
 	end)
 end
-coroutine.wrap(XQBDH_fake_script)()
+coroutine.wrap(CBIIY_fake_script)()
