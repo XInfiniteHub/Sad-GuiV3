@@ -303,7 +303,7 @@ Tab:AddButton({
 	end    
 })
 local Section = Tab:AddSection({
-	Name = "Others Options"
+	Name = "Outras Opções"
 })
 Tab:AddButton({
 	Name = "Disable effects",
