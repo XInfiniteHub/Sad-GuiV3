@@ -1,0 +1,12 @@
+local hum = game:GetService("Players").LocalPlayer.Character.Humanoid
+local material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
+local ui = material.Load({ Title = "LocalPlayer Gui By Darkzin and Cool", Style = 3, SizeY = 150 })
+local mainPage = ui.New({ Title = 'Main' })
+local slider = mainPage.Slider({ Text = 'WalkSpeed', Min = 16, Max = 1000, Def = 16, Callback = function(v) hum.WalkSpeed = v end })
+
+-----------------------------
+
+local hum = game:GetService("Players").LocalPlayer.Character.Humanoid
+local slider = mainPage.Slider({ Text = 'JumpPower', Min = 16, Max = 1000, Def = 16, Callback = function(v) hum.JumpPower = v end })
+
+-----------------------------
