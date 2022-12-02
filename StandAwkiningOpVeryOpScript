@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Project Awakening v3.0 🥳", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v3.2 🥳", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining"})
 
 -- MENSAGEM --
 
@@ -13,6 +13,20 @@ OrionLib:MakeNotification({
 
 -- END --
 
+
+
+
+-- WELCOME --
+
+local Tab = Window:MakeTab({
+	Name = "Welcome",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddParagraph("Bem Vindo","Project Awakining v3.2")
+
+-- END
 
 
 
@@ -321,7 +335,8 @@ Tab:AddButton({
 	Callback = function()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/itsyouranya/free/main/Anya%20Stands%20Awakening%20Helper.lua'),true))()
 	end    
-})Tab:AddButton({
+})
+Tab:AddButton({
 	Name = "Complete Parkour",
 	Callback = function()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(20.4561386, 113.245972, 196.61351, 0.0634383112, 5.81675401e-08, -0.99798578, 8.29346689e-08, 1, 6.35567972e-08, 0.99798578, -8.67995524e-08, 0.0634383112))
@@ -342,8 +357,31 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
-	Name = "Soon..."
+	Name = "Local Player Scripts"
 })
+Tab:AddButton({
+	Name = "Fly (Working) | Togle E ",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Fly'))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Noclip (Working) Beta ",
+	Callback = function()
+      		local character = game.Players.LocalPlayer.Character
+			while true do
+			for i,v in pairs(character:GetDescendants()) do
+			pcall(function()
+			if v:IsA("BasePart") then
+			v.CanCollide = false
+			end
+			end)
+			end
+			task.wait()
+			end
+  	end    
+})
+
 
 -- END --
 
@@ -362,13 +400,26 @@ Tab:AddToggle({
 	Name = "Save Settings",
 	Default = false,
 	Callback = function(Value)
-		OrionLib:MakeNotification({
-		Name = "Soon... 😴",
-		Content = "...",
-		Image = "rbxassetid://4483345998",
-		Time = 5
-})
+		print("Settings Saved")
 	end    
 })
+
+-- END --
+
+
+
+
+-- INFO --
+
+local Tab = Window:MakeTab({
+	Name = "Info",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddParagraph("Nova Update!!","Versão 3.2")
+Tab:AddParagraph("Correção de bugs","Maioria dos bugs totalmente corrigidos")
+Tab:AddParagraph("Erro de script","Item Farm Script corrigido")
+Tab:AddParagraph("Erro Crash","Erro Crash Script Corrigido")
 
 -- END --
