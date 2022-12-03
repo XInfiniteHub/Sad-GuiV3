@@ -1,0 +1,12 @@
+Tab:AddButton({
+	Name = "Buy Arrow",
+	Callback = function()
+	
+local args = {
+    [1] = "Arrow"
+}
+
+game:GetService("ReplicatedStorage").Purchase:FireServer(unpack(args))
+
+  	end    
+})
