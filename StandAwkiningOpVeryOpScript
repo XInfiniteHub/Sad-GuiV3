@@ -1,6 +1,22 @@
+--[[
+	__________________________
+	|Made By Darkzin and Cool|
+	|						 |
+	|GUI: Darkzin|			 |
+	|Script: Cool			 |
+	|				 		 |
+	|				         |
+	|				         |
+	--------------------------
+	
+--]]
+
+
+
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Project Awakening v3.2 🥳", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining"})
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v3.3 (Beta) 🥳", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining"})
 
 -- MENSAGEM --
 
@@ -281,6 +297,12 @@ Tab:AddButton({
 	end    
 })
 Tab:AddButton({
+	Name = "Arena 1v1",
+	Callback = function()
+  		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1247.95, 581.04, -279.96))
+	end    
+})
+Tab:AddButton({
 	Name = "Key Spawn 1",
 	Callback = function()
   		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1043.8, 591.63, -185.03))
@@ -379,6 +401,25 @@ Tab:AddButton({
 			end
 			task.wait()
 			end
+  	end    
+})
+Tab:AddButton({
+	Name = "Ctrl + Click Tp ",
+	Callback = function()
+      		local Plr = game:GetService("Players").LocalPlayer
+			local Mouse = Plr:GetMouse()
+
+			Mouse.Button1Down:connect(function()
+			if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+			if not Mouse.Target then return end
+			Plr.Character:MoveTo(Mouse.Hit.p)
+			end)
+  	end    
+})
+Tab:AddButton({
+	Name = "Infinite Jump ",
+	Callback = function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Infinite%20jump'))()
   	end    
 })
 
