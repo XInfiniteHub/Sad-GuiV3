@@ -1,0 +1,12 @@
+Tab:AddButton({
+	Name = "Buy Rokaka",
+	Callback = function()
+
+local args = {
+    [1] = "Rokakaka Fruit"
+}
+
+game:GetService("ReplicatedStorage").Purchase:FireServer(unpack(args))
+
+  	end    
+})
