@@ -16,13 +16,19 @@
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Project Awakening v3.4 🥳", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining"})
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v3.5 (Beta) 🥳", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining (Beta) "})
 
 -- MENSAGEM --
 
 OrionLib:MakeNotification({
 	Name = "Creditos !",
 	Content = "Feito por Darkzin e Cool",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+OrionLib:MakeNotification({
+	Name = "Beta Version Loaded",
+	Content = "",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
@@ -40,7 +46,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Bem Vindo","Project Awakining v3.4")
+Tab:AddParagraph("Bem Vindo","Project Awakining v3.5 (Beta Version)")
 
 -- END
 
@@ -85,6 +91,28 @@ Tab:AddButton({
       		local args = {
 				[1] = 20000000,           -- 20000000 = 20 or 15
 				[2] = "diooh"			-- Shadow dio / Stw
+			}
+
+			game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+  			end    
+})
+Tab:AddButton({
+	Name = "Steve",
+	Callback = function()
+      		local args = {
+				[1] = 20000000,           -- 20000000 = 20 or 15
+				[2] = "jotaro"			-- Shadow dio / Stw
+			}
+
+			game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+  			end    
+})
+Tab:AddButton({
+	Name = "Herobrine",
+	Callback = function()
+      		local args = {
+				[1] = 20000000,           -- 20000000 = 20 or 15
+				[2] = "jotaro"			-- Shadow dio / Stw
 			}
 
 			game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
@@ -165,6 +193,70 @@ Tab:AddButton({
 
 		game:GetService("ReplicatedStorage").Main.Menacing:FireServer(unpack(args))
   		end    
+})
+Tab:AddButton({
+	Name = "Shadow Dio Infinite Kinifes (Use Q first) ",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Shadow%20Inf%20Kinifes'))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Wings ULF inf ",
+	Callback = function()
+      		local args = {
+    [1] = game:GetService("Players").LocalPlayer.Character.Wing1,
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage").Main.Transparency:FireServer(unpack(args))
+  	end    
+})
+Tab:AddButton({
+	Name = "Hierophant Green (Infinite Emerald) Beta ",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/INF%20ESMERAlD'))()
+  	end    
+})
+
+-- END --
+
+
+
+
+-- Buy Items --
+
+local Tab = Window:MakeTab({
+	Name = "Buy Items",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Clique e o item sera comprado"
+})
+Tab:AddButton({
+	Name = "Buy Arrow",
+	Callback = function()
+	
+local args = {
+    [1] = "Arrow"
+}
+
+game:GetService("ReplicatedStorage").Purchase:FireServer(unpack(args))
+
+  	end    
+})
+Tab:AddButton({
+	Name = "Buy Rokaka",
+	Callback = function()
+
+local args = {
+    [1] = "Rokakaka Fruit"
+}
+
+game:GetService("ReplicatedStorage").Purchase:FireServer(unpack(args))
+
+  	end    
 })
 
 -- END --
@@ -465,5 +557,8 @@ Tab:AddParagraph("Erro de script","Item Farm Script corrigido")
 Tab:AddParagraph("Erro Crash","Erro Crash Script Corrigido")
 Tab:AddParagraph("Erro Do Fly não totalmente corrigido","Não é recomendado")
 Tab:AddParagraph("Noclip Bugado","Não é recomendado")
+Tab:AddParagraph("Versão Em Beta","A versão original esta tendo uns bugs, então tiramos os Bugs e colocamos as opção que não estão bugadas")
+Tab:AddParagraph("Novos Stands Adicionados","Steve e Herobrine")
+Tab:AddParagraph("Novas Opções no Main","")
 
 -- END --
