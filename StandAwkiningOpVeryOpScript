@@ -16,7 +16,7 @@
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Project Awakening v3.3 (Beta) 🥳", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining"})
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v3.4 (Beta) 🥳", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining"})
 
 -- MENSAGEM --
 
@@ -40,7 +40,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Bem Vindo","Project Awakining v3.2")
+Tab:AddParagraph("Bem Vindo","Project Awakining v3.4")
 
 -- END
 
@@ -382,13 +382,13 @@ local Section = Tab:AddSection({
 	Name = "Local Player Scripts"
 })
 Tab:AddButton({
-	Name = "Fly (Working) | Togle E ",
+	Name = "Fly | Togle E ",
 	Callback = function()
       		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Fly'))()
   	end    
 })
 Tab:AddButton({
-	Name = "Noclip (Working) Beta ",
+	Name = "Noclip Not Recommended ",
 	Callback = function()
       		local character = game.Players.LocalPlayer.Character
 			while true do
@@ -437,11 +437,12 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddToggle({
-	Name = "Save Settings",
-	Default = false,
+Tab:AddDropdown({
+	Name = "Themes",
+	Default = "1",
+	Options = {"Soon...", "Soon...", "Soon..."},
 	Callback = function(Value)
-		print("Settings Saved")
+		print(Value)
 	end    
 })
 
@@ -458,9 +459,11 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Nova Update!!","Versão 3.2")
+Tab:AddParagraph("Nova Update!!","Versão 3.4")
 Tab:AddParagraph("Correção de bugs","Maioria dos bugs totalmente corrigidos")
 Tab:AddParagraph("Erro de script","Item Farm Script corrigido")
 Tab:AddParagraph("Erro Crash","Erro Crash Script Corrigido")
+Tab:AddParagraph("Erro Do Fly não totalmente corrigido","Não é recomendado")
+Tab:AddParagraph("Noclip Bugado","Não é recomendado")
 
 -- END --
