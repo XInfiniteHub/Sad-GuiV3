@@ -575,7 +575,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Nova Update!!","Versão 3.4")
+Tab:AddParagraph("Nova Update!!","Versão 3.5 (Beta)")
 Tab:AddParagraph("Correção de bugs","Maioria dos bugs totalmente corrigidos")
 Tab:AddParagraph("Erro de script","Item Farm Script corrigido")
 Tab:AddParagraph("Erro Crash","Erro Crash Script Corrigido")
