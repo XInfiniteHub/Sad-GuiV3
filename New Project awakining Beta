@@ -1,0 +1,539 @@
+--[[
+	Local Devs = {
+		Gui: Darkzin	
+		Scripts: Cool
+	}
+--]]
+
+
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+-- MAIN --
+
+local Window = Rayfield:CreateWindow({
+	Name = "Project Awakining v 4.0 | @Dakrzin, @Cool ",
+	LoadingTitle = "Project Awakining",
+	LoadingSubtitle = "by Darkzin and Cool",
+	ConfigurationSaving = {
+		Enabled = true,
+		FolderName = nil, -- Create a custom folder for your hub/game
+		FileName = "Big Hub"
+	},
+        Discord = {
+        	Enabled = false,
+        	Invite = "sirius", -- The Discord invite code, do not include discord.gg/
+        	RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+        },
+	KeySystem = true, -- Set this to true to use our key system
+	KeySettings = {
+		Title = "Project Awakining v4.0 🥳",
+		Subtitle = "Key System",
+		Note = "Enter in https://pastebin.com/agy5283q",
+		FileName = "SiriusKey",
+		SaveKey = true,
+		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+		Key = "28AA1293445C3DDB7168B85F214AC"
+	}
+})
+
+-- END --
+
+
+
+
+-- WELCOME --
+
+local Tab = Window:CreateTab("Welcome")
+local Paragraph = Tab:CreateParagraph({Title = "Bem vindo a nova Update do Project Awakining", Content = "È um prazer ter você aqui denovo"})
+
+-- END --
+
+
+
+
+-- MAIN --
+
+local Tab = Window:CreateTab("Stands")
+local Paragraph = Tab:CreateParagraph({Title = "Bem vindo aos stands", Content = "Ao selecionar seu stand ele tera seu time stop de 20 segundos"})
+
+local Section = Tab:CreateSection("Stand com TimeStop")
+
+local Button = Tab:CreateButton({
+	Name = "Shadow Dio",
+	Callback = function()
+		      		local args = {
+				[1] = 20000000,           -- 20000000 = 20 or 15
+				[2] = "shadowdio"			-- Shadow dio / Stw
+			}
+
+			game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "JSP",
+	Callback = function()
+		      		local args = {
+				[1] = 20000000,           -- 20000000 = 20 or 15
+				[2] = "jotaro"			-- Shadow dio / Stw
+			}
+
+			game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "EVA 01",
+	Callback = function()
+		      		local args = {
+				[1] = 20000000,           -- 20000000 = 20 or 15
+				[2] = "jotaro"			-- Shadow dio / Stw
+			}
+
+			game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Steve",
+	Callback = function()
+		      		local args = {
+				[1] = 20000000,           -- 20000000 = 20 or 15
+				[2] = "jotaro"			-- Shadow dio / Stw
+			}
+
+			game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Herobine",
+	Callback = function()
+		      		local args = {
+				[1] = 20000000,           -- 20000000 = 20 or 15
+				[2] = "jotaro"			-- Shadow dio / Stw
+			}
+
+			game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+	end,
+})
+
+-- D4C
+
+local Section = Tab:CreateSection("D4C Clones, ao aperta ele ira spawnar 1 clone")
+
+local Button = Tab:CreateButton({
+	Name = "D4C Clones",
+	Callback = function()
+			local args = {
+				[1] = "Alternate",
+				[2] = "Clone"
+			}	
+
+		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args)) 
+	end,
+})
+
+-- END 
+
+
+-- END --
+
+
+
+
+-- MAIN --
+
+local Tab = Window:CreateTab("Main")
+local Paragraph = Tab:CreateParagraph({Title = "Bem vindo ao main", Content = "Slecione uma das opções abaixo"})
+
+local Button = Tab:CreateButton({
+	Name = "Auto Block",
+	Callback = function()
+		local args = {
+			[1] = "Alternate",
+			[2] = "Block"
+		}
+
+		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Infinite Damage Reflect",
+	Callback = function()
+		Rayfield:Notify({
+    Title = "CUIDADO",
+    Content = "Para executar esse script é necessario o Gold Expirience Requiem",
+    Duration = 6.5,
+    Image = 4483362458,
+    Actions = { -- Notification Buttons
+        Ignore = {
+            Name = "Okay!",
+            Callback = function()
+                		local args = {
+			[1] = "Alternate",
+			[2] = "RTZ",
+			[3] = true
+		}
+
+		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+            end
+		},
+	},
+})
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Infinite Pose",
+	Callback = function()
+		local args = {
+			[1] = true
+		}
+
+		game:GetService("ReplicatedStorage").Main.Menacing:FireServer(unpack(args))
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Shadow Dio Infinite Kinife (Use Q First)",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Shadow%20Inf%20Kinifes'))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Wings ULF inf",
+	Callback = function()
+	local args = {
+   		 [1] = game:GetService("Players").LocalPlayer.Character.Wing1,
+   		 [2] = 0
+	}
+
+	game:GetService("ReplicatedStorage").Main.Transparency:FireServer(unpack(args))
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Hierophant Green (Infinite Emerald) Beta",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/INF%20ESMERAlD'))()
+	end,
+})
+
+-- END --
+
+
+
+
+
+-- BUY ITEMS --
+
+local Tab = Window:CreateTab("Buy Items")
+local Paragraph = Tab:CreateParagraph({Title = "Bem vindo ao Buy Item", Content = "Ao aperta o item sera comprado"})
+
+local Button = Tab:CreateButton({
+	Name = "Arrow",
+	Callback = function()
+		local args = {
+  		  	  [1] = "Arrow"
+		}
+
+		game:GetService("ReplicatedStorage").Purchase:FireServer(unpack(args))
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Rokakaka",
+	Callback = function()
+		local args = {
+  		  	  [1] = "Rokakaka Fruit"
+		}
+
+		game:GetService("ReplicatedStorage").Purchase:FireServer(unpack(args))
+	end,
+})
+
+-- END --
+
+
+
+
+-- STAND FARM --
+
+local Tab = Window:CreateTab("Stand Farm")
+local Paragraph = Tab:CreateParagraph({Title = "Bem vindo ao Stand Farm", Content = "Ao aperta em uma das opções ele iniciará o stand farm"})
+
+local Button = Tab:CreateButton({
+	Name = "The World",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/tw'))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Star Platinum",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/jp'))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Star Platinum OVA",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/jpova'))()
+	end,
+})
+
+-- END --
+
+local Tab = Window:CreateTab("Item Farm")
+local Paragraph = Tab:CreateParagraph({Title = "Bem vindo ao item Farm", Content = "Ao aperta em Star ele iniciará e no stop ele irá parar"})
+
+local Button = Tab:CreateButton({
+	Name = "Start Item Farm",
+	Callback = function()
+		  			_G.ItemsFarm = true -- Coloque falso para parar e true para iniciar
+			while _G.ItemsFarm do wait() 
+			---------------------------------------------------- Script
+
+			for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+				if v:IsA("Tool") and v:FindFirstChild("Handle") then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Handle.CFrame
+				end
+			end
+
+			---------------------------------------------------- Script
+		end -- End lol
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Stop Item Farm",
+	Callback = function()
+		  	_G.ItemsFarm = false -- Coloque falso para parar e true para iniciar
+			while _G.ItemsFarm do wait() 
+			---------------------------------------------------- Script
+
+			for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+				if v:IsA("Tool") and v:FindFirstChild("Handle") then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Handle.CFrame
+				end
+			end
+
+			---------------------------------------------------- Script
+		end -- End lol
+	end,
+})
+
+-- END --
+
+
+
+
+-- TELEPORT --
+
+local Tab = Window:CreateTab("Teleport")
+local Paragraph = Tab:CreateParagraph({Title = "Bem vindo ao Teleport", Content = "Ao aperta em um dos botões você será teletransportado"})
+
+local Button = Tab:CreateButton({
+	Name = "Bank",
+	Callback = function()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1342.28, 584.95, -546.44))
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Boss",
+	Callback = function()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1101.2, 585.91, -736.67))
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Farm Zone",
+	Callback = function()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-316.59, 466.42, -1502.53))
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Timmy",
+	Callback = function()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1395.74, 581.69, -218.97))
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Arena 1v1",
+	Callback = function()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1247.95, 581.04, -279.96))
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Key Spawn 1",
+	Callback = function()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1043.8, 591.63, -185.03))
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Key Spawn 1",
+	Callback = function()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1617.95, 588.23, -755.87))
+	end,
+})
+
+-- END --
+
+
+
+
+-- AUTO BOSS --
+
+local Tab = Window:CreateTab("Auto Boss")
+local Paragraph = Tab:CreateParagraph({Title = "Bem vindo ao Auto Boss", Content = "O Auto Boss foi concertado, aproveite "})
+
+local Button = Tab:CreateButton({
+	Name = "Auto Boss",
+	Callback = function()
+		getgenv().WaitTime = 240 -- amount time you want added to your run in seconds
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/sunexn/standsawakening/main/uncanny.lua",true))()
+	end,
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Outra Opções ", Content = ""})
+
+local Button = Tab:CreateButton({
+	Name = "Disable effects",
+	Callback = function()
+		if game:GetService("Workspace"):FindFirstChild("Effects") then
+    		game:GetService("Workspace"):FindFirstChild("Effects"):Destroy()
+		end
+		if game:GetService("Workspace").Map:FindFirstChild("ThunderParts") then
+   			game:GetService("Workspace").Map:FindFirstChild("ThunderParts"):Destroy()
+		end
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Sword No Cooldown",
+	Callback = function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/itsyouranya/free/main/Anya%20Stands%20Awakening%20Helper.lua'),true))()
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Complete Parkour",
+	Callback = function()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(20.4561386, 113.245972, 196.61351, 0.0634383112, 5.81675401e-08, -0.99798578, 8.29346689e-08, 1, 6.35567972e-08, 0.99798578, -8.67995524e-08, 0.0634383112))
+	end,
+})
+
+-- END --
+
+
+
+
+-- Local Player --
+
+local Tab = Window:CreateTab("Local Player")
+local Paragraph = Tab:CreateParagraph({Title = "Bem vindo ao Local Player", Content = ""})
+
+local Button = Tab:CreateButton({
+	Name = "Fly (Patched) ",
+	Callback = function()
+		Rayfield:Notify({
+   		Title = "Fly Partched ",
+    	Content = "O fly infelizmente n está mais funcionando :( ",
+    	Duration = 6.5,
+   		Image = 4483362458,
+    	Actions = { -- Notification Buttons
+        	Ignore = {
+            	Name = "Okay!",
+            	Callback = function()
+                	print("Fly is patched Okay!")
+            end
+		},
+	},
+})
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Noclip Dont Work",
+	Callback = function()
+		Rayfield:Notify({
+    Title = "Noclip Dont Work ",
+    Content = "O noclip não está mais funionando :( ",
+    Duration = 6.5,
+    Image = 4483362458,
+    Actions = { -- Notification Buttons
+        Ignore = {
+            Name = "Okay!",
+            Callback = function()
+                print("Noclip Dont Work")
+            end
+		},
+	},
+})
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Ctrt + Click Tp",
+	Callback = function()
+		    local Plr = game:GetService("Players").LocalPlayer
+			local Mouse = Plr:GetMouse()
+
+			Mouse.Button1Down:connect(function()
+			if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+			if not Mouse.Target then return end
+			Plr.Character:MoveTo(Mouse.Hit.p)
+			end)
+	end,
+})
+local Button = Tab:CreateButton({
+	Name = "Ctrt + Click Tp",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Infinite%20jump'))()
+	end,
+})
+local Slider = Tab:CreateSlider({
+	Name = "WalkSpeed",
+	Range = {16, 500},
+	Increment = 10,
+	Suffix = "Speed",
+	CurrentValue = 16,
+	Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Speed)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed
+	end,
+})
+local Slider = Tab:CreateSlider({
+	Name = "JumpPower",
+	Range = {50, 500},
+	Increment = 10,
+	Suffix = "Speed",
+	CurrentValue = 50,
+	Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Jump)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Jump
+	end,
+})
+
+-- END --
+
+
+
+
+-- SETTINGS --
+
+local Tab = Window:CreateTab("Settings")
+local Paragraph = Tab:CreateParagraph({Title = "Bem vindo as Configurações", Content = "Configura a GUI "})
+local Paragraph = Tab:CreateParagraph({Title = "Error! ", Content = "Estamos com problema sobre a KeyBind, se esse erro continuar iremos voltar com a antiga GUI"})
+
+local Keybind = Tab:CreateKeybind({
+	Name = "Keybind",
+	CurrentKeybind = "RightCtrl",
+	HoldToInteract = true,
+	Flag = "Keybind1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Keybind)
+		Keybind:Set("RightCtrl")
+	end,
+})
+
+-- END --
+
+
+
+
+-- INFO --
+
+local Tab = Window:CreateTab("Info")
+local Paragraph = Tab:CreateParagraph({Title = "Info Sobre a GUI", Content = "Aqui você irá poder saber sobre as novas updates e as antigas "})
+
+local Section = Tab:CreateSection("Update 4.0 ")
+local Label = Tab:CreateLabel("Foi mudado o estilo da GUI, alguns boug corrigidos")
+local Label = Tab:CreateLabel("Auto Boss Erro ainda em observação")
+
+-- END
