@@ -11,7 +11,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shle
 -- MAIN --
 
 local Window = Rayfield:CreateWindow({
-	Name = "Project Awakining v 4.0 | @Dakrzin, @Cool ",
+	Name = "Project Awakining v 4.1 | @Dakrzin, @Cool ",
 	LoadingTitle = "Project Awakining",
 	LoadingSubtitle = "by Darkzin and Cool",
 	ConfigurationSaving = {
@@ -26,7 +26,7 @@ local Window = Rayfield:CreateWindow({
         },
 	KeySystem = true, -- Set this to true to use our key system
 	KeySettings = {
-		Title = "Project Awakining v4.0 🥳",
+		Title = "Project Awakining v4.1 🥳",
 		Subtitle = "Key System",
 		Note = "Enter in https://pastebin.com/agy5283q",
 		FileName = "SiriusKey",
@@ -512,7 +512,27 @@ local Tab = Window:CreateTab("Settings")
 local Paragraph = Tab:CreateParagraph({Title = "Bem vindo as Configurações", Content = "Configura a GUI "})
 local Paragraph = Tab:CreateParagraph({Title = "KeyBind ! ", Content = "O erro da key bind foi corrigido, mais para isso precisa estar com a Trava do Shift desativada"})
 
-Keybind:Set("RightShift")
+-- END --
+
+
+
+
+-- VISUAL --
+
+local Tab = Window:CreateTab("Visual")
+local Paragraph = Tab:CreateParagraph({Title = "Bem vindo ao visual", Content = "Aqui os scripts são visuais(Só você pode ver) "})
+
+local Slider = Tab:CreateSlider({
+	Name = "Infinite Money 🤑 ",
+	Range = {10000, 1000000000000},
+	Increment = 10000,
+	Suffix = "Money",
+	CurrentValue = 10000,
+	Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Money)
+        game.Players.LocalPlayer.Data.Money.Value = Money
+	end,
+})
 
 -- END --
 
@@ -524,8 +544,8 @@ Keybind:Set("RightShift")
 local Tab = Window:CreateTab("Info")
 local Paragraph = Tab:CreateParagraph({Title = "Info Sobre a GUI", Content = "Aqui você irá poder saber sobre as novas updates e as antigas "})
 
-local Section = Tab:CreateSection("Update 4.0 ")
-local Label = Tab:CreateLabel("Foi mudado o estilo da GUI, alguns boug corrigidos")
-local Label = Tab:CreateLabel("Auto Boss Erro ainda em observação")
+local Label = Tab:CreateLabel("Update 4.1 [=] Erros Corrigidos: [+] Foi corrigido erros alguns bugs e problemas entre as opções [+] Auto Boss Patched (Ao entrar em um jogo você é expulso) [+] Bug errror 268 corrigido [=] Adicionais: [+] Scripts Visuais ")
+
+Keybind:Set("RightShift")
 
 -- END
