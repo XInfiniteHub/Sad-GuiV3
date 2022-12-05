@@ -510,17 +510,9 @@ local Slider = Tab:CreateSlider({
 
 local Tab = Window:CreateTab("Settings")
 local Paragraph = Tab:CreateParagraph({Title = "Bem vindo as Configurações", Content = "Configura a GUI "})
-local Paragraph = Tab:CreateParagraph({Title = "Error! ", Content = "Estamos com problema sobre a KeyBind, se esse erro continuar iremos voltar com a antiga GUI"})
+local Paragraph = Tab:CreateParagraph({Title = "KeyBind ! ", Content = "O erro da key bind foi corrigido, mais para isso precisa estar com a Trava do Shift desativada"})
 
-local Keybind = Tab:CreateKeybind({
-	Name = "Keybind",
-	CurrentKeybind = "RightCtrl",
-	HoldToInteract = true,
-	Flag = "Keybind1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-	Callback = function(Keybind)
-		Keybind:Set("RightCtrl")
-	end,
-})
+Keybind:Set("RightShift")
 
 -- END --
 
