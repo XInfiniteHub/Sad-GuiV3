@@ -1,0 +1,54 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.1 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining (Beta) "})
+
+-- MENSAGEM --
+
+OrionLib:MakeNotification({
+	Name = "Creditos !",
+	Content = "Feito por Darkzin e Cool",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+-- END --
+
+
+
+
+-- WELCOME --
+
+local Tab = Window:MakeTab({
+	Name = "Welcome",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.1")
+
+-- END
+
+
+
+
+-- STANDS --
+
+local Tab = Window:MakeTab({
+	Name = " ✨ Stands",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Selecione seu Stand, que o seu time stop tera 20 segundos"
+})
+Tab:AddButton({
+	Name = "Shadow Dio",
+	Callback = function()
+      		local args = {
+				[1] = 20000000,           -- 20000000 = 20 or 15
+				[2] = "shadowdio"			-- Shadow dio / Stw
+			}
+
+			game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+  			end    
+})
