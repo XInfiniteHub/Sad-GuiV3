@@ -11,7 +11,7 @@
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.1 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining "})
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.2 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining "})
 
 -- MENSAGEM --
 
@@ -204,6 +204,29 @@ Tab:AddButton({
 	Name = "Hierophant Green (Infinite Emerald) Beta ",
 	Callback = function()
       		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/INF%20ESMERAlD'))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Shadow Dio Infinite H ",
+	Callback = function()
+      	local args = {
+  			  [1] = "Alternate",
+  			  [2] = "STWRTZ",
+  			  [3] = true
+		}
+
+		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+  	end    
+})
+Tab:AddButton({
+	Name = "Mot and Smot Drill ",
+	Callback = function()
+		local args = {
+  		  	[1] = "Alternate",
+   		  	[2] = "Drill"
+		}
+
+		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
   	end    
 })
 
@@ -547,7 +570,7 @@ local Tab = Window:MakeTab({
 Tab:AddSlider({
 	Name = "Infinite Money 💵",
 	Min = 10000000,
-	Max = 1000000000000000000,
+	Max = 100000000000000000,
 	Default = 10000000,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
@@ -592,8 +615,12 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Nova Update!!","Versão 4.1")
-Tab:AddParagraph("Correção de bugs","Alguns dos bugs de TP foram corrigidos")
+Tab:AddParagraph("Nova Update!!","Versão 4.2")
+Tab:AddParagraph("Correção de bugs","Bug Tp Corrigido, Mains opções no Main")
 Tab:AddParagraph("Adicionais","Scripts Visuais")
 
 -- END --
+
+wait(2)
+
+print("Project Awakining Loaded")
