@@ -11,7 +11,7 @@
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.1 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining (Beta) "})
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.1 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining "})
 
 -- MENSAGEM --
 
@@ -30,7 +30,7 @@ OrionLib:MakeNotification({
 -- WELCOME --
 
 local Tab = Window:MakeTab({
-	Name = "Welcome",
+	Name = " 👋 Welcome",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -529,6 +529,33 @@ Tab:AddSlider({
 	end    
 })
 
+
+-- END --
+
+
+
+
+
+-- VISUAL --
+
+local Tab = Window:MakeTab({
+	Name = " 👀 Visual",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddSlider({
+	Name = "Infinite Money 💵",
+	Min = 10000000,
+	Max = 1000000000000000000,
+	Default = 10000000,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Money 💵",
+	Callback = function(Money)
+		game.Players.LocalPlayer.Data.Money.Value = Money
+	end    
+})
 
 -- END --
 
