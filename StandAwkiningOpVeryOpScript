@@ -35,7 +35,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.1")
+Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.2")
 
 -- END
 
