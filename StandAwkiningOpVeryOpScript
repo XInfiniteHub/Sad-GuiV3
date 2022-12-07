@@ -39,4 +39,4 @@ local Window = Rayfield:CreateWindow({
 local Tab = Window:CreateTab("Working", 4483362458) -- Title, Image
 
 
-local Paragraph = Tab:CreateParagraph({Title = "Gui em desenvolvimente", Content = "Infelizmente a Gui com o sistema da Keybind não está tendo reputação positiva nem mesmo para mim. Então iremos Trocar a Libray. Favor aguarda até a proxima update"})
+local Paragraph = Tab:CreateParagraph({Title = "Gui em desenvolvimento", Content = "Infelizmente a Gui com o sistema da Keybind não está tendo reputação positiva nem mesmo para mim. Então iremos Trocar a Libray. Favor aguarda até a proxima update"})
