@@ -41,7 +41,7 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Project Shindo (Shindo Life)",
 	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/ProjectAwakining'))()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20Shindo'))()
   	end    
 })
 
