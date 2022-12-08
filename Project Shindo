@@ -1,0 +1,194 @@
+--[[ 
+	local devs = {
+	
+		gui = Darkzin
+		script = cool / dakrzin
+	
+	}
+--]]
+
+--> ladstring
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+--> Not
+OrionLib:MakeNotification({
+	Name = "Creditos",
+	Content = "Mabe by darkzin and cool",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+--> Window
+local Window = OrionLib:MakeWindow({Name = "Project Shindo", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Poject Shindo "})
+
+--> Aviso 
+local Tab = Window:MakeTab({
+	Name = " ⚠️ Aviso ",
+	PremiumOnly = false
+})
+
+Tab:AddParagraph("Script No Cooldow KG e Elements","")
+Tab:AddParagraph("⚠️ Aviso Importante ⚠️","Dentre os spins ele tem um Cooldown, então é totalmete normal quando vc iniciar ele demorar pra executar novamente  OBS: Isso demora entre 5 segundos")
+
+--> Topranks
+
+local Tab = Window:MakeTab({
+	Name = " 📂 Topranks",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Topraks"
+})
+Tab:AddButton({
+	Name = "Start Topranks (se não funcionar execute isto)",
+	Callback = function()
+		workspace.TOPRANKS.topranks:InvokeServer()
+  	end    
+})
+
+--> Genkai
+local Tab = Window:MakeTab({
+	Name = " 📂 Genkai",
+	PremiumOnly = false
+})
+
+Tab:AddParagraph("KG no cooldown","Ao selecionar a sua KG SLOT ele vai skipar a animação")
+Tab:AddParagraph("Ele não irá salvar os spins","")
+
+local Section = Tab:AddSection({
+	Name = "Kg"
+})
+
+Tab:AddButton({
+	Name = "KG 1",
+	Callback = function()
+
+local args = {
+    [1] = "spin",
+    [2] = "kg1"
+}
+
+game:GetService("Players").LocalPlayer.startevent:FireServer(unpack(args))
+
+  	end    
+})
+Tab:AddButton({
+	Name = "KG 2",
+	Callback = function()
+
+local args = {
+    [1] = "spin",
+    [2] = "kg2"
+}
+
+game:GetService("Players").LocalPlayer.startevent:FireServer(unpack(args))
+
+  	end    
+})
+Tab:AddButton({
+	Name = "KG 3",
+	Callback = function()
+
+local args = {
+    [1] = "spin",
+    [2] = "kg3"
+}
+
+game:GetService("Players").LocalPlayer.startevent:FireServer(unpack(args))
+
+  	end    
+})
+Tab:AddButton({
+	Name = "KG 4",
+	Callback = function()
+
+local args = {
+    [1] = "spin",
+    [2] = "kg4"
+}
+
+game:GetService("Players").LocalPlayer.startevent:FireServer(unpack(args))
+
+  	end    
+})
+
+-- Element
+local Tab = Window:MakeTab({
+	Name = " 📂 Element ",
+	PremiumOnly = false
+})
+
+Tab:AddParagraph("Element no cooldown","Ao selecionar a sua KG SLOT ele vai skipar a animação")
+Tab:AddParagraph("Ele não irá salvar os spins","")
+
+local Section = Tab:AddSection({
+	Name = "Elements"
+})
+
+Tab:AddButton({
+	Name = "KG 4",
+	Callback = function()
+
+local args = {
+    [1] = "spin",
+    [2] = "element1"
+}
+
+game:GetService("Players").LocalPlayer.startevent:FireServer(unpack(args))
+
+  	end    
+})
+Tab:AddButton({
+	Name = "KG 4",
+	Callback = function()
+
+local args = {
+    [1] = "spin",
+    [2] = "element2"
+}
+
+game:GetService("Players").LocalPlayer.startevent:FireServer(unpack(args))
+
+  	end    
+})
+Tab:AddButton({
+	Name = "KG 4",
+	Callback = function()
+
+local args = {
+    [1] = "spin",
+    [2] = "element3"
+}
+
+game:GetService("Players").LocalPlayer.startevent:FireServer(unpack(args))
+
+  	end    
+})
+Tab:AddButton({
+	Name = "KG 4",
+	Callback = function()
+
+local args = {
+    [1] = "spin",
+    [2] = "element4"
+}
+
+game:GetService("Players").LocalPlayer.startevent:FireServer(unpack(args))
+
+  	end    
+})
+
+--> Back To Project Hub
+
+local Tab = Window:MakeTab({
+	Name = " 🔙 Back ",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Back to Project Hub",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Central%20Hub'))()
+  	end    
+})
