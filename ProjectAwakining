@@ -616,8 +616,8 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddParagraph("Nova Update!!","Versão 4.2")
-Tab:AddParagraph("Correção de bugs","Bug Tp Corrigido, Mains opções no Main")
-Tab:AddParagraph("Adicionais","Scripts Visuais")
+Tab:AddParagraph("Correção de bugs","Bug Tp Corrigido")
+Tab:AddParagraph("Adicionais","Scripts Visuais, Mais opções no Main")
 
 -- END --
 
