@@ -13,7 +13,7 @@
 
 --> Loadstring
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Central Hub ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Central Hub 📂 "})
+local Window = OrionLib:MakeWindow({Name = "Project Hub ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Hub 📂 "})
 
 --> Notificação
 OrionLib:MakeNotification({
@@ -38,6 +38,19 @@ Tab:AddButton({
       		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/ProjectAwakining'))()
   	end    
 })
+Tab:AddButton({
+	Name = "Project Shindo (Shindo Life)",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/ProjectAwakining'))()
+  	end    
+})
+
+--> Scripts Patched
+
+local Section = Tab:AddSection({
+	Name = "Scripts Patched"
+})
+
 Tab:AddButton({
 	Name = "Blox Fruit Auto Confetti (Patched) ",
 	Callback = function()
