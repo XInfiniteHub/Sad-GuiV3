@@ -621,6 +621,22 @@ Tab:AddParagraph("Adicionais","Scripts Visuais")
 
 -- END --
 
-wait(2)
 
-print("Project Awakining Loaded")
+
+
+-- BACKCENTRAL --
+
+local Tab = Window:MakeTab({
+	Name = " 🔙 Back To Central",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Back ",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Centra%20Hub'))()
+  	end    
+})
+
+-- END --
