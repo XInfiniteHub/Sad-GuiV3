@@ -49,3 +49,12 @@ Tab:AddButton({
 })
   	end    
 })
+
+--> Credits
+local Tab = Window:MakeTab({
+	Name = " 📃Credits  ",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddParagraph("Creditos","Feito por Darkzin e Cool")
