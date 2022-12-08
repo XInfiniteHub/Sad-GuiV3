@@ -1,0 +1,51 @@
+--[[ 
+	
+	local devs = {
+		Gui = Darkzin
+		Script = Cool
+	}
+	
+--]]
+
+
+
+
+
+--> Loadstring
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Central Hub ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Central Hub 📂 "})
+
+--> Notificação
+OrionLib:MakeNotification({
+	Name = "Bem Vindo! ",
+	Content = "Seja bem-vindo(a) ao Central Hub",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+--> Main
+local Tab = Window:MakeTab({
+	Name = "Main 📂 ",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Local Hubs ⬇️"
+})
+Tab:AddButton({
+	Name = "Project Awakining",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/StandAwkiningOpVeryOpScript'))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Blox Fruit Auto Confetti (Patched) ",
+	Callback = function()
+      		OrionLib:MakeNotification({
+	Name = "Script não está funcionando ",
+	Content = "O evento dos confetti foi totalmente removido do jogo :< ",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+  	end    
+})
