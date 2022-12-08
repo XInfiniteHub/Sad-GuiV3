@@ -635,7 +635,7 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
 	Name = "Back ",
 	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Centra%20Hub'))()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Central%20Hub'))()
   	end    
 })
 
