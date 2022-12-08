@@ -627,7 +627,7 @@ Tab:AddParagraph("Adicionais","Scripts Visuais")
 -- BACKCENTRAL --
 
 local Tab = Window:MakeTab({
-	Name = " 🔙 Back To Central",
+	Name = " 🔙 Back Central",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
