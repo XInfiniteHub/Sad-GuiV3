@@ -646,23 +646,3 @@ Tab:AddParagraph("Nova Update!!","Versão 4.3")
 Tab:AddParagraph("Porque Beta? "," Nessa versão alguns erros arrespeito de Stands foram descobertos, estamos tentando concertar | Adicionais: Opções no Main, Grab Tools")
 
 -- END --
-
-
-
-
--- BACKCENTRAL --
-
-local Tab = Window:MakeTab({
-	Name = " 🔙 Back",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-Tab:AddButton({
-	Name = "Back to Project Hub",
-	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Central%20Hub'))()
-  	end    
-})
-
--- END --
