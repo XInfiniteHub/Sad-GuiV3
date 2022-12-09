@@ -178,17 +178,3 @@ game:GetService("Players").LocalPlayer.startevent:FireServer(unpack(args))
 
   	end    
 })
-
---> Back To Project Hub
-
-local Tab = Window:MakeTab({
-	Name = " 🔙 Back ",
-	PremiumOnly = false
-})
-
-Tab:AddButton({
-	Name = "Back to Project Hub",
-	Callback = function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Central%20Hub'))()
-  	end    
-})
