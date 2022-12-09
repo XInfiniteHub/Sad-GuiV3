@@ -11,7 +11,7 @@
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.2 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining "})
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.3 (Beta Version) 🧐 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining "})
 
 -- MENSAGEM --
 
@@ -35,7 +35,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.2")
+Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.3 (Beta Version)")
 
 -- END
 
@@ -229,6 +229,19 @@ Tab:AddButton({
 		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
   	end    
 })
+Tab:AddButton({
+	Name = "Sans Teleport Limbo"
+	Callback = function()
+		local args = {
+			[1] = "Alternate",
+			[2] = "Teleport",
+			[3] = false,
+			[4] = Vector3.new(1272, 581, 60)
+		}
+	
+		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+	end
+})
 
 -- END --
 
@@ -300,9 +313,15 @@ Tab:AddButton({
 	end    
 })
 Tab:AddButton({
-	Name = "Star Platinum",
+	Name = "Star Platinum OVA",
 	Callback = function()
   		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/jpova'))()
+	end    
+})
+Tab:AddButton({
+	Name = "Omt",
+	Callback = function()
+  		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/OMT%20Farm'))()
 	end    
 })
 local Section = Tab:AddSection({
@@ -408,6 +427,31 @@ Tab:AddButton({
 			---------------------------------------------------- Script
 		end -- End lol
 	end    
+})
+Tab:AddButton({
+	Name = "Grab Tools"
+	Callback = function()
+		char = game:GetService('Players').LocalPlayer.Character
+		game:GetService('Players').LocalPlayer.CharacterAdded:connect(function(body)
+		char = body end)
+		for i,v in pairs(workspace:GetDescendants()) do
+		if v:IsA('Tool') then
+		char.Humanoid:EquipTool(v) end end
+		workspace.DescendantAdded:connect(function(item)
+		pcall(function()
+		if item:IsA('Tool') then wait() char.Humanoid:EquipTool(item) end end) end)
+	end
+})
+Tab:AddButton({
+	Name = "Death"
+	Callback = function()
+    	-- Death
+    	local args = {
+    	    [1] = false
+    	}
+
+    	game:GetService("ReplicatedStorage").Main.Death:FireServer(unpack(args))
+	end
 })
 
 -- END --
@@ -615,9 +659,8 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Nova Update!!","Versão 4.2")
-Tab:AddParagraph("Correção de bugs","Bug Tp Corrigido")
-Tab:AddParagraph("Adicionais","Scripts Visuais, Mais opções no Main")
+Tab:AddParagraph("Nova Update!!","Versão 4.3")
+Tab:AddParagraph("Porque Beta? "," Nessa versão alguns erros arrespeito de Stands foram descobertos, estamos tentando concertar | Adicionais: Opções no Main")
 
 -- END --
 
@@ -640,3 +683,7 @@ Tab:AddButton({
 })
 
 -- END --
+
+print("Project Awakining Loaded ")
+wait(2)
+print("Have Fun")
