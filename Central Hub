@@ -39,9 +39,9 @@ Tab:AddButton({
   	end    
 })
 Tab:AddButton({
-	Name = "Project Shindo (Shindo Life)",
+	Name = "Project Shindo (Shindo Life) Beta Working",
 	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20Shindo'))()
+      		print("Soon...")
   	end    
 })
 
