@@ -1,9 +1,14 @@
+print("Project Awakining Loaded! ")
+print("Local Devs: Darkzin and Cool")
+
+
 --[[
 	
 	local devs = {
 		gui = darkzin
 		script = cool
 	}
+
 --]]
 
 
@@ -230,9 +235,9 @@ Tab:AddButton({
   	end    
 })
 Tab:AddButton({
-	Name = "Sans Teleport Limbo"
+	Name = "Sans Teleport Player Limbo",
 	Callback = function()
-		local args = {
+      	local args = {
 			[1] = "Alternate",
 			[2] = "Teleport",
 			[3] = false,
@@ -240,7 +245,18 @@ Tab:AddButton({
 		}
 	
 		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
-	end
+  	end    
+})
+Tab:AddButton({
+	Name = "Death",
+	Callback = function()
+      	-- Death
+    	local args = {
+    	    [1] = false
+    	}
+
+    	game:GetService("ReplicatedStorage").Main.Death:FireServer(unpack(args))
+  	end    
 })
 
 -- END --
@@ -429,9 +445,9 @@ Tab:AddButton({
 	end    
 })
 Tab:AddButton({
-	Name = "Grab Tools"
+	Name = "Grab Tools",
 	Callback = function()
-		char = game:GetService('Players').LocalPlayer.Character
+      	char = game:GetService('Players').LocalPlayer.Character
 		game:GetService('Players').LocalPlayer.CharacterAdded:connect(function(body)
 		char = body end)
 		for i,v in pairs(workspace:GetDescendants()) do
@@ -440,18 +456,7 @@ Tab:AddButton({
 		workspace.DescendantAdded:connect(function(item)
 		pcall(function()
 		if item:IsA('Tool') then wait() char.Humanoid:EquipTool(item) end end) end)
-	end
-})
-Tab:AddButton({
-	Name = "Death"
-	Callback = function()
-    	-- Death
-    	local args = {
-    	    [1] = false
-    	}
-
-    	game:GetService("ReplicatedStorage").Main.Death:FireServer(unpack(args))
-	end
+  	end    
 })
 
 -- END --
@@ -462,7 +467,7 @@ Tab:AddButton({
 -- TELEPORT --
 
 local Tab = Window:MakeTab({
-	Name = " 😶‍🌫️ Teleport",
+	Name = " 🏃 Teleport",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -602,28 +607,6 @@ Tab:AddSlider({
 
 
 
-
--- VISUAL --
-
-local Tab = Window:MakeTab({
-	Name = " 👀 Visual",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-Tab:AddSlider({
-	Name = "Infinite Money 💵",
-	Min = 10000000,
-	Max = 100000000000000000,
-	Default = 10000000,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "Money 💵",
-	Callback = function(Money)
-		game.Players.LocalPlayer.Data.Money.Value = Money
-	end    
-})
-
 -- END --
 
 
@@ -660,7 +643,7 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddParagraph("Nova Update!!","Versão 4.3")
-Tab:AddParagraph("Porque Beta? "," Nessa versão alguns erros arrespeito de Stands foram descobertos, estamos tentando concertar | Adicionais: Opções no Main")
+Tab:AddParagraph("Porque Beta? "," Nessa versão alguns erros arrespeito de Stands foram descobertos, estamos tentando concertar | Adicionais: Opções no Main, Grab Tools")
 
 -- END --
 
@@ -683,7 +666,3 @@ Tab:AddButton({
 })
 
 -- END --
-
-print("Project Awakining Loaded ")
-wait(2)
-print("Have Fun")
