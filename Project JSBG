@@ -1,0 +1,69 @@
+-- Made by Darkzin and Cool
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Project JSBG", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project JSBG"})
+
+--> Main
+local Tab = Window:MakeTab({
+	Name = " ☑️ Main ",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("Welcome to Project JSBG. Scripts ⬇️")
+
+Tab:AddButton({
+	Name = "Grab All Tools",
+	Callback = function()
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-195.73959350585938, -113.86055755615234, 420.3124084472656))
+        wait(0.8)
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-187.08709716796875, -114.05121612548828, 420.2312927246094))
+        wait(0.8)
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-345.0674743652344, 55.49363708496094, -28.431230545043945))
+        wait(0.8)
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(82.5650863647461, 100.28550720214844, -113.06149291992188))
+        wait(0.8)
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-202.00308227539062, -115.06425476074219, 431.045654296875))
+        wait(0.8)
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-183.6053466796875, -114.11552429199219, 430.8988342285156))
+        wait(0.8)
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-183.6053466796875, -114.11552429199219, 430.8988342285156))
+        wait(0.8)
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-181.33837890625, -113.8508071899414, 419.6007385253906))
+        wait(0.8)
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-367.0386962890625, 41.72290802001953, -10.997364044189453))
+        wait(0.8)
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-7767.083984375, 22.74181365966797, -186.00390625))
+        wait(0.8)
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(81.6923828125, 30.53977394104004, -150.8788604736328))
+        wait(0.8)
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(72.16795349121094, 73.26345825195312, -129.5802764892578))
+        wait(0.8)
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(72.16795349121094, 73.26345825195312, -129.5802764892578))
+        wait(0.8)
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-119.35140228271484, -7.866091728210449, 15.070917129516602))
+    end    
+})
+Tab:AddSlider({
+	Name = "WalkSpeed",
+	Min = 16,
+	Max = 500,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Speed",
+	Callback = function(Speed)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed
+	end    
+})
+Tab:AddSlider({
+	Name = "JumpPower",
+	Min = 50,
+	Max = 500,
+	Default = 24,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Jump",
+	Callback = function(JumpPW)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = JumpPW
+	end    
+})
