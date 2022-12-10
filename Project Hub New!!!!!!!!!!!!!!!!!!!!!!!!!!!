@@ -1,0 +1,25 @@
+--[[
+    Welcome To Project Hub
+    devs = Darkzin and Cool
+
+    games = {
+        [1] = Stand Awakining
+        [2] = Shindo Life    
+        [3] = Jojo Stand Battle Game
+    }
+--]]
+
+
+
+
+local games = {
+    [{5780309044}] = "https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/ProjectAwakining",
+    [{4616652839}] = "https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20Shindo",
+    [{7215918473}] = "https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20JSBG",
+}
+
+for ids, url in next, games do
+    if table.find(ids, game.PlaceId) then
+        loadstring(game:HttpGet(url))(); break
+    end
+end
