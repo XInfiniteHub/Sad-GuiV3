@@ -16,7 +16,7 @@ print("Local Devs: Darkzin and Cool")
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.3 (Beta Version) 🧐 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining (Beta Version) "})
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.4 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining 🔱 "})
 
 -- MENSAGEM --
 
@@ -40,7 +40,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.3 (Beta Version)")
+Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.4")
 
 -- END
 
@@ -107,6 +107,17 @@ Tab:AddButton({
       		local args = {
 				[1] = 20000000,           -- 20000000 = 20 or 15
 				[2] = "jotaro"			-- Shadow dio / Stw
+			}
+
+			game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+  			end    
+})
+Tab:AddButton({
+	Name = "The World Ova Heaven",
+	Callback = function()
+      		local args = {
+				[1] = 20000000,           -- 20000000 = 20 or 15
+				[2] = "diooh"			-- Shadow dio / Stw
 			}
 
 			game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
@@ -241,7 +252,7 @@ Tab:AddButton({
 			[1] = "Alternate",
 			[2] = "Teleport",
 			[3] = false,
-			[4] = Vector3.new(1272, 581, 60)
+			[4] = Vector3.new(621, -75, 235)
 		}
 	
 		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
@@ -256,6 +267,17 @@ Tab:AddButton({
     	}
 
     	game:GetService("ReplicatedStorage").Main.Death:FireServer(unpack(args))
+  	end    
+})
+Tab:AddButton({
+	Name = "Golden Expirience Infinite Deflect",
+	Callback = function()
+      	local args = {
+            [1] = "Alternate",
+            [2] = "Deflect"
+        }
+
+        game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
   	end    
 })
 
@@ -619,14 +641,18 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
-Tab:AddDropdown({
-	Name = "Themes",
-	Default = "1",
-	Options = {"Soon...", "Soon...", "Soon..."},
-	Callback = function(Value)
-		print(Value)
-	end    
+Tab:AddTextbox({
+	Name = "Textbox",
+	Default = "default box input",
+	TextDisappear = true,
+	Callback = function(Text)
+		if game:GetService("Workspace").FilteringEnabled == true then
+        	game:GetService("StarterGui"):SetCore("SendNotification", {
+        		Title = Text;
+        		Text = " sla bro , _ , ";
+        	})
+        end
+	end	  
 })
 
 -- END --
@@ -642,7 +668,19 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local Section = Tab:AddSection({
+	Name = "New Update"
+})
+
+Tab:AddParagraph("Nova Update!!","Versão 4.4")
+Tab:AddParagraph("Bugs Corrigidos ","Bug nos stand foi totalmente corrigidos")
+Tab:AddParagraph("Oque Foi Adicionado? ","Mais opções no main, novos stands adicionados")
+
+local Section = Tab:AddSection({
+	Name = "Old Update"
+})
+
 Tab:AddParagraph("Nova Update!!","Versão 4.3")
-Tab:AddParagraph("Porque Beta? "," Nessa versão alguns erros arrespeito de Stands foram descobertos, estamos tentando concertar | Adicionais: Opções no Main, Grab Tools")
+Tab:AddParagraph("Porque Beta? ","Nessa versão alguns erros arrespeito de Stands foram descobertos, estamos tentando concertar | Adicionais: Opções no Main, Grab Tools")
 
 -- END --
