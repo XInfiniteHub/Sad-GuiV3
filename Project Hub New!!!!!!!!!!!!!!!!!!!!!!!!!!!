@@ -13,7 +13,7 @@
 
 
 local games = {
-    [{5780309044}] = "https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/ProjectAwakining",
+    [{5780309044, 11423467063}] = "https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/ProjectAwakining",
     [{4616652839}] = "https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20Shindo",
     [{7215918473}] = "https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20JSBG",
 }
