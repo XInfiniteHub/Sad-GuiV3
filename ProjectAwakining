@@ -1,12 +1,12 @@
 print("Project Awakining Loaded! ")
-print("Local Devs: Darkzin and Cool")
+print("Local Devs: Darkzin, Cool and Astarote")
 
 
 --[[
 	
 	local devs = {
 		gui = darkzin
-		script = cool
+		script = cool and asterote
 	}
 
 --]]
@@ -22,7 +22,7 @@ local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.5 🥳 ", HideP
 
 OrionLib:MakeNotification({
 	Name = "Creditos !",
-	Content = "Feito por Darkzin e Cool",
+	Content = "Feito por Darkzin, Cool e Astarote",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
