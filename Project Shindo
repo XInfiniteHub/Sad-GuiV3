@@ -127,7 +127,7 @@ local Section = Tab:AddSection({
 })
 
 Tab:AddButton({
-	Name = "KG 4",
+	Name = "KG 1",
 	Callback = function()
 
 local args = {
@@ -140,7 +140,7 @@ game:GetService("Players").LocalPlayer.startevent:FireServer(unpack(args))
   	end    
 })
 Tab:AddButton({
-	Name = "KG 4",
+	Name = "KG 2",
 	Callback = function()
 
 local args = {
@@ -153,7 +153,7 @@ game:GetService("Players").LocalPlayer.startevent:FireServer(unpack(args))
   	end    
 })
 Tab:AddButton({
-	Name = "KG 4",
+	Name = "KG 3",
 	Callback = function()
 
 local args = {
