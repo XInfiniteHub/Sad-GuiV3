@@ -16,7 +16,7 @@ print("Local Devs: Darkzin and Cool")
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.4 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining 🔱 "})
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.5 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining 🔱 "})
 
 -- MENSAGEM --
 
@@ -40,7 +40,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.4")
+Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.5")
 
 -- END
 
@@ -321,6 +321,18 @@ game:GetService("ReplicatedStorage").Purchase:FireServer(unpack(args))
 
   	end    
 })
+Tab:AddButton({
+	Name = "Shiny Arrow",
+	Callback = function()
+
+local args = {
+    [1] = "Shiny Arrow"
+}
+
+game:GetService("ReplicatedStorage").Purchase:FireServer(unpack(args))
+
+  	end    
+})
 
 -- END --
 
@@ -362,10 +374,29 @@ Tab:AddButton({
   		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/OMT%20Farm'))()
 	end    
 })
+
 local Section = Tab:AddSection({
-	Name = "Mais em breve"
+	Name = "Flecha / Rokakaka No Animation"
 })
 
+Tab:AddButton({
+	Name = "Arrow No Cooldown (Need arrow in your hand)",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").ItemEvents.Arrow:FireServer()
+  	end    
+})
+Tab:AddButton({
+	Name = "Rokaka No Cooldown (Need rokakaka in your hand)",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").ItemEvents.Roka:FireServer()
+  	end    
+})
+Tab:AddButton({
+	Name = "Shiny Arrow No Cooldown (Need Shiny Arrow in your hand)",
+	Callback = function()
+        game:GetService("ReplicatedStorage").ItemEvents.ShinyArrow:FireServer()
+  	end    
+})
 -- END --
 
 
@@ -670,6 +701,14 @@ local Tab = Window:MakeTab({
 
 local Section = Tab:AddSection({
 	Name = "New Update"
+})
+
+Tab:AddParagraph("Nova Update!!","Versão 4.5")
+Tab:AddParagraph("Bugs Corrigidos","Não á nenhum bug encontrado, está funcionando tudo perfeitamente")
+Tab:AddParagraph("Oque foi adicionado?","Novas opções no Stand Farm, Mais opções no Buy Items")
+
+local Section = Tab:AddSection({
+	Name = "Old Update"
 })
 
 Tab:AddParagraph("Nova Update!!","Versão 4.4")
