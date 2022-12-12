@@ -7,6 +7,7 @@
         [2] = Shindo Life    
         [3] = Jojo Stand Battle Game
         [4] = Flee The Facility
+        [5] = Da Hood, Untitled Hood
     }
 --]]
 
@@ -18,6 +19,7 @@ local games = {
     [{4616652839}] = "https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20Shindo",
     [{7215918473}] = "https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20JSBG",
     [{893973440}] = "https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20Facility",
+    [{2788229376, 9183932460}] = "https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20Hood", 
 }
 
 for ids, url in next, games do
