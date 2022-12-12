@@ -1,0 +1,49 @@
+--[[
+    Project Hub
+    Flee The Facility
+--]]
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Project Facilicy", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Facility 🔨"})
+
+--> Main
+local Tab = Window:MakeTab({
+	Name = " ☑️ Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "AVISO: Infinite Credits, seu dinheiro fica negativo"
+})
+
+Tab:AddButton({
+	Name = "Infinite Credits",
+	Callback = function()
+      	game.Players.LocalPlayer.SavedPlayerStatsModule.Credits.Value = "9e9"
+  	end    
+})
+Tab:AddButton({
+	Name = "Infinite Xp",
+	Callback = function()
+      	game.Players.LocalPlayer.SavedPlayerStatsModule.Xp.Value = "9e9"
+  	end    
+})
+Tab:AddButton({
+	Name = "Infinite Donation",
+	Callback = function()
+      	game.Players.LocalPlayer.SavedPlayerStatsModule.DonationTotal.Value = "9e9"
+  	end    
+})
+Tab:AddButton({
+	Name = "Infinite Level",
+	Callback = function()
+      	game.Players.LocalPlayer.SavedPlayerStatsModule.Level.Value = "9e9"
+  	end    
+})
+Tab:AddButton({
+	Name = "Give Vip (Patched) ",
+	Callback = function()
+      	game.Players.LocalPlayer.SavedPlayerStatsModule.VIP.Value = true
+  	end    
+})
