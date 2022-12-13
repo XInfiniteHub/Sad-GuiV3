@@ -16,7 +16,7 @@ print("Local Devs: Darkzin, Cool and Astarote")
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.5 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining 🔱 "})
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.6 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining 🔱 "})
 
 -- MENSAGEM --
 
@@ -40,7 +40,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.5")
+Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.6")
 
 -- END
 
@@ -155,6 +155,10 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Main Scripts"
 })
+
+local Section = Tab:AddSection({
+	Name = "Players Main"
+})
 Tab:AddButton({
 	Name = "Auto Block",
 	Callback = function()
@@ -165,6 +169,35 @@ Tab:AddButton({
 
 		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
   		end    
+})
+Tab:AddButton({
+	Name = "Infinite Pose",
+	Callback = function()
+		local args = {
+			[1] = true
+		}
+
+		game:GetService("ReplicatedStorage").Main.Menacing:FireServer(unpack(args))
+  		end    
+})
+Tab:AddButton({
+	Name = "Death",
+	Callback = function()
+      	-- Death
+    	local args = {
+    	    [1] = false
+    	}
+
+    	game:GetService("ReplicatedStorage").Main.Death:FireServer(unpack(args))
+  	end    
+})
+
+--end
+
+
+
+local Section = Tab:AddSection({
+	Name = "Golden Expirience Requiem / Golden Expirience Main"
 })
 Tab:AddButton({
 	Name = "Infinite Damage Reflect",
@@ -190,36 +223,28 @@ wait(2)
 
 })
 Tab:AddButton({
-	Name = "Infinite Pose",
+	Name = "Golden Expirience Infinite Deflect",
 	Callback = function()
-		local args = {
-			[1] = true
-		}
+      	local args = {
+            [1] = "Alternate",
+            [2] = "Deflect"
+        }
 
-		game:GetService("ReplicatedStorage").Main.Menacing:FireServer(unpack(args))
-  		end    
+        game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+  	end    
+})
+
+--end
+
+
+
+local Section = Tab:AddSection({
+	Name = "Shadow Dio Main"
 })
 Tab:AddButton({
 	Name = "Shadow Dio Infinite Kinifes (Use Q first) ",
 	Callback = function()
       		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Shadow%20Inf%20Kinifes'))()
-  	end    
-})
-Tab:AddButton({
-	Name = "Wings ULF inf ",
-	Callback = function()
-      		local args = {
-    [1] = game:GetService("Players").LocalPlayer.Character.Wing1,
-    [2] = 0
-}
-
-game:GetService("ReplicatedStorage").Main.Transparency:FireServer(unpack(args))
-  	end    
-})
-Tab:AddButton({
-	Name = "Hierophant Green (Infinite Emerald) Beta ",
-	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/INF%20ESMERAlD'))()
   	end    
 })
 Tab:AddButton({
@@ -234,8 +259,48 @@ Tab:AddButton({
 		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
   	end    
 })
+
+--end
+
+
+local Section = Tab:AddSection({
+	Name = " Karls Main"
+})
 Tab:AddButton({
-	Name = "Mot and Smot Drill ",
+	Name = "Wings ULF inf ",
+	Callback = function()
+      		local args = {
+    [1] = game:GetService("Players").LocalPlayer.Character.Wing1,
+    [2] = 0
+}
+
+game:GetService("ReplicatedStorage").Main.Transparency:FireServer(unpack(args))
+  	end    
+})
+
+--end
+
+
+
+local Section = Tab:AddSection({
+	Name = "Hierophant Green Main"
+})
+Tab:AddButton({
+	Name = "Hierophant Green (Infinite Emerald) Beta ",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/INF%20ESMERAlD'))()
+  	end    
+})
+
+--end
+
+
+
+local Section = Tab:AddSection({
+	Name = "Omt and Smot Main"
+})
+Tab:AddButton({
+	Name = "Omt and Smot Drill ",
 	Callback = function()
 		local args = {
   		  	[1] = "Alternate",
@@ -244,6 +309,14 @@ Tab:AddButton({
 
 		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
   	end    
+})
+
+--end
+
+
+
+local Section = Tab:AddSection({
+	Name = "Sans Main"
 })
 Tab:AddButton({
 	Name = "Sans Teleport Player Limbo",
@@ -258,23 +331,31 @@ Tab:AddButton({
 		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
   	end    
 })
-Tab:AddButton({
-	Name = "Death",
-	Callback = function()
-      	-- Death
-    	local args = {
-    	    [1] = false
-    	}
 
-    	game:GetService("ReplicatedStorage").Main.Death:FireServer(unpack(args))
+--end
+
+
+
+local Section = Tab:AddSection({
+	Name = "Made in Heave Main"
+})
+Tab:AddButton({
+	Name = "Made in Heaven Universe Reset",
+	Callback = function()
+        local args = {
+            [1] = "Alternate",
+            [2] = "UniverseReset"
+        }
+
+        game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
   	end    
 })
 Tab:AddButton({
-	Name = "Golden Expirience Infinite Deflect",
+	Name = "Made in Heaven Time Accel (No cooldown)",
 	Callback = function()
-      	local args = {
+        local args = {
             [1] = "Alternate",
-            [2] = "Deflect"
+            [2] = "TimeAccel"
         }
 
         game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
@@ -700,7 +781,15 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
-	Name = "New Update"
+	Name = "New Update Update"
+})
+
+Tab:AddParagraph("Nova Update!!","Versão 4.6")
+Tab:AddParagraph("Bugs Corrigidos","Nenhum Bug encontrado, tudo funcionando perfeitamente")
+Tab:AddParagraph("Oque foi adicionado?","Mais opções no Main")
+
+local Section = Tab:AddSection({
+	Name = "Old Update"
 })
 
 Tab:AddParagraph("Nova Update!!","Versão 4.5")
