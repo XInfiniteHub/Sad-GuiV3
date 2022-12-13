@@ -1,0 +1,97 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Project Mimic Capther 1 (Working) ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnable = true, IntroText = "Project Mimic"})
+
+--> Welcome 
+local Tab = Window:MakeTab({
+	Name = " ☑️ Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Anti Speed and Anti Fly"
+})
+
+Tab:AddButton({
+	Name = "Speed (No Ban, Anti Speed)",
+	Callback = function()
+        local pussy_mode = true -- no jumpscares i think
+        local speed = 50 -- sped
+        local speed_question_mark = true -- false if no
+
+        local important_table = {}
+        local totally_not_the_game = game;local workspace_thing = workspace;local person_you_play = totally_not_the_game.Players.LocalPlayer;local the_actual_player_thing_you_are = person_you_play.Character;
+        local function stamina_speed() for i,v in pairs(the_actual_player_thing_you_are:GetChildren()) do
+        local function speeed() the_actual_player_thing_you_are.Humanoid.WalkSpeed = speed
+        end
+        if v.ClassName == "NumberValue" then table.insert(important_table, v);
+        for i2,v2 in pairs(important_table) do
+        v2.Value = math.huge or math.huge
+        if v2.Value > 500 then print("ja executo, pq dnv ,_,? ")
+        end
+        end;end;
+        if v.Name == "AntiFly" then v.Disabled = true
+        if v.Name == "Antispeed" then v.Disabled = true; end; end end end
+        for i3,v3 in pairs(the_actual_player_thing_you_are:GetChildren()) do
+           if v3:IsA("Humanoid") then
+        if speed_question_mark == true then
+           v3.WalkSpeed = speed
+        end
+        end
+        end
+        if pussy_mode == true then
+           person_you_play.PlayerGui.Jumpscare_Handler.Enabled = false
+        end
+        stamina_speed()
+  	end    
+})
+Tab:AddButton({
+	Name = "Anti Fly (No Ban)",
+	Callback = function()
+        local pussy_mode = true -- no jumpscares i think
+        local speed = 50 -- sped
+        local speed_question_mark = true -- false if no
+
+        local important_table = {}
+        local totally_not_the_game = game;local workspace_thing = workspace;local person_you_play = totally_not_the_game.Players.LocalPlayer;local the_actual_player_thing_you_are = person_you_play.Character;
+        local function stamina_speed() for i,v in pairs(the_actual_player_thing_you_are:GetChildren()) do
+        local function speeed() the_actual_player_thing_you_are.Humanoid.WalkSpeed = speed
+        end
+        if v.ClassName == "NumberValue" then table.insert(important_table, v);
+        for i2,v2 in pairs(important_table) do
+        v2.Value = math.huge or math.huge
+        if v2.Value > 500 then print("ja executo, pq dnv ,_,? ")
+        end
+        end;end;
+        if v.Name == "AntiFly" then v.Disabled = true
+        if v.Name == "Antispeed" then v.Disabled = true; end; end end end
+        for i3,v3 in pairs(the_actual_player_thing_you_are:GetChildren()) do
+           if v3:IsA("Humanoid") then
+        if speed_question_mark == true then
+           v3.WalkSpeed = speed
+        end
+        end
+        end
+        if pussy_mode == true then
+           person_you_play.PlayerGui.Jumpscare_Handler.Enabled = false
+        end
+        stamina_speed()
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Teleports"
+})
+
+Tab:AddButton({
+	Name = "Door 1",
+	Callback = function()
+      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(387, 3, 335))
+  	end    
+})
+Tab:AddButton({
+	Name = "Basketball",
+	Callback = function()
+      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(503, 3, 159))
+  	end    
+})
