@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Project Mimic Capther 1 (Working) ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnable = true, IntroText = "Project Mimic"})
+local Window = OrionLib:MakeWindow({Name = "Project Mimic Capther 1 part 1 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnable = true, IntroText = "Project Mimic"})
 
 --> Welcome 
 local Tab = Window:MakeTab({
@@ -9,11 +9,11 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
-	Name = "Executa this first"
+	Name = "Execute this first"
 })
 
 Tab:AddButton({
-	Name = "Anti Fly / Speed / No Jumpscare",
+	Name = "Speed (No Ban, Anti Speed)",
 	Callback = function()
         local pussy_mode = true -- no jumpscares i think
         local speed = 50 -- sped
@@ -50,36 +50,101 @@ local Section = Tab:AddSection({
 	Name = "Teleports"
 })
 
-
 Tab:AddButton({
-	Name = "Win Chapter 1",
+	Name = "Win Chaper 1 part 1",
 	Callback = function()
-      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(3180, 37, -1586))
+      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-16, 91, -666))
                 if game:GetService("Workspace").FilteringEnabled == true then
                 	game:GetService("StarterGui"):SetCore("SendNotification", {
-                		Title = " Checkpoint 1 ";
+                		Title = " Talk To The Farmer (Dont Talk) ";
+                		Text = " ... ";
+                	})
+                end
+wait(2)
+
+      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-125, 95, -885))
+                if game:GetService("Workspace").FilteringEnabled == true then
+                	game:GetService("StarterGui"):SetCore("SendNotification", {
+                		Title = " Cave ";
+                		Text = " ... ";
+                	})
+                end
+wait(2)
+
+      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-103, 92, -2064))
+                if game:GetService("Workspace").FilteringEnabled == true then
+                	game:GetService("StarterGui"):SetCore("SendNotification", {
+                		Title = " Laver ";
                 		Text = " ... ";
                 	})
                 end
 
 wait(2)
 
-        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(3314, 38, -1760))
+      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-91, 97, -2293))
                 if game:GetService("Workspace").FilteringEnabled == true then
                 	game:GetService("StarterGui"):SetCore("SendNotification", {
-                		Title = " Check Key True ";
+                		Title = " Hause ";
                 		Text = " ... ";
                 	})
                 end
 
 wait(2)
-        
-        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(3484, 38, -1537))
+
+      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-114, 66, -2361))
                 if game:GetService("Workspace").FilteringEnabled == true then
                 	game:GetService("StarterGui"):SetCore("SendNotification", {
-                		Title = " Win Chapter 1 Part 1 ";
+                		Title = " Cave 2 ";
                 		Text = " ... ";
                 	})
                 end
+
+wait(2)
+
+      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-264, 92, -3242))
+                if game:GetService("Workspace").FilteringEnabled == true then
+                	game:GetService("StarterGui"):SetCore("SendNotification", {
+                		Title = " Hotel ";
+                		Text = " ... ";
+                	})
+                end
+
+wait(2)
+
+      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-399, 129, -2737))
+                if game:GetService("Workspace").FilteringEnabled == true then
+                	game:GetService("StarterGui"):SetCore("SendNotification", {
+                		Title = " Escape Hotel ";
+                		Text = " ... ";
+                	})
+                end
+
+wait(2)
+
+      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(237, 200, -2569))
+                if game:GetService("Workspace").FilteringEnabled == true then
+                	game:GetService("StarterGui"):SetCore("SendNotification", {
+                		Title = " Escape Hotel 2 ";
+                		Text = " ... ";
+                	})
+                end
+
+wait(2)
+
+      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1263, 200, -2538))
+                if game:GetService("Workspace").FilteringEnabled == true then
+                	game:GetService("StarterGui"):SetCore("SendNotification", {
+                		Title = " Escape Hotel 3 ";
+                		Text = " ... ";
+                	})
+                end
+
+wait(2)
+
+                if game:GetService("Workspace").FilteringEnabled == true then
+                	game:GetService("StarterGui"):SetCore("SendNotification", {
+                		Title = " More in soon... :< ";
+                		Text = " ... ";
+                	})
   	end    
 })
