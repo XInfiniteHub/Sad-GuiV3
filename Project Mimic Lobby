@@ -1,0 +1,10 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Project Mimic Lobby", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnable = true, IntroText = "Project Mimic"})
+
+--> Welcome 
+local Tab = Window:MakeTab({
+	Name = " 👋 Welcome",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Tab:AddParagraph("Scrip The Mimic Lobby","Entre em algum capitulo")
