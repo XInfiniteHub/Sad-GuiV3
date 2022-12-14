@@ -16,14 +16,14 @@ print("Local Devs: Darkzin, Cool and Astarote")
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.7 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "  |  Project Awakining 🔱 ", IntroIcon = "http://www.roblox.com/asset/?id=11822730215"})
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.8 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "  |  Project Awakining 🔱 ", IntroIcon = "http://www.roblox.com/asset/?id=11822730215"})
 
 -- MENSAGEM --
 
 OrionLib:MakeNotification({
 	Name = "Creditos !",
 	Content = "Feito por Darkzin, Cool e Astarote",
-	Image = "rbxassetid://4483345998",
+	Image = "http://www.roblox.com/asset/?id=11822730215",
 	Time = 5
 })
 
@@ -40,7 +40,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.7")
+Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.8")
 
 -- END
 
@@ -111,6 +111,17 @@ Tab:AddButton({
 
 			game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
   			end    
+})
+Tab:AddButton({
+	Name = "The World Auternative Universe",
+	Callback = function()
+        local args = {
+            [1] = 20000000,
+            [2] = "diego"
+        }
+
+        game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+  	end    
 })
 Tab:AddButton({
 	Name = "The World Ova Heaven",
@@ -808,6 +819,15 @@ local Tab = Window:MakeTab({
 
 local Section = Tab:AddSection({
 	Name = "New Update Update"
+})
+
+Tab:AddParagraph("Nova Update!!","Versão 4.8")
+Tab:AddParagraph("Bugs Corrigidos","Tudo funcionando corretamente")
+Tab:AddParagraph("Oque foi adicionado?","Foi Adicionado mais opções no Stands")
+
+
+local Section = Tab:AddSection({
+	Name = "Old Update Update"
 })
 
 Tab:AddParagraph("Nova Update!!","Versão 4.7")
