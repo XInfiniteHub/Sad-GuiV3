@@ -1,7 +1,7 @@
 -- Made by Darkzin and Cool
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Project JSBG", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project JSBG"})
+local Window = OrionLib:MakeWindow({Name = "Project JSBG", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "  |  Project JSBG", IntroIcon = "http://www.roblox.com/asset/?id=11822586739"})
 
 --> Main
 local Tab = Window:MakeTab({
