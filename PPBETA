@@ -1,0 +1,57 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Project Piece", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnable = true, IntroText = "  |  Project Piece 🏴‍☠️ ", IntroIcon = "http://www.roblox.com/asset/?id=11822586739"})
+
+--> Menssage
+
+    OrionLib:MakeNotification({
+	Name = "Beta Version",
+	Content = "Mais Opções estão vindo :> ",
+	Image = "http://www.roblox.com/asset/?id=11822586739",
+	Time = 5
+})
+
+
+--end
+
+--> Welcome 
+
+local Tab = Window:MakeTab({
+	Name = " 👋 Welcome",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+
+})
+Tab:AddParagraph("Welcome to Project Piece","(～￣▽￣)～")
+
+--end
+
+--> Main
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Main Scripts"
+})
+
+Tab:AddButton({
+	Name = "Roll Fruits No Cooldown",
+	Callback = function()
+        local args = {
+            [1] = "SPINB"
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.SpinsRE:FireServer(unpack(args))
+        
+        wait(0.1)
+        
+        local args = {
+            [1] = "GIVE"
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.SpinsRE:FireServer(unpack(args))
+  	end    
+})
