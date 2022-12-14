@@ -1,0 +1,101 @@
+print("Project Stars loaded")
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Project Stars World 1", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnable = true, IntroText = "Project Stars World 1 ⭐ "})
+
+--> Welcome
+local Tab = Window:MakeTab({
+	Name = " 👋 Welcome",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Tab:AddLabel("Welcome to Project Stars")
+
+--> Summon
+
+local Tab = Window:MakeTab({
+	Name = " 📂 Summons",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Banner X"
+})
+Tab:AddButton({
+	Name = "Summon 1 (Need 50 gems)",
+	Callback = function()
+      	local args = {
+            [1] = "SummonStart",
+            [2] = 1
+        }
+
+        game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+  	end    
+})
+Tab:AddButton({
+	Name = "Summon 10 (Need 450 gems)",
+	Callback = function()
+        local args = {
+            [1] = "SummonStart10",
+            [2] = 1
+        }
+
+        game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+  	end    
+})
+
+
+
+local Section = Tab:AddSection({
+	Name = "Banner Y"
+})
+Tab:AddButton({
+	Name = "Summon 1 (Need 50 gems)",
+	Callback = function()
+        local args = {
+            [1] = "SummonStart",
+            [2] = 2
+        }
+
+        game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+  	end    
+})
+Tab:AddButton({
+	Name = "Summon 10 (Need 450 gems)",
+	Callback = function()
+        local args = {
+            [1] = "SummonStart10",
+            [2] = 2
+        }
+
+        game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+  	end    
+})
+
+--> Teleports
+
+local Tab = Window:MakeTab({
+	Name = " 🏃 Teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Infinite Mode",
+	Callback = function()
+      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(50, 1389, 805))
+  	end    
+})
+Tab:AddButton({
+	Name = "Story Mode",
+	Callback = function()
+      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-142, 1389, 805))
+  	end    
+})
+Tab:AddButton({
+	Name = "Orbs",
+	Callback = function()
+      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-863, 47, -810))
+  	end    
+})
