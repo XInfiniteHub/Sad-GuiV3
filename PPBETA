@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Project Piece", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnable = true, IntroText = "  |  Project Piece 🏴‍☠️ ", IntroIcon = "http://www.roblox.com/asset/?id=11822586739"})
+local Window = OrionLib:MakeWindow({Name = "Project Piece", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnable = true, IntroText = "  |  Project Piece 🏴‍☠️ ", IntroIcon = "http://www.roblox.com/asset/?id=11822730215"})
 
 --> Menssage
 
