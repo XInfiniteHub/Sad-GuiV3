@@ -16,7 +16,7 @@ print("Local Devs: Darkzin, Cool and Astarote")
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.6 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining 🔱 "})
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.7 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "Project Awakining 🔱 "})
 
 -- MENSAGEM --
 
@@ -40,7 +40,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.6")
+Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.7")
 
 -- END
 
@@ -363,6 +363,32 @@ Tab:AddButton({
 })
 
 -- END --
+
+
+
+
+--Server Remotes
+
+local Tab = Window:MakeTab({
+	Name = " 🌍 SR",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Server Remotes (Beta) "
+})
+
+
+Tab:AddButton({
+	Name = "Update Spawn",
+	Callback = function()
+      	game:GetService("ReplicatedStorage").UpdateSpawn:FireServer()
+  	end    
+})
+
+
+--END
 
 
 
@@ -782,6 +808,14 @@ local Tab = Window:MakeTab({
 
 local Section = Tab:AddSection({
 	Name = "New Update Update"
+})
+
+Tab:AddParagraph("Nova Update!!","Versão 4.7")
+Tab:AddParagraph("Bugs Corrigidos","Descobrimos o erro do Auto Boss, e agora ele so funciona na segunda faze, execute perto do lugar aonde fica o Script (Pois ai vc n leva kick) ")
+Tab:AddParagraph("Oque foi adicionado?","Foi adicionado uma nova opção de Server Remote, a onde o primeiro remote pela teoria te da mais sorte nos spawn dos itens")
+
+local Section = Tab:AddSection({
+	Name = "Old Update Update"
 })
 
 Tab:AddParagraph("Nova Update!!","Versão 4.6")
