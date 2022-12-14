@@ -9,6 +9,7 @@
         [4] = Flee The Facility
         [5] = Da Hood, Untitled Hood
         [6] = The Mimic
+        [7] = All Star Tower Defense
     }
 --]]
 
@@ -21,6 +22,7 @@ local games = {
     [{7215918473}] = "https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20JSBG",
     [{893973440}] = "https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20Facility",
     [{2788229376, 9183932460}] = "https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20Hood", 
+    [{4996049426}] = "https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20Stars",
 
     -- Them Mimic Places
     --[[Lobby]]       [{6243699076}] = "https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20Mimic%20Lobby",
