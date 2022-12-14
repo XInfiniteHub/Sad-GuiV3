@@ -19,7 +19,7 @@ OrionLib:MakeNotification({
 })
 
 --> Window
-local Window = OrionLib:MakeWindow({Name = "Project Shindo", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "  |  Poject Shindo ", IntroIcon = "http://www.roblox.com/asset/?id=11822586739"})
+local Window = OrionLib:MakeWindow({Name = "Project Shindo", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "  |  Poject Shindo ", IntroIcon = "http://www.roblox.com/asset/?id=11822730215"})
 
 --> Aviso 
 local Tab = Window:MakeTab({
