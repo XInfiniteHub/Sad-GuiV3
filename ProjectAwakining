@@ -1,7 +1,6 @@
 print("Project Awakining Loaded! ")
 print("Local Devs: Darkzin, Cool and Astarote")
 
-
 --[[
 	
 	local devs = {
@@ -16,7 +15,7 @@ print("Local Devs: Darkzin, Cool and Astarote")
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.8 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "  |  Project Awakining 🔱 ", IntroIcon = "http://www.roblox.com/asset/?id=11822730215"})
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.9 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "  |  Project Awakining 🔱 ", IntroIcon = "http://www.roblox.com/asset/?id=11822730215"})
 
 -- MENSAGEM --
 
@@ -40,7 +39,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.8")
+Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.9")
 
 -- END
 
@@ -163,8 +162,10 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+Tab:AddLabel("Main Scripts")
+
 local Section = Tab:AddSection({
-	Name = "Main Scripts"
+	Name = ""
 })
 
 local Section = Tab:AddSection({
@@ -206,7 +207,9 @@ Tab:AddButton({
 --end
 
 
-
+local Section = Tab:AddSection({
+	Name = ""
+})
 local Section = Tab:AddSection({
 	Name = "Golden Expirience Requiem / Golden Expirience Main"
 })
@@ -248,7 +251,9 @@ Tab:AddButton({
 --end
 
 
-
+local Section = Tab:AddSection({
+	Name = ""
+})
 local Section = Tab:AddSection({
 	Name = "Shadow Dio Main"
 })
@@ -274,6 +279,10 @@ Tab:AddButton({
 --end
 
 
+
+local Section = Tab:AddSection({
+	Name = ""
+})
 local Section = Tab:AddSection({
 	Name = " Karls Main"
 })
@@ -292,21 +301,12 @@ game:GetService("ReplicatedStorage").Main.Transparency:FireServer(unpack(args))
 --end
 
 
-
-local Section = Tab:AddSection({
-	Name = "Hierophant Green Main"
-})
-Tab:AddButton({
-	Name = "Hierophant Green (Infinite Emerald) Beta ",
-	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/INF%20ESMERAlD'))()
-  	end    
-})
-
 --end
 
 
-
+local Section = Tab:AddSection({
+	Name = ""
+})
 local Section = Tab:AddSection({
 	Name = "Omt and Smot Main"
 })
@@ -325,7 +325,9 @@ Tab:AddButton({
 --end
 
 
-
+local Section = Tab:AddSection({
+	Name = ""
+})
 local Section = Tab:AddSection({
 	Name = "Sans Main"
 })
@@ -346,7 +348,9 @@ Tab:AddButton({
 --end
 
 
-
+local Section = Tab:AddSection({
+	Name = ""
+})
 local Section = Tab:AddSection({
 	Name = "Made in Heave Main"
 })
@@ -398,6 +402,15 @@ Tab:AddButton({
   	end    
 })
 
+local Section = Tab:AddSection({
+	Name = "Lag Server"
+})
+Tab:AddButton({
+	Name = "Need Hierophant Green  ",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/INF%20ESMERAlD'))()
+  	end    
+})
 
 --END
 
@@ -819,6 +832,14 @@ local Tab = Window:MakeTab({
 
 local Section = Tab:AddSection({
 	Name = "New Update Update"
+})
+
+Tab:AddParagraph("Nova Update!!","Versão 4.9")
+Tab:AddParagraph("Bugs Corrigidos","Erro 264 corrigido")
+Tab:AddParagraph("Oque foi adicionado?","Mais opções no Main")
+
+local Section = Tab:AddSection({
+	Name = "Old Update Update"
 })
 
 Tab:AddParagraph("Nova Update!!","Versão 4.8")
