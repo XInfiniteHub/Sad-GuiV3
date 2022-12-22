@@ -830,60 +830,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-local Section = Tab:AddSection({
-	Name = "New Update Update"
-})
+Tab:AddParagraph("New Update","[=] Versão 4.9                                                                                                           [+] bugs corrigidos: Erro 264                                                                                                           [+] Oque foi adicinado: Mais opções no main")
 
-Tab:AddParagraph("Nova Update!!","Versão 4.9")
-Tab:AddParagraph("Bugs Corrigidos","Erro 264 corrigido")
-Tab:AddParagraph("Oque foi adicionado?","Mais opções no Main")
-
-local Section = Tab:AddSection({
-	Name = "Old Update Update"
-})
-
-Tab:AddParagraph("Nova Update!!","Versão 4.8")
-Tab:AddParagraph("Bugs Corrigidos","Tudo funcionando corretamente")
-Tab:AddParagraph("Oque foi adicionado?","Foi Adicionado mais opções no Stands")
-
-
-local Section = Tab:AddSection({
-	Name = "Old Update Update"
-})
-
-Tab:AddParagraph("Nova Update!!","Versão 4.7")
-Tab:AddParagraph("Bugs Corrigidos","Descobrimos o erro do Auto Boss, e agora ele so funciona na segunda faze, execute perto do lugar aonde fica o Script (Pois ai vc n leva kick) ")
-Tab:AddParagraph("Oque foi adicionado?","Foi adicionado uma nova opção de Server Remote, a onde o primeiro remote pela teoria te da mais sorte nos spawn dos itens")
-
-local Section = Tab:AddSection({
-	Name = "Old Update Update"
-})
-
-Tab:AddParagraph("Nova Update!!","Versão 4.6")
-Tab:AddParagraph("Bugs Corrigidos","Nenhum Bug encontrado, tudo funcionando perfeitamente")
-Tab:AddParagraph("Oque foi adicionado?","Mais opções no Main")
-
-local Section = Tab:AddSection({
-	Name = "Old Update"
-})
-
-Tab:AddParagraph("Nova Update!!","Versão 4.5")
-Tab:AddParagraph("Bugs Corrigidos","Não á nenhum bug encontrado, está funcionando tudo perfeitamente")
-Tab:AddParagraph("Oque foi adicionado?","Novas opções no Stand Farm, Mais opções no Buy Items")
-
-local Section = Tab:AddSection({
-	Name = "Old Update"
-})
-
-Tab:AddParagraph("Nova Update!!","Versão 4.4")
-Tab:AddParagraph("Bugs Corrigidos ","Bug nos stand foi totalmente corrigidos")
-Tab:AddParagraph("Oque Foi Adicionado? ","Mais opções no main, novos stands adicionados")
-
-local Section = Tab:AddSection({
-	Name = "Old Update"
-})
-
-Tab:AddParagraph("Nova Update!!","Versão 4.3")
-Tab:AddParagraph("Porque Beta? ","Nessa versão alguns erros arrespeito de Stands foram descobertos, estamos tentando concertar | Adicionais: Opções no Main, Grab Tools")
 
 -- END --
