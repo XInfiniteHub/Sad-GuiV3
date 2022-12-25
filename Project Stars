@@ -1,101 +1,395 @@
-print("Project Stars loaded")
-
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Project Stars World 1", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnable = true, IntroText = "  |  Project Stars World 1 ⭐ ", IntroIcon = "http://www.roblox.com/asset/?id=11822730215"})
-
---> Welcome
-local Tab = Window:MakeTab({
-	Name = " 👋 Welcome",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+--// Project Stars
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Window = Rayfield:CreateWindow({
+   Name = "Project Stars ⭐ W 1 | @Project Hub",
+   LoadingTitle = "Project Hub",
+   LoadingSubtitle = "by @Darkzin | @Cool",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "sirius", -- The Discord invite code, do not include discord.gg/
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Project Hub Hub",
+      Subtitle = "Key System",
+      Note = "Join the discord (discord.gg/Project Hub)",
+      FileName = "SiriusKey",
+      SaveKey = true,
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = "ProjectHub@@@###$$$%%%"
+   }
 })
-Tab:AddLabel("Welcome to Project Stars")
 
---> Summon
 
-local Tab = Window:MakeTab({
-	Name = " 📂 Summons",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
+--< Welcome >--
+local Tab = Window:CreateTab("👋 Welcome")
 
-local Section = Tab:AddSection({
-	Name = "Banner X"
-})
-Tab:AddButton({
-	Name = "Summon 1 (Need 50 gems)",
-	Callback = function()
+local Paragraph = Tab:CreateParagraph({Title = "Welcome", Content = "Bem vindo ao Project Stars"})
+local Paragraph = Tab:CreateParagraph({Title = "Working version", Content = "Achamos varios scripts, mais ainda estamos adicionando na GUI"})
+
+--< Summon >--
+local Tab = Window:CreateTab("Summon")
+
+
+local Section = Tab:CreateSection("Banner X")
+local Button = Tab:CreateButton({
+   Name = "Summon 1 (Need 50 gems)",
+   Callback = function()
       	local args = {
             [1] = "SummonStart",
             [2] = 1
         }
 
         game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-  	end    
+   end,
 })
-Tab:AddButton({
-	Name = "Summon 10 (Need 450 gems)",
-	Callback = function()
+local Button = Tab:CreateButton({
+   Name = "Summon 10 (Need 450 gems)",
+   Callback = function()
+      	local args = {
+            [1] = "SummonStart10",
+            [2] = 1
+        }
+
+        game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+   end,
+})
+
+
+
+local Section = Tab:CreateSection("")
+
+
+
+local Section = Tab:CreateSection("Banner Y")
+local Button = Tab:CreateButton({
+   Name = "Summon 1 (Need 50 gems)",
+   Callback = function()
+      	local args = {
+            [1] = "SummonStart",
+            [2] = 2
+        }
+
+        game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Summon 10 (Need 450 gems)",
+   Callback = function()
+      	local args = {
+            [1] = "SummonStart10",
+            [2] = 2
+        }
+
+        game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+   end,
+})
+
+
+local Section = Tab:CreateSection("")
+
+
+local Label = Tab:CreateLabel("advanced Working")
+
+
+local Section = Tab:CreateSection("")
+
+
+local Section = Tab:CreateSection("Banner X")
+local Input = Tab:CreateInput({
+   Name = "Advanced Summon 1 Example",
+   PlaceholderText = "number",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(Summon)
+        local args = {
+            [1] = "SummonStart",
+            [2] = 1
+        }
+
+        game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+   end,
+})
+local Input = Tab:CreateInput({
+   Name = "Advanced Summon 10 Example",
+   PlaceholderText = "number",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(Summon)
         local args = {
             [1] = "SummonStart10",
             [2] = 1
         }
 
         game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-  	end    
+   end,
 })
 
 
+local Section = Tab:CreateSection("")
 
-local Section = Tab:AddSection({
-	Name = "Banner Y"
-})
-Tab:AddButton({
-	Name = "Summon 1 (Need 50 gems)",
-	Callback = function()
+
+local Section = Tab:CreateSection("Banner Y")
+
+
+local Input = Tab:CreateInput({
+   Name = "Advanced Summon 1 Example",
+   PlaceholderText = "number",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(Summon)
         local args = {
             [1] = "SummonStart",
             [2] = 2
         }
 
         game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-  	end    
+   end,
 })
-Tab:AddButton({
-	Name = "Summon 10 (Need 450 gems)",
-	Callback = function()
+local Input = Tab:CreateInput({
+   Name = "Advanced Summon 10 Example",
+   PlaceholderText = "number",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(Summon)
         local args = {
             [1] = "SummonStart10",
             [2] = 2
         }
 
         game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
-  	end    
+   end,
 })
 
---> Teleports
 
-local Tab = Window:MakeTab({
-	Name = " 🏃 Teleports",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+--< Teleports >--
+local Tab = Window:CreateTab("Teleports")
+local Paragraph = Tab:CreateParagraph({Title = "Teleports", Content = "Aperte no botão para se teletransportado para onde desejar"})
+
+local Button = Tab:CreateButton({
+   Name = "Infinite Mode",
+   Callback = function()
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(50, 1389, 805))
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Story Mode",
+   Callback = function()
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-142, 1389, 805))
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Orbs ",
+   Callback = function()
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-863, 47, -810))
+   end,
 })
 
-Tab:AddButton({
-	Name = "Infinite Mode",
-	Callback = function()
-      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(50, 1389, 805))
-  	end    
+
+local Section = Tab:CreateSection("")
+
+
+local Section = Tab:CreateSection("Serpent Paths")
+local Button = Tab:CreateButton({
+   Name = "Serpent Paths",
+   Callback = function()
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-472, 47, -620))
+   end,
 })
-Tab:AddButton({
-	Name = "Story Mode",
-	Callback = function()
-      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-142, 1389, 805))
-  	end    
+local Button = Tab:CreateButton({
+   Name = "Serpent Paths Trial 1 (lvl 25+)",
+   Callback = function()
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-227, 67, -837))
+   end,
 })
-Tab:AddButton({
-	Name = "Orbs",
-	Callback = function()
-      	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-863, 47, -810))
-  	end    
+local Button = Tab:CreateButton({
+   Name = "Serpent Paths Trial 2 (lvl 35+)",
+   Callback = function()
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-508, 106, -878))
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Serpent Paths Trial 3 (lvl 45+)",
+   Callback = function()
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-769, 172, -914))
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Serpent Paths Raid 1 (lvl 50+)",
+   Callback = function()
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-952, 184, -792))
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Serpent Paths Raid 2 (lvl 60+)",
+   Callback = function()
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1059, 201, -610))
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Serpent Paths Raid 3 (lvl 68+)",
+   Callback = function()
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-945, 201, -361))
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Serpent Paths challenge 1 (lvl 75+)",
+   Callback = function()
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-774, 245, -253))
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Serpent Paths challenge 2 (lvl 90+)",
+   Callback = function()
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-561, 301, -241))
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Serpent Paths challenge 3 (lvl 100+)",
+   Callback = function()
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-430, 300, -432))
+   end,
+})
+
+
+local Section = Tab:CreateSection("")
+
+
+local Section = Tab:CreateSection("World 2 ⭐⭐")
+local Button = Tab:CreateButton({
+   Name = "World 2 (lvl 100+)",
+   Callback = function()
+        game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-553, 300, -544))
+   end,
+})
+
+
+--< Start Story Mode >--
+local Tab = Window:CreateTab("Start Story Mode")
+local Paragraph = Tab:CreateParagraph({Title = "Start Story Mode", Content = "Ele iniciará o Story Mode / Abrir, o iniciar ainda está em desenvolvimento :/ "})
+
+local Button = Tab:CreateButton({
+   Name = "Open Story Mode",
+   Callback = function()
+      game:GetService("Players").LocalPlayer.PlayerGui.HUD.Missions.Visible = true
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Close Story Mode",
+   Callback = function()
+      game:GetService("Players").LocalPlayer.PlayerGui.HUD.Missions.Visible = false
+   end,
+})
+
+
+--< Start Infinite Mode >--
+local Tab = Window:CreateTab("Start Infinite Mode")
+local Paragraph = Tab:CreateParagraph({Title = "Start Infinite Mode", Content = "Ele iniciará o infinite Mode / Abrir, o iniciar ainda está em desenvolvimento :/ "})
+
+local Button = Tab:CreateButton({
+   Name = "Open Infinite Mode Mode",
+   Callback = function()
+      game:GetService("Players").LocalPlayer.PlayerGui.HUD.InfiniteMissions.Visible = true
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Close Infinite Mode Mode",
+   Callback = function()
+      game:GetService("Players").LocalPlayer.PlayerGui.HUD.InfiniteMissions.Visible = false
+   end,
+})
+
+--< Opem >--
+local Tab = Window:CreateTab("Open ")
+local Paragraph = Tab:CreateParagraph({Title = "Open", Content = "Open, ele irá abrir os Menu que selecionar "})
+
+
+local Section = Tab:CreateSection("")
+
+
+local Section = Tab:CreateSection("Summon")
+local Button = Tab:CreateButton({
+   Name = "Open Summon",
+   Callback = function()
+      game:GetService("Players").LocalPlayer.PlayerGui.HUD.Summon.Visible = true
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Close Summon",
+   Callback = function()
+      game:GetService("Players").LocalPlayer.PlayerGui.HUD.Summon.Visible = false
+   end,
+})
+
+
+local Section = Tab:CreateSection("")
+
+
+local Section = Tab:CreateSection("Orbs")
+local Button = Tab:CreateButton({
+   Name = "Open Orbs Shop",
+   Callback = function()
+      game:GetService("Players").LocalPlayer.PlayerGui.HUD.OrbShop.Visible = true
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Close Orbs Shop",
+   Callback = function()
+      game:GetService("Players").LocalPlayer.PlayerGui.HUD.OrbShop.Visible = false
+   end,
+})
+
+
+local Section = Tab:CreateSection("")
+
+
+local Section = Tab:CreateSection("Orbs Forge")
+local Button = Tab:CreateButton({
+   Name = "Open Orbs Forge",
+   Callback = function()
+      game:GetService("Players").LocalPlayer.PlayerGui.HUD.OrbForge.Visible = true
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Close Orbs Forge",
+   Callback = function()
+      game:GetService("Players").LocalPlayer.PlayerGui.HUD.OrbForge.Visible = false
+   end,
+})
+
+
+local Section = Tab:CreateSection("")
+
+
+local Button = Tab:CreateButton({
+   Name = "Open Orbs Forge Inventory",
+   Callback = function()
+      game:GetService("Players").blackah178.PlayerGui.HUD.OrbForgeInventory.Visible = true
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Close Orbs Forge Inventory",
+   Callback = function()
+      game:GetService("Players").blackah178.PlayerGui.HUD.OrbForgeInventory.Visible = false
+   end,
+})
+
+
+local Section = Tab:CreateSection("")
+
+
+local Section = Tab:CreateSection("Weapon Frame")
+local Button = Tab:CreateButton({
+   Name = "Open Weapon Frame",
+   Callback = function()
+      game:GetService("Players").LocalPlayer.PlayerGui.HUD.WeaponFrame.Visible = true
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Close Weapon Frame",
+   Callback = function()
+      game:GetService("Players").LocalPlayer.PlayerGui.HUD.WeaponFrame.Visible = false
+   end,
 })
