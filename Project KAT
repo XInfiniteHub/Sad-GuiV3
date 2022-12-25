@@ -1,0 +1,226 @@
+--// Project Hub Kat
+--// Workinf Version 
+--// Have Fun :>
+
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Window = Rayfield:CreateWindow({
+   Name = "Project KAT | @Project Hub",
+   LoadingTitle = "Project Hub",
+   LoadingSubtitle = "by @Darkzin | @Cool",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "sirius", -- The Discord invite code, do not include discord.gg/
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Project Hub",
+      Subtitle = "Key System",
+      Note = "Join the discord (discord.gg/Project Hub)",
+      FileName = "ProjectHubKey",
+      SaveKey = true,
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = "ProjectHub@@@###$$$%%%"
+   }
+})
+Rayfield:Notify({
+   Title = "Project KAT working version",
+   Content = "Essa versão foi feita recentemente então não há muitas opções, outra opções estão sendo feitas em breve",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "...",
+         Callback = function()
+         print("...")
+      end
+   },
+},
+})
+
+--< Welcome >--
+local Tab = Window:CreateTab("👋 Welcome")
+local Paragraph = Tab:CreateParagraph({Title = "Welcome", Content = "Bem Vindo, divirta-se :> "})
+
+--< Kill Players >--
+local Tab = Window:CreateTab("Kill Players")
+local Paragraph = Tab:CreateParagraph({Title = "Kill Players", Content = "Aqui você poderar matar seus inimigos "})
+
+local Button = Tab:CreateButton({
+   Name = "Kill Players",
+   Callback = function()
+        Rayfield:Notify({
+           Title = "Aviso",
+           Content = "Para iniciar o kill é necessario que aperte a tecla  E",
+           Duration = 6.5,
+           Image = 4483362458,
+           Actions = { -- Notification Buttons
+              Ignore = {
+                 Name = "Entendi!",
+                 Callback = function()
+                    local key = game:GetService("UserInputService") --- this is meant for KAT but works for any game
+        
+                    key.InputBegan:Connect(function(input)
+                    if input.KeyCode == Enum.KeyCode.E then
+                    for i,v in pairs(game.Players:GetChildren()) do
+                        if v ~= game.Players.LocalPlayer then
+                             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.Head.CFrame * CFrame.new(0,0,.4)
+                             wait(0.5)
+                        end
+                    end
+                    end
+                    end)
+              end
+           },
+        },
+        })
+   end,
+})
+
+local Section = Tab:CreateSection("")
+local Section = Tab:CreateSection("Others Opton")
+
+local Button = Tab:CreateButton({
+   Name = "Esp Players",
+   Callback = function()
+        if _G.Reantheajfdfjdgse then
+            return
+        end
+        
+        _G.Reantheajfdfjdgse = "susan"
+        
+        local coregui = game:GetService("CoreGui")
+        local players = game:GetService("Players")
+        local plr = players.LocalPlayer
+        
+        local highlights = {}
+        
+        function esp(target, color)
+            pcall(function()
+                if target.Character then
+                    if not highlights[target] then
+                        local highlight = Instance.new("Highlight", coregui)
+                        highlight.Name = target.Name
+                        highlight.Adornee = target.Character
+                        highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+                        highlight.FillColor = color
+                        highlights[target] = highlight
+                    else
+                        highlights[target].FillColor = color
+                    end
+                end
+            end)
+        end
+        
+        players.PlayerAdded:Connect(function(v)
+            v.CharacterAdded:Connect(function()
+                esp(v, _G.UseTeamColor and v.TeamColor.Color or ((plr.TeamColor == v.TeamColor) and _G.FriendColor or _G.EnemyColor))
+            end)
+        end)
+        
+        players.PlayerRemoving:Connect(function(v)
+            if highlights[v] then
+                highlights[v]:Destroy()
+                highlights[v] = nil
+            end
+        end)
+        
+        for i, v in pairs(players:GetPlayers()) do
+            if v ~= plr then
+                local color = _G.UseTeamColor and v.TeamColor.Color or ((plr.TeamColor == v.TeamColor) and _G.FriendColor or _G.EnemyColor)
+                v.CharacterAdded:Connect(function()
+                    local color = _G.UseTeamColor and v.TeamColor.Color or ((plr.TeamColor == v.TeamColor) and _G.FriendColor or _G.EnemyColor)
+                    esp(v, color)
+                end)
+                
+                esp(v, color)
+            end
+        end
+        
+        while task.wait() do
+            for i, v in pairs(highlights) do
+                local color = _G.UseTeamColor and i.TeamColor.Color or ((plr.TeamColor == i.TeamColor) and _G.FriendColor or _G.EnemyColor)
+                v.FillColor = color
+            end
+        end
+   end,
+})
+
+--< Universal >--
+local Tab = Window:CreateTab("Universal")
+local Paragraph = Tab:CreateParagraph({Title = "Universal", Content = "Scripts a onde pode ser usados para todos os jogos"})
+
+local Button = Tab:CreateButton({
+   Name = "Aim Lock ( Working )",
+   Callback = function()
+      print("Working Aim Lock :< ")
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Aimbot",
+   Callback = function()
+        aimassist = true
+
+        teambased = false -- teamcheck
+
+        aim = 1
+        lock = 0
+
+        fov = 120
+        e = Instance.new("SelectionBox")
+        e.Color3 = Color3.new(1, 0, 0)
+        e.Parent = game.Workspace
+        mouse = game.Players.LocalPlayer:GetMouse()
+        game:GetService("RunService").RenderStepped:Connect(function()
+           if lock == 0 then
+           if (120 - (mouse.Hit.Position - game.Workspace.CurrentCamera.CFrame.Position).Magnitude / 5)>116 then
+           
+               fov = 120 - ((mouse.Hit.Position - game.Workspace.CurrentCamera.CFrame.Position).Magnitude / 5)
+           else
+               fov = 116
+           end
+           end
+           game.Workspace.CurrentCamera.DiagonalFieldOfView = fov
+           game.Workspace.CurrentCamera.FieldOfView = fov
+
+           if mouse.Target.Parent:FindFirstChild("Humanoid") then
+               if game.Players:FindFirstChild(mouse.Target.Parent.Name) then
+                   if game.Players:FindFirstChild(mouse.Target.Parent.Name).TeamColor == game.Players.LocalPlayer.TeamColor then
+                       if teambased == false then
+                           e.Adornee = mouse.Target
+                           if aimassist == true then
+                               lock = 1
+                               fov = 105
+
+                               game.Workspace.CurrentCamera.CFrame = game.Workspace.CurrentCamera.CFrame:Lerp(CFrame.new(game.Workspace.CurrentCamera.CFrame.Position, mouse.Target.Parent:FindFirstChild("Head").Position), 0.94)
+                           end
+                       end
+                   else
+                       e.Adornee = mouse.Target
+                       if aimassist == true then
+                           lock = 1
+                           fov = 105
+
+                           game.Workspace.CurrentCamera.CFrame = game.Workspace.CurrentCamera.CFrame:Lerp(CFrame.new(game.Workspace.CurrentCamera.CFrame.Position, mouse.Target.Parent:FindFirstChild("Head").Position), 0.94)
+                           end
+                   end
+               end
+
+           else
+               lock = 0
+               fov = 120
+               e.Adornee = nil
+               e.Adornee = nil
+
+
+
+           end
+
+        end)
+   end,
+})
