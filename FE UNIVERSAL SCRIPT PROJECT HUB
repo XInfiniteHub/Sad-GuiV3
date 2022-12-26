@@ -1,0 +1,194 @@
+--// Universal Project Hub
+--// Made by @Darkzin | @Cool
+--// discord.com/ProjectHub (Beta server)
+
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Window = Rayfield:CreateWindow({
+   Name = "Project Hub Universal | @Project Hub",
+   LoadingTitle = "Project Hub",
+   LoadingSubtitle = "@Darkzin | @Cool",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "", -- The Discord invite code, do not include discord.gg/
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Project Hub",
+      Subtitle = "Key System",
+      Note = "Join the discord (Beta Server)",
+      FileName = "Project Hub Key",
+      SaveKey = true,
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = "9ebbd1803758011356fb53c3939ccc2daf00898e"
+   }
+})
+
+
+
+--// Welcome
+local Tab = Window:CreateTab("👋 Welcome")
+local Paragraph = Tab:CreateParagraph({Title = "Welcome", Content = "Bem vindo ao Project Hub Universal"})
+Rayfield:Notify({
+   Title = "Universal Script",
+   Content = "O universal ainda esta em desenvolvimento, mais já conta com otimas opções",
+   Duration = 6.5,
+   Image = 11822730215,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+
+--// hubs and GUIS
+local Tab = Window:CreateTab("Hubsand GUIS")
+local Section = Tab:CreateSection("Total Hubs/GUIS: 13")
+local Paragraph = Tab:CreateParagraph({Title = "Importante", Content = "Cuidado ao executar alguns scripts, pois podem ser que ele n seja compativel com o seu executor ou com a sua API que você usa que o seu exploit é compativel, então cuidado ao executar"})
+
+local Section = Tab:CreateSection("Hubs")
+local Button = Tab:CreateButton({
+   Name = "Simpility V2",
+   Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/HeyGyt/simplityv2/main/main"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Refelx V2",
+   Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Te1amon/Reflex/main/loader.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Unfair Hub",
+   Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua'),true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Draco Hub",
+   Callback = function()
+        Rayfield:Notify({
+           Title = "Aviso !",
+           Content = "Essa hub é paga, entre no servidos do Discord deles",
+           Duration = 6.5,
+           Image = 4483362458,
+           Actions = { -- Notification Buttons
+              Ignore = {
+                 Name = "Copiar Link",
+                 Callback = function()
+                    setclipboard("https://discord.com/invite/CpfZ9jaJAe")
+              end
+           },
+        },
+        })
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Nex Hub",
+   Callback = function()
+        loadstring(game:HttpGet('https://pastebin.com/AfnaiBHs'))()
+   end,
+})
+local Button = Tab:CreateButton({
+           Name = "Doulingo Hub",
+           Callback = function()
+           Rayfield:Notify({
+           Title = "Doulingo Hub",
+           Content = "Ela so funciona no jogo (Duolingo-Game-Hub)",
+           Duration = 6.5,
+           Image = 4483362458,
+           Actions = { -- Notification Buttons
+              Ignore = {
+                 Name = "Okay!",
+                 Callback = function()
+                         loadstring(game:HttpGet("https://pastebin.com/raw/exgdUYN5"))()
+                        setclipboard("https://www.roblox.com/games/9726345231/Duolingo-Game-Hub")
+              end
+           },
+        },
+        })
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Lazy Hub",
+   Callback = function()
+        repeat wait() until game:IsLoaded()
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/LioK251/RbScripts/main/lazyhub.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Orca Hub",
+   Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/latest.lua"))()
+  end,
+})
+local Button = Tab:CreateButton({
+   Name = "Domain Hub",
+   Callback = function()
+        loadstring(game:HttpGet('https://shlex.dev/release/domainx/latest.lua',true))()
+   end,
+})
+
+local Section = Tab:CreateSection("Guis")
+local Button = Tab:CreateButton({
+   Name = "CoolGui",
+   Callback = function()
+        loadstring(game:GetObjects("rbxassetid://9827584846")[1].Source)()
+  end,
+})
+local Button = Tab:CreateButton({
+   Name = "Infinite Yield Admin",
+   Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+  end,
+})
+local Button = Tab:CreateButton({
+   Name = "R6 Animations",
+   Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/R6%20anim'))()
+  end,
+})
+local Button = Tab:CreateButton({
+   Name = "R15 Animations",
+   Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/ShiroSeby/Seby-s-Lair/main/R15%20Animation%20Changer'), true))()
+  end,
+})
+
+
+
+--// Scripts Fe
+local Tab = Window:CreateTab("Scripts FE")
+local Paragraph = Tab:CreateParagraph({Title = "Welcome", Content = "Bem vindo ao Project Hub Universal"})
+
+local Section = Tab:CreateSection("FE Hubs")
+local Button = Tab:CreateButton({
+   Name = "VG HUB",
+   Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+  end,
+})
+local Button = Tab:CreateButton({
+   Name = "Domain X",
+   Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
+  end,
+})
+
+local Section = Tab:CreateSection("FE Scripts")
+local Button = Tab:CreateButton({
+   Name = "FE Pong Script",
+   Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/rouxhaver/scripts/main/RateMyAvatarPong.Lua'))()
+  end,
+})
