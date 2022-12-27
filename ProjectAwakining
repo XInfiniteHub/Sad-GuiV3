@@ -1,5 +1,5 @@
 print("Project Awakining Loaded! ")
-print("Local Devs: Darkzin, Cool and Astarote")
+print("Local Devs: @Darkzin  |  @Cool")
 
 --[[
 	
@@ -15,14 +15,14 @@ print("Local Devs: Darkzin, Cool and Astarote")
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Project Awakening v4.9 🥳 ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "  |  Project Awakining 🔱 ", IntroIcon = "http://www.roblox.com/asset/?id=11822730215"})
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v5.0 ⭐  |  @ProjectHub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "  |  Project Awakining   🔱", IntroIcon = "http://www.roblox.com/asset/?id=11941169058"})
 
 -- MENSAGEM --
 
 OrionLib:MakeNotification({
 	Name = "Creditos !",
-	Content = "Feito por Darkzin, Cool e Astarote",
-	Image = "http://www.roblox.com/asset/?id=11822730215",
+	Content = "By @Darkzin  |  @Cool",
+	Image = "http://www.roblox.com/asset/?id=11941169058",
 	Time = 5
 })
 
@@ -34,12 +34,12 @@ OrionLib:MakeNotification({
 -- WELCOME --
 
 local Tab = Window:MakeTab({
-	Name = " 👋 Welcome",
-	Icon = "rbxassetid://4483345998",
+	Name = " | Welcome",
+	Icon = "rbxassetid://7733955740",
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.9")
+Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v5.0")
 
 -- END
 
@@ -49,13 +49,15 @@ Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v4.9")
 -- STANDS --
 
 local Tab = Window:MakeTab({
-	Name = " ✨ Stands",
-	Icon = "rbxassetid://4483345998",
+	Name = " | Stands",
+	Icon = "http://www.roblox.com/asset/?id=11322155020",
 	PremiumOnly = false
 })
 local Section = Tab:AddSection({
-	Name = "Selecione seu Stand, que o seu time stop tera 20 segundos"
+	Name = "Total Stands Scripts: 8"
 })
+Tab:AddParagraph("Stands Scripts", "Selecione seu Stand, que o seu time stop tera 20 segundos / D4C Clone")
+
 Tab:AddButton({
 	Name = "Shadow Dio",
 	Callback = function()
@@ -157,19 +159,19 @@ Tab:AddButton({
 -- MAIN --
 
 local Tab = Window:MakeTab({
-	Name = " ☑️ Main",
-	Icon = "rbxassetid://4483345998",
+	Name = " | Main",
+	Icon = "rbxassetid://7733960981",
 	PremiumOnly = false
 })
 
-Tab:AddLabel("Main Scripts")
-
 local Section = Tab:AddSection({
-	Name = ""
+	Name = "Total Main Scripts: 12"
 })
+Tab:AddParagraph("Main Scripts", "Cuidado, alguns scripts podem requer alguns stand especificos")
+
 
 local Section = Tab:AddSection({
-	Name = "Players Main"
+	Name = "--<         Players Main          >--"
 })
 Tab:AddButton({
 	Name = "Auto Block",
@@ -208,10 +210,7 @@ Tab:AddButton({
 
 
 local Section = Tab:AddSection({
-	Name = ""
-})
-local Section = Tab:AddSection({
-	Name = "Golden Expirience Requiem / Golden Expirience Main"
+	Name = "--<         GER / GE Main          >--"
 })
 Tab:AddButton({
 	Name = "Infinite Damage Reflect",
@@ -252,10 +251,7 @@ Tab:AddButton({
 
 
 local Section = Tab:AddSection({
-	Name = ""
-})
-local Section = Tab:AddSection({
-	Name = "Shadow Dio Main"
+	Name = "--<         Shadow Dio Main          >-- "
 })
 Tab:AddButton({
 	Name = "Shadow Dio Infinite Kinifes (Use Q first) ",
@@ -279,12 +275,8 @@ Tab:AddButton({
 --end
 
 
-
 local Section = Tab:AddSection({
-	Name = ""
-})
-local Section = Tab:AddSection({
-	Name = " Karls Main"
+	Name = "--<         Karls Main          >-- "
 })
 Tab:AddButton({
 	Name = "Wings ULF inf ",
@@ -301,14 +293,8 @@ game:GetService("ReplicatedStorage").Main.Transparency:FireServer(unpack(args))
 --end
 
 
---end
-
-
 local Section = Tab:AddSection({
-	Name = ""
-})
-local Section = Tab:AddSection({
-	Name = "Omt and Smot Main"
+	Name = "--<         Omt and Smot Main          >-- "
 })
 Tab:AddButton({
 	Name = "Omt and Smot Drill ",
@@ -326,10 +312,7 @@ Tab:AddButton({
 
 
 local Section = Tab:AddSection({
-	Name = ""
-})
-local Section = Tab:AddSection({
-	Name = "Sans Main"
+	Name = "--<         Sans Main          >-- "
 })
 Tab:AddButton({
 	Name = "Sans Teleport Player Limbo",
@@ -349,10 +332,7 @@ Tab:AddButton({
 
 
 local Section = Tab:AddSection({
-	Name = ""
-})
-local Section = Tab:AddSection({
-	Name = "Made in Heave Main"
+	Name = "--<         Made in Heave Main          >-- "
 })
 Tab:AddButton({
 	Name = "Made in Heaven Universe Reset",
@@ -376,6 +356,18 @@ Tab:AddButton({
         game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
   	end    
 })
+Tab:AddButton({
+	Name = "Made in Heaven invisible (Hallow)",
+	Callback = function()
+        local args = {
+            [1] = "Alternate",
+            [2] = "Appear",
+            [3] = false
+        }
+
+        game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+  	end    
+})
 
 -- END --
 
@@ -385,16 +377,18 @@ Tab:AddButton({
 --Server Remotes
 
 local Tab = Window:MakeTab({
-	Name = " 🌍 SR",
-	Icon = "rbxassetid://4483345998",
+	Name = " | SR",
+	Icon = "http://www.roblox.com/asset/?id=11941263246",
 	PremiumOnly = false
 })
+local Section = Tab:AddSection({
+	Name = "Total Server Remotes: 2 "
+})
+Tab:AddParagraph("Server Remotes","Ainda está em desenvolvimento, não temos muitas opções disponiveis por enquanto")
 
 local Section = Tab:AddSection({
-	Name = "Server Remotes (Beta) "
+	Name = "--<         Server Remotes          >-- "
 })
-
-
 Tab:AddButton({
 	Name = "Update Spawn",
 	Callback = function()
@@ -403,7 +397,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
-	Name = "Lag Server"
+	Name = "--<         Lag Server          >--"
 })
 Tab:AddButton({
 	Name = "Need Hierophant Green  ",
@@ -420,8 +414,8 @@ Tab:AddButton({
 -- Buy Items --
 
 local Tab = Window:MakeTab({
-	Name = " 💸 Buy Items",
-	Icon = "rbxassetid://4483345998",
+	Name = " | Buy Items",
+	Icon = "http://www.roblox.com/asset/?id=11941289020",
 	PremiumOnly = false
 })
 
@@ -473,8 +467,8 @@ game:GetService("ReplicatedStorage").Purchase:FireServer(unpack(args))
 -- Stand Farm --
 
 local Tab = Window:MakeTab({
-	Name = " 📂 Stand Farm",
-	Icon = "rbxassetid://4483345998",
+	Name = " | Stand Farm",
+	Icon = "rbxassetid://8997386062",
 	PremiumOnly = false
 })
 
@@ -536,8 +530,8 @@ Tab:AddButton({
 -- AUTO BOSS -- 
 
 local Tab = Window:MakeTab({
-	Name = " 📂 Auto Boss",
-	Icon = "rbxassetid://4483345998",
+	Name = " | Auto Boss",
+	Icon = "rbxassetid://8997386062",
 	PremiumOnly = false
 })
 
@@ -586,8 +580,8 @@ Tab:AddButton({
 -- ITEM FARM --
 
 local Tab = Window:MakeTab({
-	Name = " 📂 Item Farm",
-	Icon = "rbxassetid://4483345998",
+	Name = " | Item Farm",
+	Icon = "rbxassetid://8997386062",
 	PremiumOnly = false
 })
 
@@ -650,9 +644,9 @@ Tab:AddButton({
 
 -- TELEPORT --
 
-local Tab = Window:MakeTab({
-	Name = " 🏃 Teleport",
-	Icon = "rbxassetid://4483345998",
+local Tab = Window:MakeTab({    
+	Name = " | Teleport",
+	Icon = "http://www.roblox.com/asset/?id=6723742952",
 	PremiumOnly = false
 })
 
@@ -711,8 +705,8 @@ Tab:AddButton({
 -- LOCAL PLAYER --
 
 local Tab = Window:MakeTab({
-	Name = " 🙎 Local Player",
-	Icon = "rbxassetid://4483345998",
+	Name = " | Local Player",
+	Icon = "http://www.roblox.com/asset/?id=2795572800",
 	PremiumOnly = false
 })
 
@@ -799,8 +793,8 @@ Tab:AddSlider({
 -- SETTINGS --
 
 local Tab = Window:MakeTab({
-	Name = " ⚙️ Settings",
-	Icon = "rbxassetid://4483345998",
+	Name = " | Settings",
+	Icon = "rbxassetid://7734053495",
 	PremiumOnly = false
 })
 Tab:AddTextbox({
@@ -825,12 +819,12 @@ Tab:AddTextbox({
 -- INFO --
 
 local Tab = Window:MakeTab({
-	Name = " 📃 Info",
-	Icon = "rbxassetid://4483345998",
+	Name = " | Info",
+	Icon = "http://www.roblox.com/asset/?id=11941414897",
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("New Update","[=] Versão 4.9                                                                                                           [+] bugs corrigidos: Erro 264                                                                                                           [+] Oque foi adicinado: Mais opções no main")
+Tab:AddParagraph("New Update","[=] Versão 5.0                                                                                                           [+] bugs corrigidos: Erro 264                                                                                                           [+] Oque foi adicinado: Nova mudanças na GUI, algumas opções a mais, alguns de novos erros corrigidos alem do 268")
 
 
 -- END --
