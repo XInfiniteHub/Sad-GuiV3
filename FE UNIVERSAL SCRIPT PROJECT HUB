@@ -31,7 +31,7 @@ local Window = Rayfield:CreateWindow({
 
 
 
---// Welcome
+--// Welcome \\--
 local Tab = Window:CreateTab("👋 Welcome")
 local Paragraph = Tab:CreateParagraph({Title = "Welcome", Content = "Bem vindo ao Project Hub Universal"})
 Rayfield:Notify({
@@ -49,8 +49,8 @@ Rayfield:Notify({
 },
 })
 
---// hubs and GUIS
-local Tab = Window:CreateTab("Hubsand GUIS")
+--// hubs and GUIS \\--
+local Tab = Window:CreateTab("Hubs and GUIS")
 local Section = Tab:CreateSection("Total Hubs/GUIS: 13")
 local Paragraph = Tab:CreateParagraph({Title = "Importante", Content = "Cuidado ao executar alguns scripts, pois podem ser que ele n seja compativel com o seu executor ou com a sua API que você usa que o seu exploit é compativel, então cuidado ao executar"})
 
@@ -167,9 +167,10 @@ local Button = Tab:CreateButton({
 
 
 
---// Scripts Fe
+--// Scripts Fe \\--
 local Tab = Window:CreateTab("Scripts FE")
-local Paragraph = Tab:CreateParagraph({Title = "Welcome", Content = "Bem vindo ao Project Hub Universal"})
+local Section = Tab:CreateSection("Total FE Hubs/Script: 11")
+local Paragraph = Tab:CreateParagraph({Title = "Aviso", Content = "Cuidado, alguns desses script fe podem ser feitos pelo Snypse X, alguns tambem podem ter as funções deles e se n for executado pela API correta podem ate crashar seu jogo"})
 
 local Section = Tab:CreateSection("FE Hubs")
 local Button = Tab:CreateButton({
@@ -184,11 +185,451 @@ local Button = Tab:CreateButton({
         loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
   end,
 })
+local Button = Tab:CreateButton({
+   Name = "Harked V2    ",
+   Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Harked%20V2'))()
+  end,
+})
 
 local Section = Tab:CreateSection("FE Scripts")
 local Button = Tab:CreateButton({
-   Name = "FE Pong Script",
+   Name = "FE Pong Script (R6 Only)",
    Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/rouxhaver/scripts/main/RateMyAvatarPong.Lua'))()
   end,
 })
+local Button = Tab:CreateButton({
+   Name = "FE Raybeam Script (R15 Only)",
+   Callback = function()
+        --[[
+        ╭━━━╮╱╱╱╱╭╮╱╱╱╱╱╱╱╭╮
+        ┃╭━━╯╱╱╱╱┃┃╱╱╱╱╱╱╭╯╰╮
+        ┃╰━━┳━━┳━╯┣━━┳━┳━┻╮╭╋╮╭┳╮╭╮
+        ┃╭━━┫┃━┫╭╮┃╭╮┃╭┫╭╮┃┃┃┃┃┃╰╯┃
+        ┃┃╱╱┃┃━┫╰╯┃╰╯┃┃┃╭╮┃╰┫╰╯┃┃┃┃
+        ╰╯╱╱╰━━┻━━┻━━┻╯╰╯╰┻━┻━━┻┻┻╯
+
+        RayBeam Fling V2.2 (FE)
+        Official name of this Script.
+
+        Wear trench coat, and any layered clothing pants to make this script work better.
+        --]]
+
+        --[[
+        +/+/+/+/+/+( UpdateLog of V2.2 )+/+/+/+/+/+
+        (1.) Added UpdateLog (explainable) (V2)
+        (2.) Added R15 Detection (so you know) (V2)
+        (3.) Added DeleteArm (prevent exploiters) (V2)
+        (4.) Added SayDramaticStuff (explainable and slows down the script process) (V2)
+        (5.) Added New Animation On SayDramaticStuff (Casting Summons Of Heaven) (V2.2)
+        --]]
+
+        -- R15 Detection wow
+
+        if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+        local m = Instance.new("Message", game.CoreGui)
+        m.Text = "You are in R6, this script will not work"
+        wait(4)
+        m:Destroy()
+        task.wait()
+        return
+        end
+
+        --[[
+        (I will never obsfucate this, as it would make me claim this as my own code, all the code cut is from Infinite Yield and other sources i have forgotten.)
+
+        Don't use this with games that has a kill block because you're gonna touch that kill block easier and kill yourself.
+        --]]
+
+        -- Respect to Digitality
+        -- For creating Leg Resize.
+
+        -----
+        -- INFO TO KNOW
+        -----
+
+        --[[
+        Noclip : Automatically On
+        Fly : Automatically On
+        Fly is mobile supported, which means you can move with fly in mobile
+
+        (Mobile users with executors wont be strugglin pressing a fake keyboard)
+
+        Wear layered clothing when on a nocollide game (to only annoy people)
+        --]]
+
+        TypeOfFling = 1 -- Default
+        -- 1 is SpreadRadius
+        -- 2 is FocusOneRadius
+        -- Any random number is still 2
+
+        -- if you dont know how to script
+        -- true is on
+        -- false is off
+
+        DeleteArm = true
+        -- Prevent killing from other exploitors
+
+        SayDramaticStuff = true
+        -- Say dramatic stuff like in anime lol
+
+        -- Meaning of the option TypeOfFling
+
+        -- SPREAD RADIUS
+
+        --[[
+        This will reduce the effectiveness of flinging more harder but spreads the fling of radius even more.
+        --]]
+
+        -- FOCUS ONE RADIUS
+
+        --[[
+        This will increase effectiveness of flinging more harder but reduces the radius of flinging.
+        --]]
+
+        -- OPTION FOR FLING VELOCITY
+
+        --[[
+        Set your fling velocity, the higher the better, but the more broken it is. (This means you are going to get fling off because of the map parts or either bug out)
+        --]]
+
+        FlingVelocity = 9000 -- Default
+
+        -- Set to 0 if you want it to not spin
+
+
+        -- Script will start now
+        -- You can notice familliar code cuts.
+
+        local function Notif(txt)
+        game.StarterGui:SetCore("SendNotification",{
+                Title = "Fling Notification";
+                Text = txt;
+                 Icon = "rbxassetid://7772906436";
+                 Duration = 5;
+            })
+        end
+
+        Notif("Running the script please wait")
+
+        local Player = game.Players.LocalPlayer
+
+        Player.Character:FindFirstChildOfClass('Humanoid').WalkSpeed = 0
+
+        if DeleteArm then
+        Player.Character.RightUpperArm:Destroy()
+        end
+
+        if SayDramaticStuff then
+        AnimationId = "3303161675"
+        local Anim = Instance.new("Animation")
+        Anim.AnimationId = "rbxassetid://"..AnimationId
+        local k = Player.Character:FindFirstChildOfClass('Humanoid'):LoadAnimation(Anim)
+        k:Play()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("UNLEASH POWER OF HEAVEN","All")
+        k:AdjustSpeed(1)
+        wait(4.7)
+        end
+
+        local P2 = game:GetService("Players").LocalPlayer
+        local Noclipping = nil
+        local Clip = true
+        local RunService = game:GetService("RunService")
+        	wait(0.1)
+        	local function NoclipLoop()
+        if Clip then
+        		if P2.Character ~= nil then
+        			for _, child in pairs(P2.Character:GetDescendants()) do
+        				if child:IsA("BasePart") and child.CanCollide == true then
+        					child.CanCollide = false
+        				end
+        			end
+        	end
+        end
+        end
+        	Noclipping = RunService.Stepped:Connect(NoclipLoop)
+        wait(0.3)
+
+        				for i, x in pairs(Player.Character:GetDescendants()) do
+        					if x:IsA("BasePart") and not x.Anchored then
+        						x.Anchored = true
+        					end
+        				end
+
+        if SayDramaticStuff then
+        
+        -- I watch anime so i know
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("THE POWER OF HEAVEN CHEATS.","All")
+        wait(3)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("POWER OF DIMENSIONAL DIVERSION.","All")
+        wait(2.3)
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("HEAVEN SKILL, SUPERNOVA!!","All")
+        end
+
+        local IsFlying = true
+        local flyv
+        local flyg
+        local Speed = 70
+
+        local LastSpeed = Speed
+        local IsRunning = false
+        local f = 1
+
+        				flyv = Instance.new("BodyVelocity")
+
+        			flyv.Parent = Player.Character:FindFirstChild('Torso') or Player.Character:FindFirstChild('UpperTorso')
+        				flyv.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+
+        				flyg = Instance.new("BodyGyro")
+        			flyg.Parent = Player.Character:FindFirstChild('Torso') or Player.Character:FindFirstChild('UpperTorso')
+        				flyg.MaxTorque = Vector3.new(9e9,9e9,9e9)
+        				flyg.P = 1000
+        				flyg.D = 50
+        			Player.Character:WaitForChild('Humanoid').PlatformStand = true
+
+        spawn(function()
+        		while true do
+        			wait()
+        		if IsFlying then
+        				flyg.CFrame = workspace.CurrentCamera.CoordinateFrame * CFrame.new(-math.rad((f+0)*50*Speed),0,0) 
+        					flyv.Velocity = workspace.CurrentCamera.CoordinateFrame.LookVector * Speed
+        else
+        f = 0
+        		end
+        if IsRunning then
+        			Speed = LastSpeed
+        		else
+        			if not Speed == 0 then
+        				LastSpeed = Speed
+        			end 
+        			Speed = 0
+        		end
+        end
+        end)
+
+        Player.Character.Humanoid.Changed:Connect(function()
+        		if Player.Character.Humanoid.Health == 0 then
+        		if IsFlying then
+        Noclipping:Disconnect()
+        Clip = false
+        		flyg:Destroy()
+        		flyv:Destroy()
+        		end
+        		end
+        	end)
+
+        Player.CharacterAdded:Connect(function()
+        if isFlying then
+        Noclipping:Disconnect()
+        Clip = false
+        flyg:Destroy()
+        flyv:Destroy()
+        end
+        end)
+        	Player.Character.Humanoid.Changed:Connect(function(Prop)
+
+        			if Player.Character.Humanoid.MoveDirection == Vector3.new(0,0,0) then
+        				IsRunning = false
+        			else
+        				IsRunning = true
+        			end	
+        	end)
+
+        wait(0.3)
+
+        local char = Player.Character
+        function helpmeget(char)
+        	local c4 = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
+        	return c4
+        end
+
+        local Spin = Instance.new("BodyAngularVelocity")
+        Spin.Name = "SpinnerVelocity"
+        Spin.Parent = helpmeget(Player.Character)
+        Spin.MaxTorque = Vector3.new(0, math.huge, 0) 
+        Spin.AngularVelocity = Vector3.new(0,FlingVelocity,0)
+
+        wait(0.3)
+
+        Player.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated,false)
+        if TypeOfFling == 1 then
+        Player.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp,false)
+        Player.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,false)
+        Player.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
+        elseif TypeOfFling == 2 then
+        Player.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
+        else
+        Player.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
+        end
+
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Leg%20Resize'))()
+
+        wait(0.4)
+
+        for i, x in pairs(Player.Character:GetDescendants()) do
+        					if x:IsA("BasePart") and x.Anchored then
+        						x.Anchored = false
+        					end
+        				end
+
+        Notif("Finished at loading the script")
+  end,
+})
+local Button = Tab:CreateButton({
+   Name = "FE Transformer Script (R6 Only)",
+   Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/rouxhaver/scripts/main/fe_becomecar.Lua'))()
+  end,
+})
+local Button = Tab:CreateButton({
+   Name = "FE Btools Script (R6 Only)",
+   Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/rouxhaver/scripts/main/FE%20BTools(UPDATE1).lua'))()
+  end,
+})
+local Button = Tab:CreateButton({
+   Name = "FE Universal Radar Script (R6/R15)",
+   Callback = function()
+        --- Drawing Player Radar
+        --- Made by topit
+
+        _G.RadarSettings = {
+            --- Radar settings
+            RADAR_LINES = true; -- Displays distance rings + cardinal lines 
+            RADAR_LINE_DISTANCE = 50; -- The distance between each distance ring
+            RADAR_SCALE = 1; -- Controls how "zoomed in" the radar display is 
+            RADAR_RADIUS = 125; -- The size of the radar itself
+            RADAR_ROTATION = true; -- Toggles radar rotation. Looks kinda trippy when disabled
+            SMOOTH_ROT = true; -- Toggles smooth radar rotation
+            SMOOTH_ROT_AMNT = 30; -- Lower number is smoother, higher number is snappier 
+            CARDINAL_DISPLAY = true; -- Displays the four cardinal directions (north east south west) around the radar
+
+            --- Marker settings
+            DISPLAY_OFFSCREEN = true; -- Displays offscreen / off-radar markers
+            DISPLAY_TEAMMATES = true; -- Displays markers that belong to your teammates
+            DISPLAY_TEAM_COLORS = true; -- Displays your teammates markers with either a custom color (change Team_Marker) or with that teams TeamColor (enable USE_TEAM_COLORS) 
+            DISPLAY_FRIEND_COLORS = true; -- Displays your friends markers with a custom color (Friend_Marker). This takes priority over DISPLAY_TEAM_COLORS and DISPLAY_RGB
+            DISPLAY_RGB_COLORS = false; -- Displays each marker with an RGB cycle. Takes priority over DISPLAY_TEAM_COLORS, but not DISPLAY_FRIEND_COLORS
+            MARKER_SCALE_BASE = 1.25; -- Base scale that gets applied to markers
+            MARKER_SCALE_MAX = 1.25; -- The largest scale that a marker can be
+            MARKER_SCALE_MIN = 0.75; -- The smallest scale that a marker can be
+            MARKER_FALLOFF = true; -- Affects the markers' scale depending on how far away the player is - bypasses SCALE_MIN and SCALE_MAX
+            MARKER_FALLOFF_AMNT = 125; -- How close someone has to be for falloff to start affecting them 
+            OFFSCREEN_TRANSPARENCY = 0.3; -- Transparency of offscreen markers
+            USE_FALLBACK = false; -- Enables an emergency "fallback mode" for StreamingEnabled games
+            USE_QUADS = true; -- Displays radar markers as arrows instead of dots 
+            USE_TEAM_COLORS = false; -- Uses a team's TeamColor for marker colors
+            VISIBLITY_CHECK = false; -- Makes markers that are not visible slightly transparent 
+
+            --- Theme
+            RADAR_THEME = {
+                Outline = Color3.fromRGB(35, 35, 45); -- Radar outline
+                Background = Color3.fromRGB(25, 25, 35); -- Radar background
+                DragHandle = Color3.fromRGB(50, 50, 255); -- Drag handle 
+
+                Cardinal_Lines = Color3.fromRGB(110, 110, 120); -- Color of the horizontal and vertical lines
+                Distance_Lines = Color3.fromRGB(65, 65, 75); -- Color of the distance rings
+
+                Generic_Marker = Color3.fromRGB(255, 25, 115); -- Color of a player marker without a team
+                Local_Marker = Color3.fromRGB(115, 25, 255); -- Color of your marker, regardless of team
+                Team_Marker = Color3.fromRGB(25, 115, 255); -- Color of your teammates markers. Used when DISPLAY_TEAM_COLORS is disabled
+                Friend_Marker = Color3.fromRGB(25, 255, 115); -- Color of your friends markers. Used when DISPLAY_FRIEND_COLORS is enabled 
+            };
+        }
+
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/topitbopit/stuff/main/PlayerRadar/source.lua'))()
+  end,
+})
+local Button = Tab:CreateButton({
+   Name = "FE Snake Script (R6 Only)",
+   Callback = function()
+        loadstring(game:HttpGet(('https://pastefy.ga/tWBTcE4R/raw'),true))()
+  end,
+})
+local Button = Tab:CreateButton({
+   Name = "FE Headless Script (R6/R15)",
+   Callback = function()
+        -- services
+        local players = game:GetService("Players")
+        local starterGui = game:GetService("StarterGui")
+        -- objects
+        local player = players.LocalPlayer
+        local character = player.Character
+        local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+        local head, torso = character:FindFirstChild("Head"), character:FindFirstChild("UpperTorso")
+        local resetBindable = Instance.new("BindableEvent")
+        -- variables
+        local destroyFunc, resetBindableConnection = character.Destroy, nil
+        -- main
+        -- initializes the permadeath
+        player.Character = nil
+        player.Character = character
+        task.wait(players.RespawnTime + .05)
+
+        humanoid.BreakJointsOnDeath = false
+        humanoid:SetStateEnabled(Enum.HumanoidStateType.Dead, false)
+        if humanoid.RigType == Enum.HumanoidRigType.R15 then
+           task.defer(destroyFunc, (head.Neck))
+        end
+        task.defer(destroyFunc, head) -- and we destroy the head
+
+        resetBindableConnection = resetBindable.Event:Connect(function()
+           starterGui:SetCore("ResetButtonCallback", true)
+           resetBindableConnection:Disconnect()
+
+           if player.Character == character then
+               character:Destroy()
+               local daModel = Instance.new("Model")
+               local _daModelHumanoid = Instance.new("Humanoid")
+               _daModelHumanoid.Parent = daModel
+               player.Character = daModel
+
+               task.delay(players.RespawnTime, destroyFunc, daModel)
+           else
+               player.Character:BreakJoints()
+           end
+        end)
+        starterGui:SetCore("ResetButtonCallback", resetBindable)
+
+        --fixed for synapse
+  end,
+})
+local Button = Tab:CreateButton({
+   Name = "FE Baller Script (R6 Only)",
+   Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Lowerrated/roblox-fe-baller-script/main/main"))()
+         Rayfield:Notify({
+           Title = "Aviso !",
+           Content = "Esse item requer o Red-Stickman-Head para ser usado",
+           Duration = 6.5,
+           Image = 11822730215,
+           Actions = { -- Notification Buttons
+              Ignore = {
+                 Name = "Okay!",
+                 Callback = function()
+                  setclipboard("https://www.roblox.com/catalog/6685365462/Red-Stickman-Head")
+              end
+           },
+        },
+        })
+  end,
+})
+
+
+
+--// Animations \\--
+local Tab = Window:CreateTab("Animations")
+local Section = Tab:CreateSection("Total Animations: ")
+local Paragraph = Tab:CreateParagraph({Title = "Importante !", Content = "Algumas animações devem ser feitas apenas com R6 ou R15"})
+
+local Section = Tab:CreateSection("Soon 😴")
+
+
+
+--// Misc \\--
+local Tab = Window:CreateTab("Misc")
+local Section = Tab:CreateSection("Misc Scripts: ")
+local Paragraph = Tab:CreateParagraph({Title = "Cuidado !", Content = "Alguns script misc não podem funcionar corretamente por causa do jogo"})
+
+local Section = Tab:CreateSection("Soon 😴")
