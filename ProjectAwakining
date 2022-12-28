@@ -5,7 +5,7 @@ print("Local Devs: @Darkzin  |  @Cool")
 	
 	local devs = {
 		gui = darkzin
-		script = cool and asterote
+		script = cool / darkzin
 	}
 
 --]]
@@ -15,7 +15,7 @@ print("Local Devs: @Darkzin  |  @Cool")
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Project Awakening v5.0 ⭐  |  @ProjectHub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "  |  Project Awakining   🔱", IntroIcon = "http://www.roblox.com/asset/?id=11941169058"})
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v5.1 ⭐  |  @ProjectHub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "  |  Project Awakining   🔱", IntroIcon = "http://www.roblox.com/asset/?id=11941169058"})
 
 -- MENSAGEM --
 
@@ -39,7 +39,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v5.0")
+Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v5.1")
 
 -- END
 
@@ -130,6 +130,17 @@ Tab:AddButton({
       		local args = {
 				[1] = 20000000,           -- 20000000 = 20 or 15
 				[2] = "diooh"			-- Shadow dio / Stw
+			}
+
+			game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
+  			end    
+})
+Tab:AddButton({
+	Name = "The World Ova",
+	Callback = function()
+      		local args = {
+				[1] = 20000000,           -- 20000000 = 20 or 15
+				[2] = "dioova"			-- Shadow dio / Stw
 			}
 
 			game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
@@ -420,8 +431,9 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
-	Name = "Clique e o item sera comprado"
+	Name = "Total Items: 3"
 })
+Tab:AddParagraph("Buy Items","Clique e o item será comprado, ainda colocaremos mais opções...")
 Tab:AddButton({
 	Name = "Buy Arrow",
 	Callback = function()
@@ -473,37 +485,39 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
-	Name = "CUIDADO! Ao aperta no stand ele ira iniciar"
+	Name = "Total Stands Farm: 4"
 })
+Tab:AddParagraph("Cuidado !","Ao aperta no stand ele irá iniciar o stand farm, então tome cuidado ao for iniciar o stand farm")
 Tab:AddButton({
-	Name = "The World",
+	Name = "--<         The World          >--",
 	Callback = function()
   		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/tw'))()
 	end    
 })
 Tab:AddButton({
-	Name = "Star Platinum",
+	Name = "--<         Star Platinum          >--",
 	Callback = function()
   		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/jp'))()
 	end    
 })
 Tab:AddButton({
-	Name = "Star Platinum OVA",
+	Name = "--<         Star Platinum OVA          >--",
 	Callback = function()
   		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/jpova'))()
 	end    
 })
 Tab:AddButton({
-	Name = "Omt",
+	Name = "--<         Omt          >--",
 	Callback = function()
   		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/OMT%20Farm'))()
 	end    
 })
 
-local Section = Tab:AddSection({
-	Name = "Flecha / Rokakaka No Animation"
-})
 
+local Section = Tab:AddSection({
+	Name = "Total Items: 3"
+})
+Tab:AddParagraph("Items No Animation","Para funcionar você precisa está com o item que você quer usar na mão, ai ele ira skipar a animação")
 Tab:AddButton({
 	Name = "Arrow No Cooldown (Need arrow in your hand)",
 	Callback = function()
@@ -536,17 +550,18 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
-	Name = "Execute o Auto Boss so quando entrar na batalha contra o boss"
+	Name = "Total Farm Boss: 4"
 })
+Tab:AddParagraph("Auto Boss","Cuidado quando for executar, agora o jogo consegue indentificar quem e quem não esta usando esse script, o recomendado mesmo é usar as outras opções, mais se for usar o Auto Boss use apartir da Segunda faze (Depois do Parkour)")
 Tab:AddButton({
-	Name = "Star Auto Boss",
+	Name = "Start Auto Boss",
 	Callback = function()
   		getgenv().WaitTime = 240 -- amount time you want added to your run in seconds
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/sunexn/standsawakening/main/uncanny.lua",true))() -- open source
 	end    
 })
 local Section = Tab:AddSection({
-	Name = "Outras Opções"
+	Name = "--<         Outras Opções          >--"
 })
 Tab:AddButton({
 	Name = "Disable effects",
