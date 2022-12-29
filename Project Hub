@@ -1,0 +1,48 @@
+repeat wait() until game:IsLoaded()
+local PlaceId = game.PlaceId
+
+if PlaceId == 5780309044 or PlaceId == 11423467063 then
+
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/ProjectAwakining")()
+
+elseif PlaceId == 4616652839 then
+
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20Shindo")()
+
+elseif PlaceId == 7215918473 then
+
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20JSBG")()
+
+elseif PlaceId == 893973440 then
+
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20Facility")()
+
+elseif PlaceId == 4996049426 then
+
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20Stars")()
+
+elseif PlaceId == 9144187696 then
+	
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/PPBETA"))()
+
+elseif PlaceId == 621129760 then
+	
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20KAT"))()
+
+end
+
+
+--// The Mimic \\--
+if PlaceId == 6243699076 then
+	
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20Mimic%20Lobby"))()
+
+elseif PlaceId == 6296321810 then
+
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Mimic%20Chapter%201"))()
+
+elseif PlaceId == 6301638949 then
+	
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/The%20mimic%201%20part%201"))()
+
+end
