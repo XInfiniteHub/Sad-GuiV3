@@ -1,5 +1,7 @@
 print("Project Awakining Loaded! ")
 print("Local Devs: @Darkzin  |  @Cool")
+print("Have Fun")
+print("Join Discord Server (BETA) ")
 
 --[[
 	
@@ -15,7 +17,7 @@ print("Local Devs: @Darkzin  |  @Cool")
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Project Awakening v5.1 ⭐  |  @ProjectHub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "  |  Project Awakining   🔱", IntroIcon = "http://www.roblox.com/asset/?id=11941169058"})
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v5.2 ⭐  |  @ProjectHub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "  |  Project Awakining   🔱", IntroIcon = "http://www.roblox.com/asset/?id=11941169058"})
 
 -- MENSAGEM --
 
@@ -39,7 +41,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v5.1")
+Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v5.2")
 
 -- END
 
@@ -336,6 +338,13 @@ Tab:AddButton({
 		}
 	
 		game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+  	end    
+})
+Tab:AddButton({
+	Name = "Sans Sound Effect (Key T/H)",
+	Callback = function()
+		game:GetService("ReplicatedStorage").Effects.BoneZone.Primary.reverb.SoundId = "rbxassetid://5121734927"
+		game:GetService("ReplicatedStorage").Effects.BoneZone.Primary.eoe.SoundId = "rbxassetid://5121734927"
   	end    
 })
 
@@ -839,7 +848,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("New Update","[=] Versão 5.0                                                                                                           [+] bugs corrigidos: Erro 264                                                                                                           [+] Oque foi adicinado: Nova mudanças na GUI, algumas opções a mais, alguns de novos erros corrigidos alem do 268")
+Tab:AddParagraph("New Update","[=] Versão 5.2                                                                                                           [+] bugs corrigidos:    Nenhum bug encontrado :>                                                                                                            [+] Oque foi adicionado:    Mais opções no Main")
 
 
 -- END --
