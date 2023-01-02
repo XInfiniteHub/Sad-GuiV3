@@ -17,7 +17,7 @@ print("Join Discord Server (BETA) ")
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Project Awakening v5.2 ⭐  |  @ProjectHub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "  |  Project Awakining   🔱", IntroIcon = "http://www.roblox.com/asset/?id=11941169058"})
+local Window = OrionLib:MakeWindow({Name = "Project Awakening v5.4 ⭐  |  @ProjectHub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = true, IntroText = "  |  Project Awakining   🔱", IntroIcon = "http://www.roblox.com/asset/?id=11941169058"})
 
 -- MENSAGEM --
 
@@ -41,7 +41,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v5.2")
+Tab:AddParagraph("Bem Vindo (～￣▽￣)～  ","Project Awakining v5.4")
 
 -- END
 
@@ -559,7 +559,7 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
-	Name = "Total Farm Boss: 4"
+	Name = "Total Farm Boss: 6"
 })
 Tab:AddParagraph("Auto Boss","Cuidado quando for executar, agora o jogo consegue indentificar quem e quem não esta usando esse script, o recomendado mesmo é usar as outras opções, mais se for usar o Auto Boss use apartir da Segunda faze (Depois do Parkour)")
 Tab:AddButton({
@@ -595,6 +595,61 @@ Tab:AddButton({
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(20.4561386, 113.245972, 196.61351, 0.0634383112, 5.81675401e-08, -0.99798578, 8.29346689e-08, 1, 6.35567972e-08, 0.99798578, -8.67995524e-08, 0.0634383112))
 	end    
 })
+Tab:AddButton({
+	Name = "Spam Shoot Ray Sword",
+	Callback = function()
+		while wait() do
+
+			local A_1 = Vector3.new(303.29681396484375, -1688.1998291015625, -9520.798828125)
+			local Event = game:GetService("Workspace").Reset43354776.KnightsSword.RayGunClient.ShootRay
+			Event:FireServer(A_1)
+
+
+			local A_1 = Vector3.new(989.9542846679688, -1326.624755859375, -9489.0498046875)
+			local Event = game:GetService("Workspace").Reset43354776.KnightsSword.RayGunClient.ShootRay
+			Event:FireServer(A_1)
+
+		end
+	end, 
+})
+Tab:AddButton({
+	Name = "Complete Parkour",
+	Callback = function()
+		while wait(0.8) do
+
+			local A_1 = "H"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+			local A_1 = "T"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+			local A_1 = "Y"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+			local A_1 = "F"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+			local A_1 = "J"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+			local A_1 = "K"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+			local A_1 = "L"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+			local A_1 = "N"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+			local A_1 = "M"
+			local Event = game:GetService("Workspace").Reset43354776.SillyGuitar.playKey
+			Event:FireServer(A_1)
+
+		end
+
+	end    
+})
+
 
 -- END --
 
@@ -848,7 +903,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddParagraph("New Update","[=] Versão 5.2                                                                                                           [+] bugs corrigidos:    Nenhum bug encontrado :>                                                                                                            [+] Oque foi adicionado:    Mais opções no Main")
+Tab:AddParagraph("New Update","[=] Versão 5.4                                                                                                           [+] bugs corrigidos:    Nenhum bug encontrado :>                                                                                                            [+] Oque foi adicionado:    Mais opções no Main e mais opções no Auto Boss")
 
 
 -- END --
