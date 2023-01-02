@@ -1,163 +1,226 @@
---// Project Piece
---// Beta Version
---// made by darkzin and cool
---// join discord server (Beta)
+-- init
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
+local venyx = library.new("Project Piece ☠️  |  @ProjectHub", 5013109572)
 
+-- themes
+local themes = {
+	Background = Color3.fromRGB(24, 24, 24),
+	Glow = Color3.fromRGB(0, 0, 0),
+	Accent = Color3.fromRGB(10, 10, 10),
+	LightContrast = Color3.fromRGB(20, 20, 20),
+	DarkContrast = Color3.fromRGB(14, 14, 14),  
+	TextColor = Color3.fromRGB(255, 255, 255)
+}
 
---// Script \\--
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
-local Window = Rayfield:CreateWindow({
-   Name = "Project Piece  |  @ProjectHub",
-   LoadingTitle = "Project Hub",
-   LoadingSubtitle = "@Darkzin  |  @Coold",
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Big Hub"
-   },
-   Discord = {
-      Enabled = false,
-      Invite = "sirius", -- The Discord invite code, do not include discord.gg/
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
-   KeySystem = true, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Project Hub",
-      Subtitle = "Key System",
-      Note = "Join the discord (Beta)",
-      FileName = "SiriusKey",
-      SaveKey = true,
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = "9ebbd1803758011356fb53c3939ccc2daf00898e"
-   }
-})
-
-
-
---// Tabs \\--
 
 
 --// Welcome \\--
-local Tab = Window:CreateTab(" 👋 Welcome")
-local Paragraph = Tab:CreateParagraph({Title = "Bem Vindo", Content = "Seja bem vindo ao Project Piece"})
+local page = venyx:addPage("Welcome", 5012544693)
+local Welcome = page:addSection("Bem vindo ao project Piece")
 
 
 
---// Roll \\--
-local Tab = Window:CreateTab("Fruits")
-local Paragraph = Tab:CreateParagraph({Title = "Roll Fruit", Content = "Aqui você vai poder roda a fruta sem cooldown"})
-local Button = Tab:CreateButton({
-   Name = "Fruit Roll No Cooldown",
-   Callback = function()
-        local args = {
-            [1] = "SPINB"
-        }
+--// Roll Fruit \\--
+local page = venyx:addPage("Roll Fruit", 5012544693)
+local roll = page:addSection("Roll Fruit")
+
+roll:addButton("Roll Fruit No Cooldown", function()
+    local args = {
+        [1] = "SPINB"
+    }
         
-        game:GetService("ReplicatedStorage").Remotes.SpinsRE:FireServer(unpack(args))
+    game:GetService("ReplicatedStorage").Remotes.SpinsRE:FireServer(unpack(args))
         
-        wait(0.1)
+    wait(0.1)
         
-        local args = {
-            [1] = "GIVE"
-        }
+    local args = {
+        [1] = "GIVE"
+    }
         
-        game:GetService("ReplicatedStorage").Remotes.SpinsRE:FireServer(unpack(args))
-   end,
-})
+    game:GetService("ReplicatedStorage").Remotes.SpinsRE:FireServer(unpack(args))
+end)
 
 
 
---// Main \\--
-local Tab = Window:CreateTab("Main")
-local Paragraph = Tab:CreateParagraph({Title = "Main", Content = "Main Scripts"})
+--// Summon Any Fruits
+local page = venyx:addPage("Active Attack", 5012544693)
+local sp = page:addSection("Star Platinum")
 
 
-local Section = Tab:CreateSection("")
 
 
-local Button = Tab:CreateButton({
-   Name = "Close Attacks",
-   Callback = function()
-       game:GetService("CoreGui").Rayfield.Main.Elements.Main.Z:Destroy()
-       game:GetService("CoreGui").Rayfield.Main.Elements.Main.X:Destroy()
-       game:GetService("CoreGui").Rayfield.Main.Elements.Main.C:Destroy()
-       game:GetService("CoreGui").Rayfield.Main.Elements.Main.V:Destroy()
-   end,
-})
-local Dropdown = Tab:CreateDropdown({
-   Name = "Fruits Attack",
-   Options = {"StarPlatinumAttacks","BarrierAttacks"},
-   CurrentOption = "",
-   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Option)
-        if Options == StarPlatinumAttacks then 
-
-        local Button = Tab:CreateButton({
-           Name = "Z",
-           Callback = function()
+--// StarPlatinum
+sp:addButton("Summon", function()
+	local A_1 = true
+	local Event = game:GetService("ReplicatedStorage").StandFolder.StarPlatinum.spEvents.Summon
+	Event:FireServer(A_1)
+end)
+sp:addButton("UnSummon", function()
+	local A_1 = false
+	local Event = game:GetService("ReplicatedStorage").StandFolder.StarPlatinum.spEvents.Summon
+	Event:FireServer(A_1)
+end)
+sp:addButton("Z", function()
                 local A_1 = "StarPlatinum"
                 local A_2 = "Z"
                 local Event = game:GetService("ReplicatedStorage").Remotes.Cast
                 Event:FireServer(A_1, A_2)
-           end,
-        })
-        local Button = Tab:CreateButton({
-           Name = "X",
-           Callback = function()
+end)
+sp:addButton("X", function()
                 local A_1 = "StarPlatinum"
                 local A_2 = "X"
                 local Event = game:GetService("ReplicatedStorage").Remotes.Cast
                 Event:FireServer(A_1, A_2)
-           end,
-        })
-        local Button = Tab:CreateButton({
-           Name = "C",
-           Callback = function()
+end)
+sp:addButton("C", function()
                 local A_1 = "StarPlatinum"
                 local A_2 = "C"
                 local Event = game:GetService("ReplicatedStorage").Remotes.Cast
                 Event:FireServer(A_1, A_2)
-           end,
-        })
-        local Button = Tab:CreateButton({
-           Name = "V",
-           Callback = function()
+end)
+sp:addButton("V", function()
                 local A_1 = "StarPlatinum"
                 local A_2 = "V"
                 local Event = game:GetService("ReplicatedStorage").Remotes.Cast
                 Event:FireServer(A_1, A_2)
-           end,
-        })
+end)
 
-        elseif Options == BarrierAttacks then
-        local Button = Tab:CreateButton({
-            Name = "BariZ",
-            Callback = function()
-                local A_1 = "Bari"
-                local A_2 = "Z"
-                local Event = game:GetService("ReplicatedStorage").Remotes.Cast
-                Event:FireServer(A_1, A_2)
-            end,
-        })
-        local Button = Tab:CreateButton({
-            Name = "BariX",
-            Callback = function()
-                local A_1 = "Bari"
-                local A_2 = "X"
-                local Event = game:GetService("ReplicatedStorage").Remotes.Cast
-                Event:FireServer(A_1, A_2)
-            end,
-        })
-        local Button = Tab:CreateButton({
-            Name = "BariC",
-            Callback = function()
-                local A_1 = "Bari"
-                local A_2 = "C"
-                local Event = game:GetService("ReplicatedStorage").Remotes.Cast
-                Event:FireServer(A_1, A_2)
-            end,
-        })
-        end
 
-    end,
-})
+
+--//Rumble
+local rumble = page:addSection("Rumble")
+
+
+rumble:addButton("Z", function()
+	local A_1 = "Goro"
+	local A_2 = "Z"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Cast
+	Event:FireServer(A_1, A_2)
+end)
+rumble:addButton("X", function()
+	local A_1 = "Goro"
+	local A_2 = "X"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Cast
+	Event:FireServer(A_1, A_2)
+	
+	local A_1 = "Goro"
+	local A_2 = "X"
+	local A_3 = CFrame.new(39, 2, 29)
+	local Event = game:GetService("ReplicatedStorage").Remotes.Cast
+	Event:FireServer(A_1, A_2)
+
+	local A_1 = "Goro"
+	local A_2 = "X"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Cast
+	Event:FireServer(A_1, A_2)
+	
+	local A_1 = "Goro"
+	local A_2 = "X"
+	local A_3 = CFrame.new(39, 2, 29)
+	local Event = game:GetService("ReplicatedStorage").Remotes.Cast
+	Event:FireServer(A_1, A_2)
+end)
+rumble:addButton("C", function()
+	local A_1 = "Goro"
+	local A_2 = "C"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Cast
+	Event:FireServer(A_1, A_2)
+end)
+rumble:addButton("V", function()
+	local A_1 = "Goro"
+	local A_2 = "V"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Cast
+	Event:FireServer(A_1, A_2)
+end)
+
+
+
+--// Blood
+local blood = page:addSection("Blood")
+
+blood:addButton("Z", function()
+	local A_1 = "\66\108\111\111\100"
+	local A_2 = "\90"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Cast
+	Event:FireServer(A_1, A_2)
+end)
+
+
+
+--// Quake
+local quake = page:addSection("Quake")
+
+quake:addButton("Z", function()
+	local A_1 = "\71\117\114\97"
+	local A_2 = "\90"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Cast
+	Event:FireServer(A_1, A_2)
+end)
+quake:addButton("X", function()
+	local A_1 = "\71\117\114\97"
+	local A_2 = "\88"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Cast
+	Event:FireServer(A_1, A_2)
+end)
+quake:addButton("C", function()
+	local A_1 = "\71\117\114\97"
+	local A_2 = "\67"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Cast
+	Event:FireServer(A_1, A_2)
+end)
+
+
+
+--// Gravity
+local gravity = page:addSection("Gravity")
+
+gravity:addButton("Z", function()
+	local A_1 = "\71\114\97\118\105\116\121"
+	local A_2 = "\90"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Cast
+	Event:FireServer(A_1, A_2)
+end)
+gravity:addButton("X", function()
+	local A_1 = "\71\114\97\118\105\116\121"
+	local A_2 = "\88"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Cast
+	Event:FireServer(A_1, A_2)
+end)
+gravity:addButton("C", function()
+	local A_1 = "\71\114\97\118\105\116\121"
+	local A_2 = "\67"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Cast
+	Event:FireServer(A_1, A_2)
+end)
+
+
+
+--// Buy Items \\--
+local page = venyx:addPage("Buy Items", 5012544693)
+local buy = page:addSection("Buy Items")
+
+buy:addButton("HaoHaki (lvl 500+ and 300mi)", function()
+	--// HaoHaki
+	local A_1 = "HaoHaki"
+	local Event = game:GetService("ReplicatedStorage").Remotes.BuyItem
+	Event:FireServer(A_1)
+end)
+
+
+
+--// Confings
+--// Buy Items \\--
+local page = venyx:addPage("settings", 5012544693)
+local settings = page:addSection("settings")
+
+settings:addKeybind("Toggle Keybind", Enum.KeyCode.One, function()
+	print("Activated Keybind")
+	venyx:toggle()
+end, function()
+	print("Changed Keybind")
+end)
+
+
+
+-- load
+venyx:SelectPage(venyx.pages[1], true)
