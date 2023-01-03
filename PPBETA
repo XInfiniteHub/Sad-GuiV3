@@ -9,7 +9,7 @@ local themes = {
 	Accent = Color3.fromRGB(10, 10, 10),
 	LightContrast = Color3.fromRGB(20, 20, 20),
 	DarkContrast = Color3.fromRGB(14, 14, 14),  
-	TextColor = Color3.fromRGB(255, 255, 255)
+	TextColor = Color3.fromRGB(18, 129, 27)
 }
 
 
@@ -264,17 +264,60 @@ end)
 teleport:addButton("Pirate", function()
 	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(3181.875, 2.6406798362731934, 743.1539306640625))
 end)
+teleport:addButton("ShellIsland", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-2317.869384765625, 11.852648735046387, -1216.1954345703125))
+end)
+teleport:addButton("Skypia", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1984.68994140625, 591.0526123046875, -1874.7899169921875))
+end)
+teleport:addButton("Syruplsland", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(2258.8076171875, -30.674972534179688, -1288.6260986328125))
+end)
+teleport:addButton("Tundra", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1182.2041015625, 7.706690788269043, 1176.1602783203125))
+end)
+teleport:addButton("WholeCake", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-2142.783203125, -38.12957000732422, -1405.2261962890625))
+end)
+
 
 
 --// Buy Items \\--
 local page = venyx:addPage("Buy Items", 5012544693)
 local buy = page:addSection("Buy Items")
 
-buy:addButton("HaoHaki (lvl 500+ and 300mi)", function()
+buy:addButton("HaoHaki (lvl 500+ and 300mi beli)", function()
 	--// HaoHaki
 	local A_1 = "HaoHaki"
 	local Event = game:GetService("ReplicatedStorage").Remotes.BuyItem
 	Event:FireServer(A_1)
+end)
+buy:addButton("Fireball (500k beli)", function()
+	local ohString1 = "Fireball"
+
+	game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(ohString1)
+end)
+buy:addButton("Gaster (1mi beli)", function()
+	local ohString1 = "Gaster"
+
+	game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(ohString1)
+end)
+buy:addButton("HakiSellerRE (lvl 200 and 25mi beli)", function()
+	game:GetService("ReplicatedStorage").Remotes.HakiSellerRE:FireServer()
+end)
+buy:addButton("KamehamehaSeller (lvl 600 and 10mi beli)", function()
+	game:GetService("ReplicatedStorage").Remotes.KamehamehaSeller:FireServer()
+end)
+buy:addButton("MochiSellerRE (lvl 400 and 8mi beli)", function()
+	game:GetService("ReplicatedStorage").Remotes.MochiSellerRE:FireServer()
+end)
+buy:addButton("RedRev (lvl 699 and 18mi beli)", function()
+	local ohString1 = "RedRev"
+
+	game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(ohString1)
+end)
+buy:addButton("RedRev (lvl 699 and 18mi beli)", function()
+	game:GetService("ReplicatedStorage").Remotes.SoruBuy:FireServer()
 end)
 
 
