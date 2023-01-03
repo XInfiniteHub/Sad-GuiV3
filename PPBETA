@@ -195,6 +195,77 @@ end)
 
 
 
+--// Mera
+local mera = page:addSection("Mera")
+
+mera:addButton("Z", function()
+	local ohString1 = "Mera"
+	local ohString2 = "Z"
+	game:GetService("ReplicatedStorage").Remotes.Cast:FireServer(ohString1, ohString2)
+end)
+mera:addButton("X", function()
+	local ohString1 = "Mera"
+	local ohString2 = "X"
+	game:GetService("ReplicatedStorage").Remotes.Cast:FireServer(ohString1, ohString2)
+end)
+mera:addButton("C", function()
+	local ohString1 = "Mera"
+	local ohString2 = "C"
+	game:GetService("ReplicatedStorage").Remotes.Cast:FireServer(ohString1, ohString2)
+end)
+mera:addButton("V", function()
+	local ohString1 = "Mera"
+	local ohString2 = "V"
+	game:GetService("ReplicatedStorage").Remotes.Cast:FireServer(ohString1, ohString2)
+end)
+
+
+
+--// Teleports \\--
+local page = venyx:addPage("Teleport", 5012544693)
+local teleport = page:addSection("Island")
+
+teleport:addButton("Baratie", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1679.95849609375, -31.12504005432129, -2484.1943359375))
+end)
+teleport:addButton("Buggy", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(2431.722900390625, 6.05087947845459, -973.9908447265625))
+end)
+teleport:addButton("Christmas", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1368.1234130859375, -30.85106658935547, -79.7667236328125))
+end)
+teleport:addButton("Desert", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1269.225830078125, 12.846378326416016, 1578.1878662109375))
+end)
+teleport:addButton("Foosha", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(67.28726959228516, 34.5185546875, -12.294183731079102))
+end)
+teleport:addButton("Foosha", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(67.28726959228516, 34.5185546875, -12.294183731079102))
+end)
+teleport:addButton("ForestaIsland", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1662.231201171875, 35.43928909301758, 2504.130859375))
+end)
+teleport:addButton("Halloween", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3031.93115234375, 125.10413360595703, -1382.52392578125))
+end)
+teleport:addButton("LongueTown", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(3084.178955078125, 16.075637817382812, -2611.704345703125))
+end)
+teleport:addButton("Marine", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(3471.55859375, -0.5067138671875, -563.5797729492188))
+end)
+teleport:addButton("Monkey", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1156.56591796875, 18.54252052307129, -1183.6297607421875))
+end)
+teleport:addButton("Ninja", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1446.7508544921875, 0.4048457145690918, 66.85794067382812))
+end)
+teleport:addButton("Pirate", function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(3181.875, 2.6406798362731934, 743.1539306640625))
+end)
+
+
 --// Buy Items \\--
 local page = venyx:addPage("Buy Items", 5012544693)
 local buy = page:addSection("Buy Items")
@@ -208,8 +279,7 @@ end)
 
 
 
---// Confings
---// Buy Items \\--
+--// Confings \\--
 local page = venyx:addPage("settings", 5012544693)
 local settings = page:addSection("settings")
 
