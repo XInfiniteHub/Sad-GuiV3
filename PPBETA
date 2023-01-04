@@ -44,6 +44,7 @@ end)
 
 --// Summon Any Fruits
 local page = venyx:addPage("Active Attack", 5012544693)
+local FT = page:addSection("Fruit Attacks")
 local sp = page:addSection("Star Platinum")
 
 
@@ -221,6 +222,40 @@ end)
 
 
 
+--// Pika
+local pika = page:addSection("Pika")
+
+pika:addButton("Z", function ()
+	--// Z \\--
+	local ohString1 = "Pika"
+	local ohString2 = "Z"
+	
+	game:GetService("ReplicatedStorage").Remotes.Cast:FireServer(ohString1, ohString2)
+end)
+pika:addButton("X", function ()
+	--// Z \\--
+	local ohString1 = "Pika"
+	local ohString2 = "X"
+	
+	game:GetService("ReplicatedStorage").Remotes.Cast:FireServer(ohString1, ohString2)
+end)
+pika:addButton("C", function ()
+	--// Z \\--
+	local ohString1 = "Pika"
+	local ohString2 = "C"
+	
+	game:GetService("ReplicatedStorage").Remotes.Cast:FireServer(ohString1, ohString2)
+end)
+pika:addButton("V", function ()
+	--// Z \\--
+	local ohString1 = "Pika"
+	local ohString2 = "V"
+	
+	game:GetService("ReplicatedStorage").Remotes.Cast:FireServer(ohString1, ohString2)
+end)
+
+
+
 --// Teleports \\--
 local page = venyx:addPage("Teleport", 5012544693)
 local teleport = page:addSection("Island")
@@ -316,7 +351,7 @@ buy:addButton("RedRev (lvl 699 and 18mi beli)", function()
 
 	game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(ohString1)
 end)
-buy:addButton("RedRev (lvl 699 and 18mi beli)", function()
+buy:addButton("SoruBuy (lvl 699 and 18mi beli)", function()
 	game:GetService("ReplicatedStorage").Remotes.SoruBuy:FireServer()
 end)
 
