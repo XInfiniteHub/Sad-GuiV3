@@ -33,6 +33,10 @@ elseif PlaceId == 5324597737 then
 
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20Dragon%20Ball"))()
 	
+elseif PlaceId == 662417684 then
+	
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Project%20Lucky"))()
+
 end
 
 
