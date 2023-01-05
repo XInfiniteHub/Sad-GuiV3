@@ -419,12 +419,27 @@ Tab:AddButton({
 local Section = Tab:AddSection({
 	Name = "--<         Lag Server          >--"
 })
-Tab:AddButton({
-	Name = "Need Hierophant Green  ",
-	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/INF%20ESMERAlD'))()
-  	end    
+Tab:AddToggle({
+	Name = "Lag Serevr (Need Hierophant Green)",
+	Default = false,
+	Callback = function(lagserver)
+		if lagserver then
+
+			getgenv().lagserverw = true
+			while getgenv().lagserverw do
+				wait(0.3)
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/INF%20ESMERAlD'))()
+			end
+
+		else
+
+			getgenv().lagserverw = false
+
+		end		
+	end    
 })
+
+
 
 --END
 
