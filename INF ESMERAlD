@@ -1,4 +1,3 @@
-while wait() do 
 local args = {
     [1] = "Alternate",
     [2] = "EmeraldProjectile2",
@@ -1392,4 +1391,3 @@ wait(0.1)
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1269, 581, -633))
 wait(0.1)
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1147, 588, -645))
-end
