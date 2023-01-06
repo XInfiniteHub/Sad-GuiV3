@@ -1,0 +1,183 @@
+
+
+
+--// gang up on people simulator
+--// Made By Darkzin
+--// Verson 1.0.0
+
+
+local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/sol"))()
+
+--[[SolarisLib:New({
+  Name - Title of the UI <string>
+  FolderToSave - Name of the folder where the UI files will be stored <string>
+})]]
+local win = SolarisLib:New({
+  Name = "Project Gang 🗡️  |  @ProjectHub",
+  FolderToSave = "SolarisLibStuff"
+})
+
+
+--// Tabs \\--
+local tab = win:Tab("Welcome")
+local tab2 = win:Tab("Auto Farm Money")
+local tab3 = win:Tab("Withdrawal / Deposit")
+local tab4 = win:Tab("No Cooldown")
+
+
+--// Welcome Main \\--
+local sec = tab:Section("Welcome")
+local label = sec:Label("Bem vindo ao Project Gang")
+
+
+--// Auto Farm Money Main \\--
+local sec = tab2:Section("Auto Farm Money Main")
+
+local toggle = sec:Toggle("Start / Stop", false,"", function (autf)
+    if autf then
+		getgenv().autfw = true
+		while getgenv().autfw do
+			wait(0.1)
+			for _,v in pairs(workspace.Particles:GetChildren()) do
+    			if v.Name == "Money" then
+            	game.Players.LocalPlayer.Character.UpperTorso.CFrame = v.Part.CFrame
+        	end
+		end
+		end
+	else
+		getgenv().autfw = false	
+	end
+end)
+
+
+--// Withdrawal / Deposit \\--
+local sec = tab3:Section("Deposit Main")
+
+local toggle = sec:Toggle("Loop Deposit 1", false,"", function (D)
+	if D then
+		getgenv().DW = true
+		while getgenv().DW do
+			wait(0.1)
+			local ohTable1 = {
+			["Amount"] = 1, -- the amount of money you have
+			["Mode"] = "D"  -- D = Deposit and W = Withdrawal
+			}
+
+			game:GetService("ReplicatedStorage").RemoteEvent.ATM:FireServer(ohTable1)
+		end
+	else
+		getgenv().DW = false
+	end
+end)
+local toggle = sec:Toggle("Loop Deposit 10", false,"", function (LTEN)
+	if LTEN then
+		getgenv().LTENw = true
+		while getgenv().LTENw do
+			wait(0.1)
+			local ohTable1 = {
+			["Amount"] = 10, -- the amount of money you have
+			["Mode"] = "D"  -- D = Deposit and W = Withdrawal
+			}
+
+			game:GetService("ReplicatedStorage").RemoteEvent.ATM:FireServer(ohTable1)
+		end
+	else
+		getgenv().LTENw = false
+	end
+end)
+local toggle = sec:Toggle("Loop Deposit 100", false,"", function (LCEM)
+	if LCEM then
+		getgenv().LCEMmw = true
+		while getgenv().LCEMmw do
+			wait(0.1)
+			local ohTable1 = {
+			["Amount"] = 100, -- the amount of money you have
+			["Mode"] = "D"  -- D = Deposit and W = Withdrawal
+			}
+
+			game:GetService("ReplicatedStorage").RemoteEvent.ATM:FireServer(ohTable1)
+		end
+	else
+		getgenv().LCEMmw = false
+	end
+end)
+
+local sec = tab3:Section("Withdrawal Main")
+local toggle = sec:Toggle("Loop Withdrawal 1", false,"", function (W)
+	if W then
+		getgenv().Ww = true
+		while getgenv().Ww do
+			wait(0.1)
+			local ohTable1 = {
+			["Amount"] = 1, -- the amount of money you have
+			["Mode"] = "W"  -- D = Deposit and W = Withdrawal
+			}
+
+			game:GetService("ReplicatedStorage").RemoteEvent.ATM:FireServer(ohTable1)
+		end
+	else
+		getgenv().Ww = false
+	end
+end)
+local toggle = sec:Toggle("Loop Withdrawal 10", false,"", function (WTEN)
+	if WTEN then
+		getgenv().WTENw = true
+		while getgenv().WTENw do
+			wait(0.1)
+			local ohTable1 = {
+			["Amount"] = 10, -- the amount of money you have
+			["Mode"] = "W"  -- D = Deposit and W = Withdrawal
+			}
+
+			game:GetService("ReplicatedStorage").RemoteEvent.ATM:FireServer(ohTable1)
+		end
+	else
+		getgenv().WTENw = false
+	end
+end)
+local toggle = sec:Toggle("Loop Withdrawal 100", false,"", function (WCEM)
+	if WCEM then
+		getgenv().WCEMw = true
+		while getgenv().WCEMw do
+			wait(0.1)
+			local ohTable1 = {
+			["Amount"] = 100, -- the amount of money you have
+			["Mode"] = "W"  -- D = Deposit and W = Withdrawal
+			}
+
+			game:GetService("ReplicatedStorage").RemoteEvent.ATM:FireServer(ohTable1)
+		end
+	else
+		getgenv().WCEMw = false
+	end
+end)
+
+
+--// No Cooldown Main \\--
+local sec = tab4:Section("No Cooldown Main")
+
+local toggle = sec:Toggle("Loop No Cooldown Slap/Kick/Stomp", false,"", function (NOC)
+	if NOC then
+		getgenv().NOCw = true
+		while getgenv().NOCw do
+			wait(0.1)
+			local args = {
+			    [1] = "Slap"
+			}
+			
+			game:GetService("Players").LocalPlayer.Character.Fight.FightScript.FightEvent:FireServer(unpack(args))
+			local args = {
+			    [1] = "Kick"
+			}
+			
+			game:GetService("Players").LocalPlayer.Character.Fight.FightScript.FightEvent:FireServer(unpack(args))
+			local args = {
+			    [1] = "Stomp"
+			}
+			
+			game:GetService("Players").LocalPlayer.Character.Fight.FightScript.FightEvent:FireServer(unpack(args))
+		end
+	else
+		getgenv().NOCw = false
+	end
+end)
