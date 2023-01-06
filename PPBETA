@@ -354,6 +354,12 @@ end)
 buy:addButton("SoruBuy (lvl 699 and 18mi beli)", function()
 	game:GetService("ReplicatedStorage").Remotes.SoruBuy:FireServer()
 end)
+buy:addButton("Bisento ( 200mi beli )", function ()
+	--// Buy Bisento  | 200mi \\--
+	local ohString1 = "Bisento"
+
+	game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(ohString1)
+end)
 
 
 
