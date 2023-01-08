@@ -1,9 +1,13 @@
 repeat wait() until game:IsLoaded()
 local PlaceId = game.PlaceId
 
-if PlaceId == 5780309044 or PlaceId == 11423467063 then
+if PlaceId == 5780309044 then
 
     loadstring(game:HttpGet"https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/ProjectAwakining")()
+
+elseif PlaceId == 11423467063 then
+	
+	loadstring(game:HttpGet"https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Auto%20Boss")()
 
 elseif PlaceId == 4616652839 then
 
