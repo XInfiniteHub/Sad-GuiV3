@@ -51,6 +51,7 @@ local sr = win:Tab("Server Remotes")
 local buy = win:Tab("Buy Items")
 local st = win:Tab("Stand Farm")
 local it = win:Tab("Item Farm")
+local AuBoss = win:Tab("Auto Boss")
 local tele = win:Tab("Teleport")
 local lp = win:Tab("Local Player")
 local antilag = win:Tab("Anti Lag")
@@ -340,6 +341,12 @@ local button = sec:Button("Shiny Arrow", function ()
 
 	game:GetService("ReplicatedStorage").Purchase:FireServer(unpack(args))
 end)
+
+
+--// AUto Boss Main \\--
+local sec = AuBoss:Section("--<    Stand Farm Main    >--")
+local label = sec:Label("Entre no boss e execute o loadstring, ele iniciara uma nova gui")
+local label = sec:Label("com o Auto Boss")
 
 
 --// Stand Farm Main \\--
