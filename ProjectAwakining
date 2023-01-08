@@ -98,14 +98,6 @@ local button = sec:Button("EVA 01", function ()
 
 			game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
 end)
-local button = sec:Button("EVA 01", function ()
-     		local args = {
-				[1] = 20000000,           -- 20000000 = 20 or 15
-				[2] = "diooh"			-- Shadow dio / Stw
-			}
-
-			game:GetService("ReplicatedStorage").Main.Timestop:FireServer(unpack(args))
-end)
 local button = sec:Button("Steve", function ()
      		local args = {
 				[1] = 20000000,           -- 20000000 = 20 or 15
