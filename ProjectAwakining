@@ -6,10 +6,19 @@ Notification:Notify(
     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
 )
 
+ wait(1)
+
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+Notification:Notify(
+    {Title = "Info", Description = "Bugs corrigidos, auto boss agora esta funcionando e opções no Main"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+)
+
 
 --// Print \\--
 print("Project Awakening Executed!")
-print("Version 6.0")
+print("Version 6.2")
 print("Have Fun")
 
 --[===========[
@@ -29,7 +38,7 @@ local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bl
   FolderToSave - Name of the folder where the UI files will be stored <string>
 })]]
 local win = SolarisLib:New({
-  Name = "Project Awakening v6.0  ⭐ ⭐  |  @ProjectHub",
+  Name = "Project Awakening v6.2  ⭐ ⭐  |  @ProjectHub",
   FolderToSave = "SolarisLibStuff"
 })
 
