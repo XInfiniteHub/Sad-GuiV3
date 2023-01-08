@@ -46,7 +46,6 @@ local it = win:Tab("Item Farm")
 local tele = win:Tab("Teleport")
 local lp = win:Tab("Local Player")
 local antilag = win:Tab("Anti Lag")
-local info = win:Tab("Info")
 
 
 --// Welcome \\--
@@ -170,28 +169,27 @@ end)
 
 
 local sec = main:Section("--<    Goldem Expirience Requiem / Golden Expirience Main    >--")
-local button = sec:Button("Infinite Damage Reflect", function ()
+local button = sec:Button("Infinite Damage Deflect / Goldem Expirience Requiem", function ()
 		local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 		local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 
 		Notification:Notify(
     		{Title = "Aviso", Description = "Requer o Goldem Expirience Requiem para usar isto, você esta usando ele?"},
     		{OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "option"},
-    		{Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84), Callback = function(State)       	local args = {
-           		[1] = "Alternate",
-            	[2] = "Deflect"
-        	}
+    		{Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84), Callback = function()       	
+			local ohString1 = "Alternate"
+			local ohString2 = "RTZ"
+			local ohBoolean3 = true
 
-        	game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args)) end}
+			game:GetService("ReplicatedStorage").Main.Input:FireServer(ohString1, ohString2, ohBoolean3)
+		end}
 	)
 end)
-local button = sec:Button("Infinite Damage Deflact", function ()
-      	local args = {
-            [1] = "Alternate",
-            [2] = "Deflect"
-        }
+local button = sec:Button("Infinite Damage Deflect / Goldem Expirience", function ()
+	local ohString1 = "Alternate"
+	local ohString2 = "Deflect"
 
-        game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+	game:GetService("ReplicatedStorage").Main.Input:FireServer(ohString1, ohString2)
 end)
 
 
@@ -574,32 +572,18 @@ local toggle = sec:Toggle("Max fps (50-360)", false,"Toggle", function(fps)
 		getgenv().fpsw = true
 		while getgenv().fpsw do
 			wait(0.1)
-			local MAX_FPS = 360
-			local MIN_FPS = 5
-			local RENDER = true
-			local UserInputService = game:GetService("UserInputService")
-			local RunService = game:GetService("RunService")
+			local FPS = 100
+			local clock = tick()
 
-			UserInputService.WindowFocused:Connect(function()
-			   if RENDER then
-			       RunService:Set3dRenderingEnabled(true)
-			   end
-			   setfpscap(MAX_FPS)
-			end)
-
-			UserInputService.WindowFocusReleased:Connect(function()
-			   if RENDER then
-			       RunService:Set3dRenderingEnabled(false)
-			   end
-			   setfpscap(MIN_FPS)
-			end)
+			while true do
+			    while clock + 1 / FPS > tick() do end
+			    wait()
+			    clock = tick()
+			end
 		end
 	else
 		getgenv().fpsw = false
 	end
 end)
 
-
---// Info \\--
-local sec = info:Section("--<    Info Main    >--")
-local label = sec:Label("NOVA UPADATEE!! versão 6.0, conta com novas opções e mudanças na libray aproveite")
+--// end \\--
