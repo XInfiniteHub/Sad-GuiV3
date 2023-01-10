@@ -3,10 +3,11 @@ local NotificationHolder = loadstring(game:HttpGet("https://raw.githubuserconten
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 Notification:Notify(
     {Title = "Checking Game", Description = "..."},
-    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 10, Type = "default"}
 )
 
-wait(5)
+wait(10)
+
 
 repeat wait() until game:IsLoaded()
 local PlaceId = game.PlaceId
@@ -16,7 +17,7 @@ if PlaceId == 5780309044 then
 	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 	Notification:Notify(
 	    {Title = "Game Detected", Description = "Stand Awakening"},
-	    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+	    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 2, Type = "default"}
 	)
 
 	wait(2)
@@ -25,10 +26,10 @@ if PlaceId == 5780309044 then
 	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 	Notification:Notify(
 	    {Title = "Starting ProjectHub", Description = ""},
-	    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+	    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 2, Type = "default"}
 	)
 
-	wait(8)
+	wait(3)
 
 	local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
