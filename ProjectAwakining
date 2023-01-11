@@ -49,7 +49,7 @@ if PlaceId == 5780309044 then
 
 	--// Print \\--
 	print("Project Awakening Executed!")
-	print("Version 6.2")
+	print("Version 6.4")
 	print("Have Fun")
 	
 	--[===========[
@@ -69,7 +69,7 @@ if PlaceId == 5780309044 then
 	  FolderToSave - Name of the folder where the UI files will be stored <string>
 	})]]
 	local win = SolarisLib:New({
-	  Name = "Project Awakening v6.2  ⭐ ⭐  |  @ProjectHub",
+	  Name = "Project Awakening v6.4  ⭐ ⭐  |  @ProjectHub",
 	  FolderToSave = "SolarisLibStuff"
 	})
 	
@@ -184,6 +184,22 @@ if PlaceId == 5780309044 then
 	
 			game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
 	end)
+	local toggle = sec:Toggle("Loop Auto Block", false,"Toggle", function(LoopAuB)
+		if LoopAuB then
+			getgenv().LoopAuBw = true
+			while getgenv().LoopAuBw do
+				wait(2)
+				local args = {
+				    [1] = "Alternate",
+				    [2] = "Block"
+				}
+				
+				game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
+			end
+		else
+			getgenv().LoopAuBw = false
+		end
+	end)
 	local button = sec:Button("Infinite Pose", function ()
 			local args = {
 				[1] = true
@@ -228,6 +244,17 @@ if PlaceId == 5780309044 then
 	local sec = main:Section("--<    Shadow Dio Main    >--")
 	local button = sec:Button("Shadow Dio Infinite Kinifes (Use Q first)", function ()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Shadow%20Inf%20Kinifes'))()
+	end)
+	local toggle = sec:Toggle("Loop Shadow Dio Infinite Kinifes", false,"Toggle", function(LoopSdiK)
+		if LoopSdiK then
+			getgenv().LoopSdiKw = true
+			while getgenv().LoopSdiKw do
+				wait(3)
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Shadow%20Inf%20Kinifes'))()			
+			end
+		else
+			getgenv().LoopSdiKw = false
+		end
 	end)
 	local button = sec:Button("Shadow Dio Infinite H ", function ()
 	      	local args = {
@@ -535,12 +562,12 @@ else
 	local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
 	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 	Notification:Notify(
-    	{Title = "Game not supported", Description = "..."},
+    	{Title = "Game not detected", Description = "..."},
     	{OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
 	)
 
 	wait(0.5)
 
-	game.Players.LocalPlayer:Kick("Game not supported, join the discord server to see the games where the project hub works")
+	game.Players.LocalPlayer:Kick("Game not detected, join the discord server to see the games where the project hub works")
 
 end
