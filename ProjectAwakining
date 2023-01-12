@@ -3,10 +3,10 @@ local NotificationHolder = loadstring(game:HttpGet("https://raw.githubuserconten
 local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
 Notification:Notify(
     {Title = "Checking Game", Description = "..."},
-    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 10, Type = "default"}
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 8, Type = "default"}
 )
 
-wait(10)
+wait(8)
 
 
 repeat wait() until game:IsLoaded()
@@ -60,7 +60,7 @@ if PlaceId == 5780309044 then
 	
 	
 	--// Libray \\--
-	local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/sol"))()
+	local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Solaris%20Libray"))()
 	
 	
 	--// Main Code \\--
