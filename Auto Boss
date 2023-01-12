@@ -14,7 +14,7 @@ wait(1)
 
 
 --// Libray \\--
-local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/sol"))()
+local SolarisLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Alonebr/Sad-GuiV3/main/Solaris%20Libray"))()
 
 
 --// Main Code \\--
