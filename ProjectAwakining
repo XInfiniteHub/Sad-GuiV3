@@ -265,7 +265,54 @@ if PlaceId == 5780309044 then
 	
 			game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
 	end)
-	
+	local toggle = sec:Toggle("Loop Shadow Dio Infinite Effect", false,"Toggle", function(LoopSE)
+		if LoopSE then
+			getgenv().LoopSEw = true
+			while getgenv().LoopSEw do
+				wait(1)
+				local ohInstance1 = workspace.Reset43354776.Stand.FakeTorso.particle.Pixelate
+				local ohBoolean2 = true
+
+				game:GetService("ReplicatedStorage").Trail:FireServer(ohInstance1, ohBoolean2)
+			end
+		else
+			getgenv().LoopSEw = false
+		end
+	end)
+		local toggle = sec:Toggle("Loop Shadow Dio Infinite Fake Stand", false,"Toggle", function(LoopFAKES)
+		if LoopFAKES then
+			getgenv().LoopFAKESw = true
+			while getgenv().LoopSEw do
+				wait(1)
+				-- Head
+				local args = {
+				    [1] = game:GetService("Players").LocalPlayer.Character.Stand.FakeHead,
+				    [2] = 0
+				}
+				game:GetService("ReplicatedStorage").Main.Transparency:FireServer(unpack(args))
+				-- Torso
+				local args = {
+				    [1] = game:GetService("Players").LocalPlayer.Character.Stand.FakeTorso,
+				    [2] = 0
+				}
+				game:GetService("ReplicatedStorage").Main.Transparency:FireServer(unpack(args))
+				-- Right Arm
+				local args = {
+				    [1] = game:GetService("Players").LocalPlayer.Character.Stand.FakeRightArm,
+				    [2] = 0
+				}
+				game:GetService("ReplicatedStorage").Main.Transparency:FireServer(unpack(args))
+				-- Left Arm
+				local args = {
+				    [1] = game:GetService("Players").LocalPlayer.Character.Stand.FakeLeftArm,
+				    [2] = 0
+				}
+				game:GetService("ReplicatedStorage").Main.Transparency:FireServer(unpack(args))
+			end
+		else
+			getgenv().LoopFAKESw = false
+		end
+	end)
 	
 	local sec = main:Section("--<    Karls Main    >--")
 	local button = sec:Button("Wings ULF inf ", function ()
@@ -475,6 +522,12 @@ if PlaceId == 5780309044 then
 	end)
 	local button = sec:Button("Timmy", function ()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1395.74, 581.69, -218.97))
+	end)
+	local button = sec:Button("Key Boss", function ()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1099, 589, -738))
+	end)
+	local button = sec:Button("D4C Place", function ()
+		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-3093, 464, -428))
 	end)
 	local button = sec:Button("Arena 1v1", function ()
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1247.95, 581.04, -279.96))
