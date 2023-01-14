@@ -3,5 +3,5 @@ local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/
 
 Notification:Notify(
     {Title = "KKKKKKKKKKKKKKKKKK", Description = "Tem nada aqui nao mn kkkKKSKDAJKSDJK"},
-    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
+    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}s
 )
