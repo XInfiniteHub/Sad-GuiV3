@@ -1379,15 +1379,3 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Main.Input:FireServer(unpack(args))
-
-game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1409, 581, -376))
-wait(0.1)
-game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1413, 581, -462))
-wait(0.1)
-game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1328, 581, -497))
-wait(0.1)
-game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1259, 581, -566))
-wait(0.1)
-game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1269, 581, -633))
-wait(0.1)
-game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1147, 588, -645))
